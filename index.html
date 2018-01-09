@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><meta name="generator" content="ReSpec 18.3.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><meta name="generator" content="ReSpec 19.0.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -87,38 +87,9 @@ input.task-list-item-checkbox {
 </style>
 		<title>Digital Publishing Accessibility API Mappings</title>
 		
-		<script src="../common/script/jquery-1.9.0.min.js"></script>
+		<script src="common/script/jquery-1.9.0.min.js"></script>
 		
-		
-		
-		
-		<link href="../common/css/mapping-tables.css" rel="stylesheet" type="text/css">
-		<link href="../common/css/common.css" rel="stylesheet" type="text/css">
-		<!--<link href="css/dpub-aam.css" rel="stylesheet" type="text/css"/>-->
-		
-		<script src="../common/script/jquery.details.min.js"></script>
-		<script src="../common/script/mapping-tables.js"></script>
-		<script type="text/javascript">
-
-var mappingTableLabels = {
-  viewByTable: "View as a single table",
-  expand: "Expand all",
-  collapse: "Collapse all",
-  showHideCols: "Show/Hide Columns:",
-  showActionText: "Show",
-  hideActionText: "Hide",
-  showToolTipText: "Show column",
-  hideToolTipText: "Hide column",
-
-  // map where keys are @id of associated mapping table:
-  viewByLabels: {
-    "role-mapping-table": "View by roles",
-    "state-property-mapping-table": "View by state/property",
-    "event-mapping-table": "View by state/property"
-  }
-}
-</script>
-	<style id="respec-mainstyle">/*****************************************************************
+		<style id="respec-mainstyle">/*****************************************************************
  * ReSpec 3 CSS
  * Robin Berjon - http://berjon.com/
  *****************************************************************/
@@ -391,13 +362,42 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-strong {
   font-weight: bold;
 }
-</style><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"><link rel="canonical" href="https://www.w3.org/TR/dpub-aam-1.0/"><script id="initialUserConfig" type="application/json">{
+</style>
+		
+		
+		<link href="common/css/mapping-tables.css" rel="stylesheet" type="text/css">
+		<link href="common/css/common.css" rel="stylesheet" type="text/css">
+		<!--<link href="css/dpub-aam.css" rel="stylesheet" type="text/css"/>-->
+		
+		<script src="common/script/jquery.details.min.js"></script>
+		<script src="common/script/mapping-tables.js"></script>
+		<script type="text/javascript">
+
+var mappingTableLabels = {
+  viewByTable: "View as a single table",
+  expand: "Expand all",
+  collapse: "Collapse all",
+  showHideCols: "Show/Hide Columns:",
+  showActionText: "Show",
+  hideActionText: "Hide",
+  showToolTipText: "Show column",
+  hideToolTipText: "Hide column",
+
+  // map where keys are @id of associated mapping table:
+  viewByLabels: {
+    "role-mapping-table": "View by roles",
+    "state-property-mapping-table": "View by state/property",
+    "event-mapping-table": "View by state/property"
+  }
+}
+</script>
+	<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"><link rel="canonical" href="https://www.w3.org/TR/dpub-aam-1.0/"><script id="initialUserConfig" type="application/json">{
   "includePermalinks": true,
   "specStatus": "ED",
   "diffTool": "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
   "shortName": "dpub-aam-1.0",
   "copyrightStart": "2015",
-  "edDraftURI": "http://w3c.github.io/aria/dpub-aam/dpub-aam.html",
+  "edDraftURI": "http://w3c.github.io/dpub-aam/",
   "editors": [
     {
       "name": "Richard Schwerdtfeger",
@@ -421,61 +421,313 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   "wgPatentURI": "https://www.w3.org/2004/01/pp-impl/83726/status",
   "tocIntroductory": true,
   "ariaSpecURLs": {
-    "ED": "https://w3c.github.io/aria/aria/aria.html",
+    "ED": "https://w3c.github.io/aria/",
     "FPWD": "http://www.w3.org/TR/wai-aria-1.1/",
     "WD": "http://www.w3.org/TR/wai-aria-1.1/",
     "REC": "http://www.w3.org/TR/wai-aria/"
   },
   "accNameURLs": {
-    "ED": "http://w3c.github.io/aria/accname-aam/accname-aam.html",
+    "ED": "http://w3c.github.io/accname/",
     "WD": "http://www.w3.org/TR/accname-aam-1.1/",
     "FPWD": "http://www.w3.org/TR/accname-aam-1.1/",
     "REC": "http://www.w3.org/TR/accname-aam/"
   },
   "coreMappingURLs": {
-    "ED": "http://w3c.github.io/aria/core-aam/core-aam.html",
+    "ED": "http://w3c.github.io/core-aam/",
     "WD": "http://www.w3.org/TR/core-aam-1.1/",
     "FPWD": "http://www.w3.org/TR/core-aam-1.1/",
     "REC": "http://www.w3.org/TR/wai-aria-implementation/"
   },
   "dpubModURLs": {
-    "ED": "http://w3c.github.io/aria/aria/dpub.html",
+    "ED": "http://w3c.github.io/dpub-aria/",
     "FPWD": "http://www.w3.org/TR/dpub-aria-1.0/",
     "WD": "http://www.w3.org/TR/dpub-aria-1.0/",
     "REC": "http://www.w3.org/TR/dpub-aria/"
   },
   "localBiblio": {
+    "ACCNAME-AAM": {
+      "title": "Accessible Name and Description: Computation and API Mappings 1.1",
+      "href": "http://www.w3.org/TR/accname-aam-1.1/",
+      "status": "WD",
+      "publisher": "W3C",
+      "authors": [
+        "Joseph Scheuhammer",
+        "Michael Cooper",
+        "Andi Snow-Weaver",
+        "Aaron Leventhal"
+      ],
+      "etAl": true,
+      "deliveredBy": [
+        "http://www.w3.org/WAI/ARIA/"
+      ]
+    },
+    "ARIA-PRACTICES": {
+      "title": "WAI-ARIA Authoring Practicess 1.1",
+      "href": "http://www.w3.org/TR/wai-aria-practices-1.1/",
+      "status": "WD",
+      "publisher": "W3C",
+      "authors": [
+        "Matt King",
+        "James Nurthen",
+        "Michael Cooper",
+        "Michiel Bijl",
+        "Joseph Scheuhammer",
+        "Lisa Pappas",
+        "Richard Schwerdtfeger"
+      ],
+      "etAl": true,
+      "deliveredBy": [
+        "http://www.w3.org/WAI/ARIA/"
+      ]
+    },
+    "ATK": {
+      "href": "https://developer.gnome.org/atk/stable/",
+      "title": "ATK - Accessibility Toolkit",
+      "publisher": "The GNOME Project"
+    },
+    "AXAPI": {
+      "href": "https://developer.apple.com/library/content/documentation/Accessibility/Conceptual/AccessibilityMacOSX/index.html#//apple_ref/doc/uid/TP40001078",
+      "title": "Accessibility Programming Guide for OS X",
+      "publisher": "Apple Corporation"
+    },
+    "CORE-AAM": {
+      "title": "Core Accessibility API Mappings 1.1",
+      "href": "http://www.w3.org/TR/core-aam-1.1/",
+      "status": "WD",
+      "publisher": "W3C",
+      "authors": [
+        "Joseph Scheuhammer",
+        "Michael Cooper",
+        "Andi Snow-Weaver",
+        "Aaron Leventhal"
+      ],
+      "etAl": true,
+      "deliveredBy": [
+        "http://www.w3.org/WAI/ARIA/"
+      ]
+    },
+    "DPUB-ARIA": {
+      "title": "Digital Publishing WAI-ARIA Module 1.0",
+      "href": "http://www.w3.org/TR/dpub-aria-1.0/",
+      "status": "WD",
+      "publisher": "W3C",
+      "authors": [
+        "Matt Garrish",
+        "Tzviya Siegman",
+        "Markus Gylling",
+        "Shane McCarron"
+      ],
+      "etAl": true,
+      "deliveredBy": [
+        "http://www.w3.org/WAI/ARIA/"
+      ]
+    },
+    "GRAPHICS-ARIA": {
+      "title": "WAI-ARIA Graphics",
+      "href": "http://www.w3.org/TR/graphics-aria-1.0/",
+      "status": "WD",
+      "publisher": "W3C",
+      "authors": [
+        "Amelia Bellamy-Royds",
+        "Fred Esch",
+        "Rich Schwerdtfeger",
+        "Leonie Watson"
+      ],
+      "etAl": true,
+      "deliveredBy": [
+        "http://www.w3.org/WAI/ARIA/",
+        "http://www.w3.org/SVG/"
+      ]
+    },
+    "GRAPHICS-AAM": {
+      "title": "Graphics Accessibility API Mappings",
+      "href": "http://www.w3.org/TR/graphics-aam-1.0/",
+      "status": "WD",
+      "publisher": "W3C",
+      "authors": [
+        "Amelia Bellamy-Royds",
+        "Fred Esch",
+        "Richard Schwerdtfeger"
+      ],
+      "etAl": true,
+      "deliveredBy": [
+        "http://www.w3.org/WAI/ARIA/",
+        "http://www.w3.org/SVG/"
+      ]
+    },
+    "EPUB-SSV": {
+      "href": "http://www.idpf.org/epub/vocab/structure/",
+      "title": "EPUB Structural Semantics Vocabulary",
+      "publisher": "IDPF"
+    },
     "EPUB-Content": {
       "href": "http://www.idpf.org/epub/31/spec/epub-contentdocs.html",
       "title": "EPUB Content Documents 3.1",
       "publisher": "IDPF"
+    },
+    "GTK": {
+      "href": "https://developer.gnome.org/gtk3/stable/",
+      "title": "GTK+ 3 Reference Manual",
+      "publisher": "The GNOME Project"
+    },
+    "HTML-AAM": {
+      "authors": [
+        "Steve Faulkner",
+        "Jason Kiss",
+        "Cynthia Shelly",
+        "Alexander Surkov"
+      ],
+      "etAl": true,
+      "href": "http://www.w3.org/TR/html-aam-1.0/",
+      "title": "HTML Accessibility API Mappings 1.0",
+      "status": "WD",
+      "publisher": "W3C",
+      "deliveredBy": [
+        "http://www.w3.org/html",
+        "http://www.w3.org/WAI/PF/"
+      ]
+    },
+    "MSAA": {
+      "href": "https://msdn.microsoft.com/en-us/library/ms697707.aspx",
+      "title": "Microsoft Active Accessibility (MSAA) 2.0",
+      "publisher": "Microsoft Corporation"
+    },
+    "SVG-AAM": {
+      "title": "SVG2 Accessibility API Mappings 1.0",
+      "href": "http://www.w3.org/TR/svg-aam-1.0/",
+      "status": "WD",
+      "publisher": "W3C",
+      "authors": [
+        "Amelia Bellamy-Royds",
+        "Richard Schwerdtfeger"
+      ],
+      "etAl": true,
+      "deliveredBy": [
+        "http://www.w3.org/WAI/PF/"
+      ]
+    },
+    "SVG1": {
+      "title": "Scalable Vector Graphics (SVG) 1.0 Specification",
+      "href": "http://www.w3.org/TR/SVG10/",
+      "status": "REC",
+      "publisher": "W3C",
+      "authors": [
+        "John Ferraiolo"
+      ],
+      "etAl": true,
+      "deliveredBy": [
+        "http://www.w3.org/SVG"
+      ]
+    },
+    "SVG11": {
+      "title": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+      "href": "http://www.w3.org/TR/SVG11/",
+      "status": "REC",
+      "publisher": "W3C",
+      "authors": [
+        "Erik Dahlström",
+        "Patrick Dengler",
+        "Anthony Grasso",
+        "Chris Lilley",
+        "Cameron McCormack",
+        "Doug Schepers",
+        "Jonathan Watt",
+        "John Ferraiolo",
+        "藤沢 淳 (FUJISAWA Jun)",
+        "Dean Jackson"
+      ],
+      "etAl": true,
+      "deliveredBy": [
+        "http://www.w3.org/SVG"
+      ]
+    },
+    "SVG2": {
+      "title": "Scalable Vector Graphics (SVG) 2",
+      "href": "http://www.w3.org/TR/2015/WD-SVG2-20150915/",
+      "status": "WD",
+      "publisher": "W3C",
+      "authors": [
+        "Nikos Andronikos",
+        "Rossen Atanassov",
+        "Tavmjong Bah",
+        "Amelia Bellamy-Royds",
+        "Brian Birtles",
+        "Cyril Concolato",
+        "Erik Dahlström",
+        "Chris Lilley",
+        "Cameron McCormack",
+        "Doug Schepers",
+        "Dirk Schulze",
+        "Richard Schwerdtfeger",
+        "Satoru Takagi",
+        "Jonathan Watt"
+      ],
+      "etAl": true,
+      "deliveredBy": [
+        "http://www.w3.org/WAI/PF/"
+      ]
+    },
+    "UI-AUTOMATION": {
+      "href": "https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx",
+      "title": "UI Automation",
+      "publisher": "Microsoft Corporation"
+    },
+    "UIA-EXPRESS": {
+      "href": "https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx",
+      "title": "The IAccessibleEx Interface",
+      "publisher": "Microsoft Corporation"
+    },
+    "WAI-ARIA": {
+      "title": "Accessible Rich Internet Applications (WAI-ARIA) 1.1",
+      "href": "http://www.w3.org/TR/wai-aria-1.1/",
+      "status": "WD",
+      "publisher": "W3C",
+      "authors": [
+        "James Craig",
+        "Michael Cooper",
+        "Shane McCarron"
+      ],
+      "etAl": true,
+      "deliveredBy": [
+        "http://www.w3.org/WAI/PF/"
+      ]
+    },
+    "WAI-ARIA-10": {
+      "authors": [
+        "James Craig",
+        "Michael Cooper"
+      ],
+      "etAl": true,
+      "href": "http://www.w3.org/TR/wai-aria/",
+      "title": "Accessible Rich Internet Applications (WAI-ARIA) 1.0",
+      "status": "REC",
+      "publisher": "W3C",
+      "deliveredBy": [
+        "http://www.w3.org/WAI/PF/"
+      ]
     }
   },
   "preProcess": [
     null
   ],
-  "publishISODate": "2017-12-11T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 11 December 2017"
-}</script><meta name="description" content="The Digital Publishing Accessibility API Mappings (DPub-AAM) defines how
-    user agents map
-    the Digital Publishing WAI-ARIA Module [dpub-aria-1.0] markup
-    to platform accessibility APIs.
-    It is intended for user agent developers
-    responsible for accessibility in their user agent so that they can support the accessibility content produced for digital publishing."></head>
-	<body aria-busy="false" class="h-entry"><div class="head">
+  "publishDate": "2018-01-09",
+  "publishISODate": "2018-01-09T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 09 January 2018"
+}</script></head>
+	<body aria-busy="false" class="h-entry toc-inline" style="zoom: 1;"><div class="head">
     <p>
-      <a class="logo" href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C" width="72" height="48"></a>
+      <a class="logo" href="https://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
     </p>
-  <p><!--_hyper: -2050808982;--></p>
+  <p><!--_hyper: 2086915148;--></p>
   <h1 class="title p-name" id="title">Digital Publishing Accessibility <abbr title="application programming interface">API</abbr> Mappings</h1>
-  <h2 id="w3c-editor-s-draft-11-december-2017"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2017-12-11">11 December 2017</time>&nbsp;<span class="permalink"><a href="#undefined" aria-label="Permalink for W3C Editor's Draft 11 December 2017" title="Permalink for W3C Editor's Draft 11 December 2017"><span>§</span></a></span></h2>
+  <h2 id="w3c-editor-s-draft-09-january-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-01-09">09 January 2018</time>&nbsp;<span class="permalink"><a href="#undefined" aria-label="Permalink for W3C Editor's Draft 09 January 2018" title="Permalink for W3C Editor's Draft 09 January 2018"><span>§</span></a></span></h2>
   <dl>
       <dt>This version:</dt>
-      <dd><a class="u-url" href="http://w3c.github.io/aria/dpub-aam/dpub-aam.html">http://w3c.github.io/aria/dpub-aam/dpub-aam.html</a></dd>
+      <dd><a class="u-url" href="http://w3c.github.io/dpub-aam/">http://w3c.github.io/dpub-aam/</a></dd>
       <dt>Latest published version:</dt>
       <dd><a href="https://www.w3.org/TR/dpub-aam-1.0/">https://www.w3.org/TR/dpub-aam-1.0/</a></dd>
       <dt>Latest editor's draft:</dt>
-      <dd><a href="http://w3c.github.io/aria/dpub-aam/dpub-aam.html">http://w3c.github.io/aria/dpub-aam/dpub-aam.html</a></dd>
+      <dd><a href="http://w3c.github.io/dpub-aam/">http://w3c.github.io/dpub-aam/</a></dd>
     <dt>Editors:</dt>
     <dd class="p-author h-card vcard" data-editor-id="2460"><span class="p-name fn">Richard Schwerdtfeger</span>, Knowbility, <span class="ed_mailto"><a class="u-email email" href="mailto:richschwer@gmail.com">richschwer@gmail.com</a></span></dd>
 <dd class="p-author h-card vcard" data-editor-id="68182"><a class="u-url url p-name fn" href="https://www.igalia.com">Joanmarie Diggs</a>, Igalia, S.L., <span class="ed_mailto"><a class="u-email email" href="mailto:jdiggs@igalia.com">jdiggs@igalia.com</a></span></dd>
@@ -483,7 +735,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   </dl>
       <p class="copyright">
         <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> ©
-        2015-2017
+        2015-2018
         
         <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup>
         (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
@@ -682,7 +934,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     
     <dt><dfn data-lt="property|properties" id="dfn-property" data-dfn-type="dfn">Property</dfn></dt>
     <dd>
-      <p><a class="termref internalDFN" data-lt="attribute" href="#dfn-attribute" data-link-type="dfn">Attributes</a> that are essential to the nature of a given <a href="#dfn-object" class="internalDFN" data-link-type="dfn">object</a>, or that represent a data value associated with the object. A change of a property may significantly impact the meaning or presentation of an object. Certain properties (for example, <a href="https://w3c.github.io/aria/aria/aria.html#aria-multiline" class="property-reference"><code>aria-multiline</code></a>) are less likely to change than <a class="termref" href="#dfn-state">states</a>, but note that the frequency of change difference is not a rule. A few properties, such as <a href="https://w3c.github.io/aria/aria/aria.html#aria-activedescendant" class="property-reference"><code>aria-activedescendant</code></a>, <a href="https://w3c.github.io/aria/aria/aria.html#aria-valuenow" class="property-reference"><code>aria-valuenow</code></a>, and <a href="https://w3c.github.io/aria/aria/aria.html#aria-valuetext" class="property-reference"><code>aria-valuetext</code></a> are expected to change often. See <a href="http://www.w3.org/TR/wai-aria/states_and_properties#statevsprop">clarification of states versus properties</a>.</p>
+      <p><a class="termref internalDFN" data-lt="attribute" href="#dfn-attribute" data-link-type="dfn">Attributes</a> that are essential to the nature of a given <a href="#dfn-object" class="internalDFN" data-link-type="dfn">object</a>, or that represent a data value associated with the object. A change of a property may significantly impact the meaning or presentation of an object. Certain properties (for example, <a href="https://w3c.github.io/aria/#aria-multiline" class="property-reference"><code>aria-multiline</code></a>) are less likely to change than <a class="termref" href="#dfn-state">states</a>, but note that the frequency of change difference is not a rule. A few properties, such as <a href="https://w3c.github.io/aria/#aria-activedescendant" class="property-reference"><code>aria-activedescendant</code></a>, <a href="https://w3c.github.io/aria/#aria-valuenow" class="property-reference"><code>aria-valuenow</code></a>, and <a href="https://w3c.github.io/aria/#aria-valuetext" class="property-reference"><code>aria-valuetext</code></a> are expected to change often. See <a href="http://www.w3.org/TR/wai-aria/states_and_properties#statevsprop">clarification of states versus properties</a>.</p>
     </dd>
     <dt></dt>
     
@@ -723,29 +975,29 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 		</section>
 		<section class="section" id="keyboard-focus">
 			<!--OddPage--><h2 id="x4-supporting-keyboard-navigation"><span class="secno">4. </span>Supporting Keyboard Navigation&nbsp;<span class="permalink"><a href="#keyboard-focus" aria-label="Permalink for 4. Supporting Keyboard Navigation" title="Permalink for 4. Supporting Keyboard Navigation"><span>§</span></a></span></h2>
-			<p>Enabling keyboard navigation in web applications is a necessary step toward making accessible web applications possible. Conforming <a class="termref internalDFN" href="#dfn-user-agent" data-link-type="dfn">user agents</a> <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="http://w3c.github.io/aria/core-aam/core-aam.html#keyboard-focus">Supporting Keyboard Navigation</a> requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+			<p>Enabling keyboard navigation in web applications is a necessary step toward making accessible web applications possible. Conforming <a class="termref internalDFN" href="#dfn-user-agent" data-link-type="dfn">user agents</a> <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="http://w3c.github.io/core-aam/#keyboard-focus">Supporting Keyboard Navigation</a> requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 		</section>
 		<section id="mapping">
 			<!--OddPage--><h2 id="x5-mapping-wai-aria-to-accessibility-apis"><span class="secno">5. </span>Mapping <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> to Accessibility <abbr title="Application Programming Interfaces">APIs</abbr>&nbsp;<span class="permalink"><a href="#mapping" aria-label="Permalink for 5. Mapping WAI-ARIA to Accessibility APIs" title="Permalink for 5. Mapping WAI-ARIA to Accessibility APIs"><span>§</span></a></span></h2>
 			<section id="mapping_general">
 				<h3 id="x5-1-general-rules-for-exposing-wai-aria-semantics"><span class="secno">5.1 </span>General rules for exposing <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> semantics&nbsp;<span class="permalink"><a href="#mapping_general" aria-label="Permalink for 5.1 General rules for exposing WAI-ARIA semantics" title="Permalink for 5.1 General rules for exposing WAI-ARIA semantics"><span>§</span></a></span></h3>
-				<p>This section <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="http://w3c.github.io/aria/core-aam/core-aam.html#mapping_general">General rules for exposing <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> semantics</a> in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+				<p>This section <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="http://w3c.github.io/core-aam/#mapping_general">General rules for exposing <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> semantics</a> in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 			</section>
 		</section>
 		<section id="mapping_conflicts">
 			<!--OddPage--><h2 id="x6-conflicts-between-native-markup-semantics-and-wai-aria"><span class="secno">6. </span>Conflicts between native markup semantics and <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr>&nbsp;<span class="permalink"><a href="#mapping_conflicts" aria-label="Permalink for 6. Conflicts between native markup semantics and WAI-ARIA" title="Permalink for 6. Conflicts between native markup semantics and WAI-ARIA"><span>§</span></a></span></h2>
-			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="http://w3c.github.io/aria/core-aam/core-aam.html#mapping_conflicts">Conflicts between native markup semantics and <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr></a> in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>]. </p>
+			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="http://w3c.github.io/core-aam/#mapping_conflicts">Conflicts between native markup semantics and <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr></a> in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>]. </p>
 		</section>
 		<section id="mapping_nodirect">
 			<!--OddPage--><h2 id="x7-exposing-attributes-that-do-not-directly-map-to-accessibility-api-properties"><span class="secno">7. </span>Exposing attributes that do not directly map to accessibility <abbr title="application programming interface">API</abbr> properties&nbsp;<span class="permalink"><a href="#mapping_nodirect" aria-label="Permalink for 7. Exposing attributes that do not directly map to accessibility API properties" title="Permalink for 7. Exposing attributes that do not directly map to accessibility API properties"><span>§</span></a></span></h2>
-			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="http://w3c.github.io/aria/core-aam/core-aam.html#mapping_nodirect">Exposing attributes that do not directly map to accessibility <abbr title="application programming interface">API</abbr> properties</a> in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="http://w3c.github.io/core-aam/#mapping_nodirect">Exposing attributes that do not directly map to accessibility <abbr title="application programming interface">API</abbr> properties</a> in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 		</section>
 		<section id="mapping_role">
 			<!--OddPage--><h2 id="x8-role-mapping"><span class="secno">8. </span>Role mapping&nbsp;<span class="permalink"><a href="#mapping_role" aria-label="Permalink for 8. Role mapping" title="Permalink for 8. Role mapping"><span>§</span></a></span></h2>
 			<p>Platform <a class="termref internalDFN" href="#dfn-accessibility-api" data-link-type="dfn">accessibility <abbr title="Application Programming Interfaces">APIs</abbr></a> traditionally have had a finite set of predefined <a class="termref internalDFN" href="#dfn-role" data-link-type="dfn">roles</a> that are expected by <a class="termref internalDFN" href="#dfn-assistive-technology" data-link-type="dfn">assistive technologies</a> on that platform and only one or two roles may be exposed. In contrast, <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> allows multiple roles to be specified as an ordered set of space-separated valid role tokens. The additional roles are fallback roles similar to the concept of specifying multiple fonts in case the first choice font type is not supported.</p>
 			<section id="roleMappingGeneralRules">
 				<h3 id="x8-1-general-rules"><span class="secno">8.1 </span>General Rules&nbsp;<span class="permalink"><a href="#roleMappingGeneralRules" aria-label="Permalink for 8.1 General Rules" title="Permalink for 8.1 General Rules"><span>§</span></a></span></h3>
-				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the Role Mapping <a class="core-mapping" href="http://w3c.github.io/aria/core-aam/core-aam.html#roleMappingGeneralRules">General Rules</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the Role Mapping <a class="core-mapping" href="http://w3c.github.io/core-aam/#roleMappingGeneralRules">General Rules</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 			</section>
 			<section id="mapping_role_table">
 				<h3 id="x8-2-role-mapping-table"><span class="secno">8.2 </span>Role Mapping Table&nbsp;<span class="permalink"><a href="#mapping_role_table" aria-label="Permalink for 8.2 Role Mapping Table" title="Permalink for 8.2 Role Mapping Table"><span>§</span></a></span></h3>
@@ -767,7 +1019,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 						</thead>
 						<tbody>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-abstract"><code>doc-abstract</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-abstract"><code>doc-abstract</code></a></th>
                                                                 <td>
 									Expose IAccessible2: 
 									<ul>
@@ -788,7 +1040,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                        <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-acknowledgments"><code>doc-acknowledgments</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-acknowledgments"><code>doc-acknowledgments</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -811,7 +1063,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
 							<tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-afterword"><code>doc-afterword</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-afterword"><code>doc-afterword</code></a></th>
 								<td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -835,7 +1087,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-appendix"><code>doc-appendix</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-appendix"><code>doc-appendix</code></a></th>
 								<td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -859,7 +1111,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-backlink"><code>doc-backlink</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-backlink"><code>doc-backlink</code></a></th>
                                                                 <td>
 								 	Expose
 										<ul>
@@ -887,7 +1139,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                         </tr>
 
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-biblioentry"><code>doc-biblioentry</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-biblioentry"><code>doc-biblioentry</code></a></th>
                                                                 <td>
 									Expose
 									<p><code>ROLE_SYSTEM_LISTITEM</code> + <code>STATE_SYSTEM_READONLY</code></p>
@@ -905,7 +1157,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-biblioentry"><code>doc-bibliography</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-biblioentry"><code>doc-bibliography</code></a></th>
 								<td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -928,7 +1180,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-biblioref"><code>doc-biblioref</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-biblioref"><code>doc-biblioref</code></a></th>
 								<td>
                                                                         Expose
                                                                                 <ul>
@@ -955,7 +1207,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                         </tr>
 
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-chapter"><code>doc-chapter</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-chapter"><code>doc-chapter</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -978,7 +1230,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
 							</tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-colophon"><code>doc-colophon</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-colophon"><code>doc-colophon</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2: Object attribute <code>xml-roles:doc-colophon</code>. </p></td>
                                                                 <td>
                                                                   <ul>
@@ -994,7 +1246,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-conclusion"><code>doc-conclusion</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-conclusion"><code>doc-conclusion</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1017,7 +1269,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-cover"><code>doc-cover</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-cover"><code>doc-cover</code></a></th>
                                                                 <td>Expose <p><code>ROLE_SYSTEM_GRAPHIC</code></p>  
 								<p>IAccessible2: Object attribute <code>xml-roles:doc-cover</code>. </p>
 								</td>
@@ -1032,7 +1284,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-cover"><code>doc-credit</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-cover"><code>doc-credit</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-credit</code></td>
                                                                 <td>
                                                                   <ul>
@@ -1047,7 +1299,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 								</td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-credits"><code>doc-credits</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-credits"><code>doc-credits</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1070,7 +1322,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 								</td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-dedication"><code>doc-dedication</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-dedication"><code>doc-dedication</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-dedication</code></td>
                                                                 <td>
                                                                   <ul>
@@ -1085,7 +1337,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-endnote"><code>doc-endnote</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-endnote"><code>doc-endnote</code></a></th>
                                                                 <td>
                                                                         Expose
                                                                         <p><code>ROLE_SYSTEM_LISTITEM</code> + <code>STATE_SYSTEM_READONLY</code></p>
@@ -1103,7 +1355,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-endnote"><code>doc-endnotes</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-endnote"><code>doc-endnotes</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1128,7 +1380,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                         </tr>
 
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-epigraph"><code>doc-epigraph</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-epigraph"><code>doc-epigraph</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-epigraph</code></td>
                                                                 <td>
                                                                   <ul>
@@ -1143,7 +1395,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-epilogue"><code>doc-epilogue</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-epilogue"><code>doc-epilogue</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1167,7 +1419,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-cover"><code>doc-errata</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-cover"><code>doc-errata</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1190,7 +1442,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-cover"><code>doc-example</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-cover"><code>doc-example</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-example</code></td>
                                                                 <td>
                                                                   <ul>
@@ -1205,7 +1457,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-footnote"><code>doc-footnote</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-footnote"><code>doc-footnote</code></a></th>
                                                                 <td><p>Expose IAccessible2:</p>
 									<ul>
 										<li><code>IA2_ROLE_FOOTNOTE</code></li>
@@ -1225,7 +1477,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-foreword"><code>doc-foreword</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-foreword"><code>doc-foreword</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1248,7 +1500,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-glossary"><code>doc-glossary</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-glossary"><code>doc-glossary</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1271,7 +1523,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-glossref"><code>doc-glossref</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-glossref"><code>doc-glossref</code></a></th>
 								<td>
                                                                         Expose
                                                                                 <ul>
@@ -1298,7 +1550,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-index"><code>doc-index</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-index"><code>doc-index</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1321,7 +1573,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-introduction"><code>doc-introduction</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-introduction"><code>doc-introduction</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1345,7 +1597,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-noteref"><code>doc-noteref</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-noteref"><code>doc-noteref</code></a></th>
                                                                 <td>
                                                                         Expose
                                                                                 <ul>
@@ -1372,7 +1624,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-notice"><code>doc-notice</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-notice"><code>doc-notice</code></a></th>
                                                                 <td>Expose
 								    <p><code>IA2_ROLE_NOTE</code></p>
 								    <p> IAccessible2:</p> Object attribute <code>xml-roles:doc-notice</code>.</td>
@@ -1389,7 +1641,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-pagebreak"><code>doc-pagebreak</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-pagebreak"><code>doc-pagebreak</code></a></th>
                                                                 <td>Expose <p><code>ROLE_SYSTEM_SEPARATOR</code></p> 
 								<p>IAccessible2:</p>
 								Object attribute <code>xml-roles:doc-pagebreak</code>.
@@ -1407,7 +1659,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-pagelist"><code>doc-pagelist</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-pagelist"><code>doc-pagelist</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1430,7 +1682,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-part"><code>doc-part</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-part"><code>doc-part</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1453,7 +1705,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-preface"><code>doc-preface</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-preface"><code>doc-preface</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1476,7 +1728,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                          <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-prologue"><code>doc-prologue</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-prologue"><code>doc-prologue</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1499,7 +1751,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                          <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-pullquote"><code>doc-pullquote</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-pullquote"><code>doc-pullquote</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1520,7 +1772,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                          <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-preface"><code>doc-qna</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-preface"><code>doc-qna</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-qna</code></td>
                                                                 <td>
                                                                   <ul>
@@ -1535,7 +1787,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                          <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-preface"><code>doc-subtitle</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-preface"><code>doc-subtitle</code></a></th>
                                                                 <td>Expose IAccessible2:
 									<ul>
 									 	<li><code>IA2_ROLE_HEADING</code></li>
@@ -1555,7 +1807,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
                                                          <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-tip"><code>doc-tip</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-tip"><code>doc-tip</code></a></th>
                                                                 <td>
 									Expose
 									<p><code>IA2_ROLE_NOTE</code></p>
@@ -1575,7 +1827,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                                                 </td>
                                                         </tr>
 							<tr>
-								<th><a class="dpub-role-reference" href="http://w3c.github.io/aria/aria/dpub.html#doc-toc"><code>doc-toc</code></a></th>
+								<th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-toc"><code>doc-toc</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1609,31 +1861,31 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			<!--OddPage--><h2 id="x9-state-and-property-mapping"><span class="secno">9. </span>State and Property Mapping&nbsp;<span class="permalink"><a href="#mapping_state-property" aria-label="Permalink for 9. State and Property Mapping" title="Permalink for 9. State and Property Mapping"><span>§</span></a></span></h2>
 			<p>This section describes how to expose <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
 				<a class="termref internalDFN" href="#dfn-state" data-link-type="dfn">states</a> and <a class="termref internalDFN" href="#dfn-object" data-link-type="dfn">object</a>
-				<a class="termref internalDFN" href="#dfn-property" data-link-type="dfn">properties</a>. User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/aria/core-aam/core-aam.html#mapping_state-property" class="core-mapping">State and Property Mapping</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>]. </p>
+				<a class="termref internalDFN" href="#dfn-property" data-link-type="dfn">properties</a>. User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/core-aam/#mapping_state-property" class="core-mapping">State and Property Mapping</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>]. </p>
 		</section>
 		<section id="mapping_additional">
 			<!--OddPage--><h2 id="x10-special-processing-requiring-additional-computation"><span class="secno">10. </span>Special Processing Requiring Additional Computation&nbsp;<span class="permalink"><a href="#mapping_additional" aria-label="Permalink for 10. Special Processing Requiring Additional Computation" title="Permalink for 10. Special Processing Requiring Additional Computation"><span>§</span></a></span></h2>
 			<section id="mapping_additional_nd">
 				<h3 id="x10-1-name-and-description"><span class="secno">10.1 </span>Name and Description&nbsp;<span class="permalink"><a href="#mapping_additional_nd" aria-label="Permalink for 10.1 Name and Description" title="Permalink for 10.1 Name and Description"><span>§</span></a></span></h3>
-				<p>When computing an <a class="termref internalDFN" href="#dfn-accessible-name" data-link-type="dfn">accessible name</a> or <a class="termref internalDFN" href="#dfn-accessible-description" data-link-type="dfn">accessible description</a>, <a class="termref internalDFN" href="#dfn-user-agent" data-link-type="dfn">user agents</a> <em class="rfc2119" title="MUST">MUST</em> conform to the section titled <a class="accname" href="http://w3c.github.io/aria/accname-aam/accname-aam.html#mapping_additional_nd_te">Text Alternative Computation</a> of the [<cite><a class="bibref" href="#bib-ACCNAME-AAM-1.1">ACCNAME-AAM-1.1</a></cite>] specification. 
+				<p>When computing an <a class="termref internalDFN" href="#dfn-accessible-name" data-link-type="dfn">accessible name</a> or <a class="termref internalDFN" href="#dfn-accessible-description" data-link-type="dfn">accessible description</a>, <a class="termref internalDFN" href="#dfn-user-agent" data-link-type="dfn">user agents</a> <em class="rfc2119" title="MUST">MUST</em> conform to the section titled <a class="accname" href="http://w3c.github.io/accname/#mapping_additional_nd_te">Text Alternative Computation</a> of the [<cite><a class="bibref" href="#bib-ACCNAME-AAM-1.1">ACCNAME-AAM-1.1</a></cite>] specification. 
 				</p>
 			</section>
 			<section id="mapping_additional_widget-value">
 				<h3 id="x10-2-widget-values"><span class="secno">10.2 </span>Widget Values&nbsp;<span class="permalink"><a href="#mapping_additional_widget-value" aria-label="Permalink for 10.2 Widget Values" title="Permalink for 10.2 Widget Values"><span>§</span></a></span></h3>
-				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/aria/core-aam/core-aam.html#mapping_additional_widget-value" class="core-mapping">Widget Values</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/core-aam/#mapping_additional_widget-value" class="core-mapping">Widget Values</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 			</section>
 			<section id="mapping_additional_relations">
 				<h3 id="x10-3-relations"><span class="secno">10.3 </span>Relations&nbsp;<span class="permalink"><a href="#mapping_additional_relations" aria-label="Permalink for 10.3 Relations" title="Permalink for 10.3 Relations"><span>§</span></a></span></h3>
-				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/aria/core-aam/core-aam.html#mapping_additional_relations" class="core-mapping">Relation</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/core-aam/#mapping_additional_relations" class="core-mapping">Relation</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 			</section>
 			<section id="mapping_additional_position">
 				<h3 id="x10-4-group-position"><span class="secno">10.4 </span>Group Position&nbsp;<span class="permalink"><a href="#mapping_additional_position" aria-label="Permalink for 10.4 Group Position" title="Permalink for 10.4 Group Position"><span>§</span></a></span></h3>
-				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/aria/core-aam/core-aam.html#mapping_additional_position" class="core-mapping">Group Position</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/core-aam/#mapping_additional_position" class="core-mapping">Group Position</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 			</section>
 		</section>
 		<section id="mapping_actions">
 			<!--OddPage--><h2 id="x11-actions"><span class="secno">11. </span>Actions&nbsp;<span class="permalink"><a href="#mapping_actions" aria-label="Permalink for 11. Actions" title="Permalink for 11. Actions"><span>§</span></a></span></h2>
-			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/aria/core-aam/core-aam.html#mapping_actions" class="core-mapping">Actions</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/core-aam/#mapping_actions" class="core-mapping">Actions</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 		</section>
 		<section id="mapping_events">
 			<!--OddPage--><h2 id="x12-events"><span class="secno">12. </span>Events&nbsp;<span class="permalink"><a href="#mapping_events" aria-label="Permalink for 12. Events" title="Permalink for 12. Events"><span>§</span></a></span></h2>
@@ -1642,7 +1894,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 		</section>
 		<section id="document-handling">
 			<!--OddPage--><h2 id="x13-special-document-handling-procedures"><span class="secno">13. </span>Special Document Handling Procedures&nbsp;<span class="permalink"><a href="#document-handling" aria-label="Permalink for 13. Special Document Handling Procedures" title="Permalink for 13. Special Document Handling Procedures"><span>§</span></a></span></h2>
-			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/aria/core-aam/core-aam.html#document-handling" class="core-mapping">Special Document Handling Procedures</a> in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/core-aam/#document-handling" class="core-mapping">Special Document Handling Procedures</a> in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 		</section>
 		<section id="appendices" class="appendix">
 			<!--OddPage--><h2 id="a-appendices"><span class="secno">A. </span>Appendices&nbsp;<span class="permalink"><a href="#appendices" aria-label="Permalink for A. Appendices" title="Permalink for A. Appendices"><span>§</span></a></span></h2>
@@ -1754,12 +2006,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 	
 
 <section id="references" class="appendix"><!--OddPage--><h2 id="b-references"><span class="secno">B. </span>References&nbsp;<span class="permalink"><a href="#references" aria-label="Permalink for B. References" title="Permalink for B. References"><span>§</span></a></span></h2><section id="normative-references"><h3 id="b-1-normative-references"><span class="secno">B.1 </span>Normative references&nbsp;<span class="permalink"><a href="#normative-references" aria-label="Permalink for B.1 Normative references" title="Permalink for B.1 Normative references"><span>§</span></a></span></h3><dl class="bibliography"><dt id="bib-ACCNAME-AAM-1.1">[ACCNAME-AAM-1.1]</dt><dd><a href="https://www.w3.org/TR/accname-aam-1.1/"><cite>Accessible Name and Description: Computation and API Mappings 1.1</cite></a>. Joseph Scheuhammer; James Craig; Andi Snow-Weaver; Aaron Leventhal. W3C. 17 March 2016. W3C Working Draft. URL: <a href="https://www.w3.org/TR/accname-aam-1.1/">https://www.w3.org/TR/accname-aam-1.1/</a>
-</dd><dt id="bib-CORE-AAM-1.1">[CORE-AAM-1.1]</dt><dd><a href="https://www.w3.org/TR/core-aam-1.1/"><cite>Core Accessibility API Mappings 1.1</cite></a>. Joanmarie Diggs; Joseph Scheuhammer; Richard Schwerdtfeger; Michael Cooper; Andi Snow-Weaver; Aaron Leventhal. W3C. 2 November 2017. W3C Proposed Recommendation. URL: <a href="https://www.w3.org/TR/core-aam-1.1/">https://www.w3.org/TR/core-aam-1.1/</a>
-</dd><dt id="bib-dpub-aria-1.0">[dpub-aria-1.0]</dt><dd><a href="https://www.w3.org/TR/dpub-aria-1.0/"><cite>Digital Publishing WAI-ARIA Module 1.0</cite></a>. Matt Garrish; Tzviya Siegman; Markus Gylling; Shane McCarron. W3C. 15 December 2016. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/dpub-aria-1.0/">https://www.w3.org/TR/dpub-aria-1.0/</a>
+</dd><dt id="bib-CORE-AAM-1.1">[CORE-AAM-1.1]</dt><dd><a href="https://www.w3.org/TR/core-aam-1.1/"><cite>Core Accessibility API Mappings 1.1</cite></a>. Joanmarie Diggs; Joseph Scheuhammer; Richard Schwerdtfeger; Michael Cooper; Andi Snow-Weaver; Aaron Leventhal. W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/core-aam-1.1/">https://www.w3.org/TR/core-aam-1.1/</a>
+</dd><dt id="bib-dpub-aria-1.0">[dpub-aria-1.0]</dt><dd><a href="https://www.w3.org/TR/dpub-aria-1.0/"><cite>Digital Publishing WAI-ARIA Module 1.0</cite></a>. Matt Garrish; Tzviya Siegman; Markus Gylling; Shane McCarron. W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/dpub-aria-1.0/">https://www.w3.org/TR/dpub-aria-1.0/</a>
 </dd><dt id="bib-RFC2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner. IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a>
 </dd></dl></section><section id="informative-references"><h3 id="b-2-informative-references"><span class="secno">B.2 </span>Informative references&nbsp;<span class="permalink"><a href="#informative-references" aria-label="Permalink for B.2 Informative references" title="Permalink for B.2 Informative references"><span>§</span></a></span></h3><dl class="bibliography"><dt id="bib-AT-SPI">[AT-SPI]</dt><dd><a href="https://developer.gnome.org/libatspi/stable/"><cite>Assistive Technology Service Provider Interface</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/libatspi/stable/">https://developer.gnome.org/libatspi/stable/</a>
 </dd><dt id="bib-ATK">[ATK]</dt><dd><a href="https://developer.gnome.org/atk/stable/"><cite>ATK - Accessibility Toolkit</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/atk/stable/">https://developer.gnome.org/atk/stable/</a>
-</dd><dt id="bib-AXAPI">[AXAPI]</dt><dd><a href="https://developer.apple.com/documentation/appkit/nsaccessibility"><cite>The NSAccessibility Protocol for macOS</cite></a>.  Apple, Inc. URL: <a href="https://developer.apple.com/documentation/appkit/nsaccessibility">https://developer.apple.com/documentation/appkit/nsaccessibility</a>
+</dd><dt id="bib-AXAPI">[AXAPI]</dt><dd><a href="https://developer.apple.com/library/content/documentation/Accessibility/Conceptual/AccessibilityMacOSX/index.html#//apple_ref/doc/uid/TP40001078"><cite>Accessibility Programming Guide for OS X</cite></a>.  Apple Corporation. URL: <a href="https://developer.apple.com/library/content/documentation/Accessibility/Conceptual/AccessibilityMacOSX/index.html#//apple_ref/doc/uid/TP40001078">https://developer.apple.com/library/content/documentation/Accessibility/Conceptual/AccessibilityMacOSX/index.html#//apple_ref/doc/uid/TP40001078</a>
 </dd><dt id="bib-IAccessible2">[IAccessible2]</dt><dd><a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2"><cite>IAccessible2</cite></a>.  Linux Foundation. URL: <a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2">https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2</a>
 </dd><dt id="bib-MSAA">[MSAA]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/ms697707.aspx"><cite>Microsoft Active Accessibility (MSAA) 2.0</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/ms697707.aspx">https://msdn.microsoft.com/en-us/library/ms697707.aspx</a>
 </dd><dt id="bib-UI-AUTOMATION">[UI-AUTOMATION]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx"><cite>UI Automation</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx">https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx</a>
