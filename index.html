@@ -89,7 +89,36 @@ input.task-list-item-checkbox {
 		
 		<script src="common/script/jquery-1.9.0.min.js"></script>
 		
-		<style id="respec-mainstyle">/*****************************************************************
+		
+		
+		
+		<link href="common/css/mapping-tables.css" rel="stylesheet" type="text/css">
+		<link href="common/css/common.css" rel="stylesheet" type="text/css">
+		<!--<link href="css/dpub-aam.css" rel="stylesheet" type="text/css"/>-->
+		
+		<script src="common/script/jquery.details.min.js"></script>
+		<script src="common/script/mapping-tables.js"></script>
+		<script type="text/javascript">
+
+var mappingTableLabels = {
+  viewByTable: "View as a single table",
+  expand: "Expand all",
+  collapse: "Collapse all",
+  showHideCols: "Show/Hide Columns:",
+  showActionText: "Show",
+  hideActionText: "Hide",
+  showToolTipText: "Show column",
+  hideToolTipText: "Hide column",
+
+  // map where keys are @id of associated mapping table:
+  viewByLabels: {
+    "role-mapping-table": "View by roles",
+    "state-property-mapping-table": "View by state/property",
+    "event-mapping-table": "View by state/property"
+  }
+}
+</script>
+	<style id="respec-mainstyle">/*****************************************************************
  * ReSpec 3 CSS
  * Robin Berjon - http://berjon.com/
  *****************************************************************/
@@ -362,42 +391,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-strong {
   font-weight: bold;
 }
-</style>
-		
-		
-		<link href="common/css/mapping-tables.css" rel="stylesheet" type="text/css">
-		<link href="common/css/common.css" rel="stylesheet" type="text/css">
-		<!--<link href="css/dpub-aam.css" rel="stylesheet" type="text/css"/>-->
-		
-		<script src="common/script/jquery.details.min.js"></script>
-		<script src="common/script/mapping-tables.js"></script>
-		<script type="text/javascript">
-
-var mappingTableLabels = {
-  viewByTable: "View as a single table",
-  expand: "Expand all",
-  collapse: "Collapse all",
-  showHideCols: "Show/Hide Columns:",
-  showActionText: "Show",
-  hideActionText: "Hide",
-  showToolTipText: "Show column",
-  hideToolTipText: "Hide column",
-
-  // map where keys are @id of associated mapping table:
-  viewByLabels: {
-    "role-mapping-table": "View by roles",
-    "state-property-mapping-table": "View by state/property",
-    "event-mapping-table": "View by state/property"
-  }
-}
-</script>
-	<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"><link rel="canonical" href="https://www.w3.org/TR/dpub-aam-1.0/"><script id="initialUserConfig" type="application/json">{
+</style><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"><link rel="canonical" href="https://www.w3.org/TR/dpub-aam-1.0/"><script id="initialUserConfig" type="application/json">{
   "includePermalinks": true,
   "specStatus": "ED",
   "diffTool": "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
   "shortName": "dpub-aam-1.0",
   "copyrightStart": "2015",
-  "edDraftURI": "http://w3c.github.io/dpub-aam/",
+  "edDraftURI": "https://w3c.github.io/dpub-aam/",
   "editors": [
     {
       "name": "Richard Schwerdtfeger",
@@ -416,33 +416,33 @@ var mappingTableLabels = {
     }
   ],
   "wg": "Accessible Rich Internet Applications Working Group",
-  "wgURI": "http://www.w3.org/WAI/ARIA/",
+  "wgURI": "https://www.w3.org/WAI/ARIA/",
   "wgPublicList": "public-dpub-aria-comments",
   "wgPatentURI": "https://www.w3.org/2004/01/pp-impl/83726/status",
   "tocIntroductory": true,
   "ariaSpecURLs": {
     "ED": "https://w3c.github.io/aria/",
-    "FPWD": "http://www.w3.org/TR/wai-aria-1.1/",
-    "WD": "http://www.w3.org/TR/wai-aria-1.1/",
-    "REC": "http://www.w3.org/TR/wai-aria/"
+    "FPWD": "https://www.w3.org/TR/wai-aria-1.1/",
+    "WD": "https://www.w3.org/TR/wai-aria-1.1/",
+    "REC": "https://www.w3.org/TR/wai-aria-1.1/"
   },
   "accNameURLs": {
-    "ED": "http://w3c.github.io/accname/",
-    "WD": "http://www.w3.org/TR/accname-aam-1.1/",
-    "FPWD": "http://www.w3.org/TR/accname-aam-1.1/",
-    "REC": "http://www.w3.org/TR/accname-aam/"
+    "ED": "https://w3c.github.io/accname/",
+    "WD": "https://www.w3.org/TR/accname-aam-1.1/",
+    "FPWD": "https://www.w3.org/TR/accname-aam-1.1/",
+    "REC": "https://www.w3.org/TR/accname-aam-1.1/"
   },
   "coreMappingURLs": {
-    "ED": "http://w3c.github.io/core-aam/",
-    "WD": "http://www.w3.org/TR/core-aam-1.1/",
-    "FPWD": "http://www.w3.org/TR/core-aam-1.1/",
-    "REC": "http://www.w3.org/TR/wai-aria-implementation/"
+    "ED": "https://w3c.github.io/core-aam/",
+    "WD": "https://www.w3.org/TR/core-aam-1.1/",
+    "FPWD": "https://www.w3.org/TR/core-aam-1.1/",
+    "REC": "https://www.w3.org/TR/core-aam-1.1/"
   },
   "dpubModURLs": {
-    "ED": "http://w3c.github.io/dpub-aria/",
-    "FPWD": "http://www.w3.org/TR/dpub-aria-1.0/",
-    "WD": "http://www.w3.org/TR/dpub-aria-1.0/",
-    "REC": "http://www.w3.org/TR/dpub-aria/"
+    "ED": "https://w3c.github.io/dpub-aria/",
+    "FPWD": "https://www.w3.org/TR/dpub-aria-1.0/",
+    "WD": "https://www.w3.org/TR/dpub-aria-1.0/",
+    "REC": "https://www.w3.org/TR/dpub-aria-1.0/"
   },
   "localBiblio": {
     "ACCNAME-AAM": {
@@ -710,24 +710,24 @@ var mappingTableLabels = {
   "preProcess": [
     null
   ],
-  "publishDate": "2018-01-09",
-  "publishISODate": "2018-01-09T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 09 January 2018"
+  "publishDate": "2018-01-11",
+  "publishISODate": "2018-01-11T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 11 January 2018"
 }</script></head>
-	<body aria-busy="false" class="h-entry toc-inline" style="zoom: 1;"><div class="head">
+	<body aria-busy="false" style="zoom: 1;" class="h-entry toc-inline"><div class="head">
     <p>
       <a class="logo" href="https://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
     </p>
-  <p><!--_hyper: -1008615938;--></p>
+  <p><!--_hyper: -512721734;--></p>
   <h1 class="title p-name" id="title">Digital Publishing Accessibility <abbr title="application programming interface">API</abbr> Mappings</h1>
-  <h2 id="w3c-editor-s-draft-09-january-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-01-09">09 January 2018</time>&nbsp;<span class="permalink"><a href="#undefined" aria-label="Permalink for W3C Editor's Draft 09 January 2018" title="Permalink for W3C Editor's Draft 09 January 2018"><span>§</span></a></span></h2>
+  <h2 id="w3c-editor-s-draft-11-january-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-01-11">11 January 2018</time>&nbsp;<span class="permalink"><a href="#undefined" aria-label="Permalink for W3C Editor's Draft 11 January 2018" title="Permalink for W3C Editor's Draft 11 January 2018"><span>§</span></a></span></h2>
   <dl>
       <dt>This version:</dt>
-      <dd><a class="u-url" href="http://w3c.github.io/dpub-aam/">http://w3c.github.io/dpub-aam/</a></dd>
+      <dd><a class="u-url" href="https://w3c.github.io/dpub-aam/">https://w3c.github.io/dpub-aam/</a></dd>
       <dt>Latest published version:</dt>
       <dd><a href="https://www.w3.org/TR/dpub-aam-1.0/">https://www.w3.org/TR/dpub-aam-1.0/</a></dd>
       <dt>Latest editor's draft:</dt>
-      <dd><a href="http://w3c.github.io/dpub-aam/">http://w3c.github.io/dpub-aam/</a></dd>
+      <dd><a href="https://w3c.github.io/dpub-aam/">https://w3c.github.io/dpub-aam/</a></dd>
     <dt>Editors:</dt>
     <dd class="p-author h-card vcard" data-editor-id="2460"><span class="p-name fn">Richard Schwerdtfeger</span>, Knowbility, <span class="ed_mailto"><a class="u-email email" href="mailto:richschwer@gmail.com">richschwer@gmail.com</a></span></dd>
 <dd class="p-author h-card vcard" data-editor-id="68182"><a class="u-url url p-name fn" href="https://www.igalia.com">Joanmarie Diggs</a>, Igalia, S.L., <span class="ed_mailto"><a class="u-email email" href="mailto:jdiggs@igalia.com">jdiggs@igalia.com</a></span></dd>
@@ -779,7 +779,7 @@ var mappingTableLabels = {
       </p>
          
         <p>
-          This document was published by the <a href="http://www.w3.org/WAI/ARIA/">Accessible Rich Internet Applications Working Group</a> as an Editor's Draft.
+          This document was published by the <a href="https://www.w3.org/WAI/ARIA/">Accessible Rich Internet Applications Working Group</a> as an Editor's Draft.
             Comments regarding this document are welcome. Please send them to
             <a href="mailto:public-dpub-aria-comments@w3.org">public-dpub-aria-comments@w3.org</a>
             (<a href="mailto:public-dpub-aria-comments-request@w3.org?subject=subscribe">subscribe</a>,
@@ -975,29 +975,29 @@ var mappingTableLabels = {
 		</section>
 		<section class="section" id="keyboard-focus">
 			<!--OddPage--><h2 id="x4-supporting-keyboard-navigation"><span class="secno">4. </span>Supporting Keyboard Navigation&nbsp;<span class="permalink"><a href="#keyboard-focus" aria-label="Permalink for 4. Supporting Keyboard Navigation" title="Permalink for 4. Supporting Keyboard Navigation"><span>§</span></a></span></h2>
-			<p>Enabling keyboard navigation in web applications is a necessary step toward making accessible web applications possible. Conforming <a class="termref internalDFN" href="#dfn-user-agent" data-link-type="dfn">user agents</a> <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="http://w3c.github.io/core-aam/#keyboard-focus">Supporting Keyboard Navigation</a> requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+			<p>Enabling keyboard navigation in web applications is a necessary step toward making accessible web applications possible. Conforming <a class="termref internalDFN" href="#dfn-user-agent" data-link-type="dfn">user agents</a> <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="https://w3c.github.io/core-aam/#keyboard-focus">Supporting Keyboard Navigation</a> requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 		</section>
 		<section id="mapping">
 			<!--OddPage--><h2 id="x5-mapping-wai-aria-to-accessibility-apis"><span class="secno">5. </span>Mapping <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> to Accessibility <abbr title="Application Programming Interfaces">APIs</abbr>&nbsp;<span class="permalink"><a href="#mapping" aria-label="Permalink for 5. Mapping WAI-ARIA to Accessibility APIs" title="Permalink for 5. Mapping WAI-ARIA to Accessibility APIs"><span>§</span></a></span></h2>
 			<section id="mapping_general">
 				<h3 id="x5-1-general-rules-for-exposing-wai-aria-semantics"><span class="secno">5.1 </span>General rules for exposing <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> semantics&nbsp;<span class="permalink"><a href="#mapping_general" aria-label="Permalink for 5.1 General rules for exposing WAI-ARIA semantics" title="Permalink for 5.1 General rules for exposing WAI-ARIA semantics"><span>§</span></a></span></h3>
-				<p>This section <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="http://w3c.github.io/core-aam/#mapping_general">General rules for exposing <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> semantics</a> in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+				<p>This section <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="https://w3c.github.io/core-aam/#mapping_general">General rules for exposing <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> semantics</a> in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 			</section>
 		</section>
 		<section id="mapping_conflicts">
 			<!--OddPage--><h2 id="x6-conflicts-between-native-markup-semantics-and-wai-aria"><span class="secno">6. </span>Conflicts between native markup semantics and <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr>&nbsp;<span class="permalink"><a href="#mapping_conflicts" aria-label="Permalink for 6. Conflicts between native markup semantics and WAI-ARIA" title="Permalink for 6. Conflicts between native markup semantics and WAI-ARIA"><span>§</span></a></span></h2>
-			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="http://w3c.github.io/core-aam/#mapping_conflicts">Conflicts between native markup semantics and <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr></a> in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>]. </p>
+			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="https://w3c.github.io/core-aam/#mapping_conflicts">Conflicts between native markup semantics and <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr></a> in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>]. </p>
 		</section>
 		<section id="mapping_nodirect">
 			<!--OddPage--><h2 id="x7-exposing-attributes-that-do-not-directly-map-to-accessibility-api-properties"><span class="secno">7. </span>Exposing attributes that do not directly map to accessibility <abbr title="application programming interface">API</abbr> properties&nbsp;<span class="permalink"><a href="#mapping_nodirect" aria-label="Permalink for 7. Exposing attributes that do not directly map to accessibility API properties" title="Permalink for 7. Exposing attributes that do not directly map to accessibility API properties"><span>§</span></a></span></h2>
-			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="http://w3c.github.io/core-aam/#mapping_nodirect">Exposing attributes that do not directly map to accessibility <abbr title="application programming interface">API</abbr> properties</a> in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="https://w3c.github.io/core-aam/#mapping_nodirect">Exposing attributes that do not directly map to accessibility <abbr title="application programming interface">API</abbr> properties</a> in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 		</section>
 		<section id="mapping_role">
 			<!--OddPage--><h2 id="x8-role-mapping"><span class="secno">8. </span>Role mapping&nbsp;<span class="permalink"><a href="#mapping_role" aria-label="Permalink for 8. Role mapping" title="Permalink for 8. Role mapping"><span>§</span></a></span></h2>
 			<p>Platform <a class="termref internalDFN" href="#dfn-accessibility-api" data-link-type="dfn">accessibility <abbr title="Application Programming Interfaces">APIs</abbr></a> traditionally have had a finite set of predefined <a class="termref internalDFN" href="#dfn-role" data-link-type="dfn">roles</a> that are expected by <a class="termref internalDFN" href="#dfn-assistive-technology" data-link-type="dfn">assistive technologies</a> on that platform and only one or two roles may be exposed. In contrast, <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> allows multiple roles to be specified as an ordered set of space-separated valid role tokens. The additional roles are fallback roles similar to the concept of specifying multiple fonts in case the first choice font type is not supported.</p>
 			<section id="roleMappingGeneralRules">
 				<h3 id="x8-1-general-rules"><span class="secno">8.1 </span>General Rules&nbsp;<span class="permalink"><a href="#roleMappingGeneralRules" aria-label="Permalink for 8.1 General Rules" title="Permalink for 8.1 General Rules"><span>§</span></a></span></h3>
-				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the Role Mapping <a class="core-mapping" href="http://w3c.github.io/core-aam/#roleMappingGeneralRules">General Rules</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the Role Mapping <a class="core-mapping" href="https://w3c.github.io/core-aam/#roleMappingGeneralRules">General Rules</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 			</section>
 			<section id="mapping_role_table">
 				<h3 id="x8-2-role-mapping-table"><span class="secno">8.2 </span>Role Mapping Table&nbsp;<span class="permalink"><a href="#mapping_role_table" aria-label="Permalink for 8.2 Role Mapping Table" title="Permalink for 8.2 Role Mapping Table"><span>§</span></a></span></h3>
@@ -1019,7 +1019,7 @@ var mappingTableLabels = {
 						</thead>
 						<tbody>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-abstract"><code>doc-abstract</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-abstract"><code>doc-abstract</code></a></th>
                                                                 <td>
 									Expose IAccessible2: 
 									<ul>
@@ -1040,7 +1040,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                        <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-acknowledgments"><code>doc-acknowledgments</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-acknowledgments"><code>doc-acknowledgments</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1063,7 +1063,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
 							<tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-afterword"><code>doc-afterword</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-afterword"><code>doc-afterword</code></a></th>
 								<td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1087,7 +1087,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-appendix"><code>doc-appendix</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-appendix"><code>doc-appendix</code></a></th>
 								<td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1111,7 +1111,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-backlink"><code>doc-backlink</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-backlink"><code>doc-backlink</code></a></th>
                                                                 <td>
 								 	Expose
 										<ul>
@@ -1139,7 +1139,7 @@ var mappingTableLabels = {
                                                         </tr>
 
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-biblioentry"><code>doc-biblioentry</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-biblioentry"><code>doc-biblioentry</code></a></th>
                                                                 <td>
 									Expose
 									<p><code>ROLE_SYSTEM_LISTITEM</code> + <code>STATE_SYSTEM_READONLY</code></p>
@@ -1157,7 +1157,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-biblioentry"><code>doc-bibliography</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-biblioentry"><code>doc-bibliography</code></a></th>
 								<td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1180,7 +1180,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-biblioref"><code>doc-biblioref</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-biblioref"><code>doc-biblioref</code></a></th>
 								<td>
                                                                         Expose
                                                                                 <ul>
@@ -1207,7 +1207,7 @@ var mappingTableLabels = {
                                                         </tr>
 
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-chapter"><code>doc-chapter</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-chapter"><code>doc-chapter</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1230,7 +1230,7 @@ var mappingTableLabels = {
                                                                 </td>
 							</tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-colophon"><code>doc-colophon</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-colophon"><code>doc-colophon</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2: Object attribute <code>xml-roles:doc-colophon</code>. </p></td>
                                                                 <td>
                                                                   <ul>
@@ -1246,7 +1246,7 @@ var mappingTableLabels = {
 
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-conclusion"><code>doc-conclusion</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-conclusion"><code>doc-conclusion</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1269,7 +1269,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-cover"><code>doc-cover</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-cover</code></a></th>
                                                                 <td>Expose <p><code>ROLE_SYSTEM_GRAPHIC</code></p>  
 								<p>IAccessible2: Object attribute <code>xml-roles:doc-cover</code>. </p>
 								</td>
@@ -1284,7 +1284,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-cover"><code>doc-credit</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-credit</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-credit</code></td>
                                                                 <td>
                                                                   <ul>
@@ -1299,7 +1299,7 @@ var mappingTableLabels = {
 								</td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-credits"><code>doc-credits</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-credits"><code>doc-credits</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1322,7 +1322,7 @@ var mappingTableLabels = {
 								</td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-dedication"><code>doc-dedication</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-dedication"><code>doc-dedication</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-dedication</code></td>
                                                                 <td>
                                                                   <ul>
@@ -1337,7 +1337,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-endnote"><code>doc-endnote</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-endnote"><code>doc-endnote</code></a></th>
                                                                 <td>
                                                                         Expose
                                                                         <p><code>ROLE_SYSTEM_LISTITEM</code> + <code>STATE_SYSTEM_READONLY</code></p>
@@ -1355,7 +1355,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-endnote"><code>doc-endnotes</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-endnote"><code>doc-endnotes</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1380,7 +1380,7 @@ var mappingTableLabels = {
                                                         </tr>
 
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-epigraph"><code>doc-epigraph</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-epigraph"><code>doc-epigraph</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-epigraph</code></td>
                                                                 <td>
                                                                   <ul>
@@ -1395,7 +1395,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-epilogue"><code>doc-epilogue</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-epilogue"><code>doc-epilogue</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1419,7 +1419,7 @@ var mappingTableLabels = {
 
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-cover"><code>doc-errata</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-errata</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1442,7 +1442,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-cover"><code>doc-example</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-example</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-example</code></td>
                                                                 <td>
                                                                   <ul>
@@ -1457,7 +1457,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-footnote"><code>doc-footnote</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-footnote"><code>doc-footnote</code></a></th>
                                                                 <td><p>Expose IAccessible2:</p>
 									<ul>
 										<li><code>IA2_ROLE_FOOTNOTE</code></li>
@@ -1477,7 +1477,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-foreword"><code>doc-foreword</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-foreword"><code>doc-foreword</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1500,7 +1500,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-glossary"><code>doc-glossary</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-glossary"><code>doc-glossary</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1523,7 +1523,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-glossref"><code>doc-glossref</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-glossref"><code>doc-glossref</code></a></th>
 								<td>
                                                                         Expose
                                                                                 <ul>
@@ -1550,7 +1550,7 @@ var mappingTableLabels = {
 
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-index"><code>doc-index</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-index"><code>doc-index</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1573,7 +1573,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-introduction"><code>doc-introduction</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-introduction"><code>doc-introduction</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1597,7 +1597,7 @@ var mappingTableLabels = {
 
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-noteref"><code>doc-noteref</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-noteref"><code>doc-noteref</code></a></th>
                                                                 <td>
                                                                         Expose
                                                                                 <ul>
@@ -1624,7 +1624,7 @@ var mappingTableLabels = {
 
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-notice"><code>doc-notice</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-notice"><code>doc-notice</code></a></th>
                                                                 <td>Expose
 								    <p><code>IA2_ROLE_NOTE</code></p>
 								    <p> IAccessible2:</p> Object attribute <code>xml-roles:doc-notice</code>.</td>
@@ -1641,7 +1641,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-pagebreak"><code>doc-pagebreak</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pagebreak"><code>doc-pagebreak</code></a></th>
                                                                 <td>Expose <p><code>ROLE_SYSTEM_SEPARATOR</code></p> 
 								<p>IAccessible2:</p>
 								Object attribute <code>xml-roles:doc-pagebreak</code>.
@@ -1659,7 +1659,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-pagelist"><code>doc-pagelist</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pagelist"><code>doc-pagelist</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1682,7 +1682,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-part"><code>doc-part</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-part"><code>doc-part</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1705,7 +1705,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                         <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-preface"><code>doc-preface</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-preface"><code>doc-preface</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1728,7 +1728,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                          <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-prologue"><code>doc-prologue</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-prologue"><code>doc-prologue</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1751,7 +1751,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                          <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-pullquote"><code>doc-pullquote</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pullquote"><code>doc-pullquote</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1772,7 +1772,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                          <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-preface"><code>doc-qna</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-preface"><code>doc-qna</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-qna</code></td>
                                                                 <td>
                                                                   <ul>
@@ -1787,7 +1787,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                          <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-preface"><code>doc-subtitle</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-preface"><code>doc-subtitle</code></a></th>
                                                                 <td>Expose IAccessible2:
 									<ul>
 									 	<li><code>IA2_ROLE_HEADING</code></li>
@@ -1807,7 +1807,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
                                                          <tr>
-                                                                <th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-tip"><code>doc-tip</code></a></th>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-tip"><code>doc-tip</code></a></th>
                                                                 <td>
 									Expose
 									<p><code>IA2_ROLE_NOTE</code></p>
@@ -1827,7 +1827,7 @@ var mappingTableLabels = {
                                                                 </td>
                                                         </tr>
 							<tr>
-								<th><a class="dpub-role-reference" href="http://w3c.github.io/dpub-aria/#doc-toc"><code>doc-toc</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-toc"><code>doc-toc</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
                                                                         <ul>
@@ -1861,31 +1861,31 @@ var mappingTableLabels = {
 			<!--OddPage--><h2 id="x9-state-and-property-mapping"><span class="secno">9. </span>State and Property Mapping&nbsp;<span class="permalink"><a href="#mapping_state-property" aria-label="Permalink for 9. State and Property Mapping" title="Permalink for 9. State and Property Mapping"><span>§</span></a></span></h2>
 			<p>This section describes how to expose <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
 				<a class="termref internalDFN" href="#dfn-state" data-link-type="dfn">states</a> and <a class="termref internalDFN" href="#dfn-object" data-link-type="dfn">object</a>
-				<a class="termref internalDFN" href="#dfn-property" data-link-type="dfn">properties</a>. User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/core-aam/#mapping_state-property" class="core-mapping">State and Property Mapping</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>]. </p>
+				<a class="termref internalDFN" href="#dfn-property" data-link-type="dfn">properties</a>. User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="https://w3c.github.io/core-aam/#mapping_state-property" class="core-mapping">State and Property Mapping</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>]. </p>
 		</section>
 		<section id="mapping_additional">
 			<!--OddPage--><h2 id="x10-special-processing-requiring-additional-computation"><span class="secno">10. </span>Special Processing Requiring Additional Computation&nbsp;<span class="permalink"><a href="#mapping_additional" aria-label="Permalink for 10. Special Processing Requiring Additional Computation" title="Permalink for 10. Special Processing Requiring Additional Computation"><span>§</span></a></span></h2>
 			<section id="mapping_additional_nd">
 				<h3 id="x10-1-name-and-description"><span class="secno">10.1 </span>Name and Description&nbsp;<span class="permalink"><a href="#mapping_additional_nd" aria-label="Permalink for 10.1 Name and Description" title="Permalink for 10.1 Name and Description"><span>§</span></a></span></h3>
-				<p>When computing an <a class="termref internalDFN" href="#dfn-accessible-name" data-link-type="dfn">accessible name</a> or <a class="termref internalDFN" href="#dfn-accessible-description" data-link-type="dfn">accessible description</a>, <a class="termref internalDFN" href="#dfn-user-agent" data-link-type="dfn">user agents</a> <em class="rfc2119" title="MUST">MUST</em> conform to the section titled <a class="accname" href="http://w3c.github.io/accname/#mapping_additional_nd_te">Text Alternative Computation</a> of the [<cite><a class="bibref" href="#bib-ACCNAME-AAM-1.1">ACCNAME-AAM-1.1</a></cite>] specification. 
+				<p>When computing an <a class="termref internalDFN" href="#dfn-accessible-name" data-link-type="dfn">accessible name</a> or <a class="termref internalDFN" href="#dfn-accessible-description" data-link-type="dfn">accessible description</a>, <a class="termref internalDFN" href="#dfn-user-agent" data-link-type="dfn">user agents</a> <em class="rfc2119" title="MUST">MUST</em> conform to the section titled <a class="accname" href="https://w3c.github.io/accname/#mapping_additional_nd_te">Text Alternative Computation</a> of the [<cite><a class="bibref" href="#bib-ACCNAME-AAM-1.1">ACCNAME-AAM-1.1</a></cite>] specification. 
 				</p>
 			</section>
 			<section id="mapping_additional_widget-value">
 				<h3 id="x10-2-widget-values"><span class="secno">10.2 </span>Widget Values&nbsp;<span class="permalink"><a href="#mapping_additional_widget-value" aria-label="Permalink for 10.2 Widget Values" title="Permalink for 10.2 Widget Values"><span>§</span></a></span></h3>
-				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/core-aam/#mapping_additional_widget-value" class="core-mapping">Widget Values</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="https://w3c.github.io/core-aam/#mapping_additional_widget-value" class="core-mapping">Widget Values</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 			</section>
 			<section id="mapping_additional_relations">
 				<h3 id="x10-3-relations"><span class="secno">10.3 </span>Relations&nbsp;<span class="permalink"><a href="#mapping_additional_relations" aria-label="Permalink for 10.3 Relations" title="Permalink for 10.3 Relations"><span>§</span></a></span></h3>
-				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/core-aam/#mapping_additional_relations" class="core-mapping">Relation</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="https://w3c.github.io/core-aam/#mapping_additional_relations" class="core-mapping">Relation</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 			</section>
 			<section id="mapping_additional_position">
 				<h3 id="x10-4-group-position"><span class="secno">10.4 </span>Group Position&nbsp;<span class="permalink"><a href="#mapping_additional_position" aria-label="Permalink for 10.4 Group Position" title="Permalink for 10.4 Group Position"><span>§</span></a></span></h3>
-				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/core-aam/#mapping_additional_position" class="core-mapping">Group Position</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="https://w3c.github.io/core-aam/#mapping_additional_position" class="core-mapping">Group Position</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 			</section>
 		</section>
 		<section id="mapping_actions">
 			<!--OddPage--><h2 id="x11-actions"><span class="secno">11. </span>Actions&nbsp;<span class="permalink"><a href="#mapping_actions" aria-label="Permalink for 11. Actions" title="Permalink for 11. Actions"><span>§</span></a></span></h2>
-			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/core-aam/#mapping_actions" class="core-mapping">Actions</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="https://w3c.github.io/core-aam/#mapping_actions" class="core-mapping">Actions</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 		</section>
 		<section id="mapping_events">
 			<!--OddPage--><h2 id="x12-events"><span class="secno">12. </span>Events&nbsp;<span class="permalink"><a href="#mapping_events" aria-label="Permalink for 12. Events" title="Permalink for 12. Events"><span>§</span></a></span></h2>
@@ -1894,7 +1894,7 @@ var mappingTableLabels = {
 		</section>
 		<section id="document-handling">
 			<!--OddPage--><h2 id="x13-special-document-handling-procedures"><span class="secno">13. </span>Special Document Handling Procedures&nbsp;<span class="permalink"><a href="#document-handling" aria-label="Permalink for 13. Special Document Handling Procedures" title="Permalink for 13. Special Document Handling Procedures"><span>§</span></a></span></h2>
-			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="http://w3c.github.io/core-aam/#document-handling" class="core-mapping">Special Document Handling Procedures</a> in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
+			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="https://w3c.github.io/core-aam/#document-handling" class="core-mapping">Special Document Handling Procedures</a> in [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>].</p>
 		</section>
 		<section id="appendices" class="appendix">
 			<!--OddPage--><h2 id="a-appendices"><span class="secno">A. </span>Appendices&nbsp;<span class="permalink"><a href="#appendices" aria-label="Permalink for A. Appendices" title="Permalink for A. Appendices"><span>§</span></a></span></h2>
