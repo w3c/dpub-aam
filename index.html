@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><meta name="generator" content="ReSpec 22.3.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><meta name="generator" content="ReSpec 23.8.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -32,6 +32,10 @@ span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
     border-color: #e05252;
     background: #fbe9e9;
 }
+.issue.closed span.issue-number {
+    text-decoration: line-through;
+}
+
 .note, .ednote {
     border-color: #52e052;
     background: #e9fbe9;
@@ -83,28 +87,6 @@ input.task-list-item-checkbox {
 .issue a.respec-label-light {
   color: #000;
   background-color: #fff;
-}
-</style><style>/* --- PERMALINKS --- */
-
-.permalink {
-  width: 1px;
-  height: 1px;
-  overflow: visible;
-  font-size: 10pt;
-  font-style: normal;
-  vertical-align: middle;
-  margin-left: 4px;
-}
-
-.permalink a, .permalink a:link, .permalink a:visited, .permalink a:hover, .permalink a:focus, .permalink a:active {
-  background:transparent !important;
-  text-decoration:none;
-  font-weight: bold;
-  color:#666 !important;
-}
-
-.permalink abbr {
-  border:0;
 }
 </style>
 		<title>Digital Publishing Accessibility API Mappings</title>
@@ -251,11 +233,11 @@ table.simple {
 
 /* --- DL --- */
 
-.section dd > p:first-child {
+.section dd>p:first-child {
   margin-top: 0;
 }
 
-.section dd > p:last-child {
+.section dd>p:last-child {
   margin-bottom: 0;
 }
 
@@ -268,7 +250,7 @@ table.simple {
   margin-bottom: 0;
 }
 
-#issue-summary > ul,
+#issue-summary>ul,
 .respec-dfn-list {
   column-count: 2;
 }
@@ -284,7 +266,7 @@ details.respec-tests-details {
   vertical-align: top;
 }
 
-details.respec-tests-details > * {
+details.respec-tests-details>* {
   padding-right: 2em;
 }
 
@@ -297,20 +279,82 @@ details.respec-tests-details[open] {
   padding-bottom: 0.5em;
 }
 
-details.respec-tests-details[open] > summary {
+details.respec-tests-details[open]>summary {
   border-bottom: thin solid #cad3e2;
   padding-left: 1em;
   margin-bottom: 1em;
   line-height: 2em;
 }
 
-details.respec-tests-details > ul {
+details.respec-tests-details>ul {
   width: 100%;
   margin-top: -0.3em;
 }
 
-details.respec-tests-details > li {
+details.respec-tests-details>li {
   padding-left: 1em;
+}
+
+a[href].self-link:hover {
+  opacity: 1;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
+aside.example .marker > a.self-link {
+  color: inherit;
+}
+
+h2>a.self-link,
+h3>a.self-link,
+h4>a.self-link,
+h5>a.self-link,
+h6>a.self-link {
+  border: none;
+  color: inherit;
+  font-size: 83%;
+  height: 2em;
+  left: -1.6em;
+  opacity: .5;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  transition: opacity .2s;
+  width: 2em;
+}
+
+h2>a.self-link::before,
+h3>a.self-link::before,
+h4>a.self-link::before,
+h5>a.self-link::before,
+h6>a.self-link::before {
+  content: "§";
+  display: block;
+}
+
+@media (max-width: 767px) {
+  dd {
+    margin-left: 0;
+  }
+
+  /* Don't position self-link in headings off-screen */
+  h2>a.self-link,
+  h3>a.self-link,
+  h4>a.self-link,
+  h5>a.self-link,
+  h6>a.self-link {
+    left: auto;
+    top: auto;
+  }
 }
 
 @media print {
@@ -412,9 +456,9 @@ details.respec-tests-details > li {
   "preProcess": [
     null
   ],
-  "publishDate": "2018-07-19",
-  "publishISODate": "2018-07-19T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 19 July 2018"
+  "publishDate": "2018-12-21",
+  "publishISODate": "2018-12-21T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 21 December 2018"
 }</script><meta name="description" content="The Digital Publishing Accessibility API Mappings (DPub-AAM) defines how
     user agents map
     the Digital Publishing WAI-ARIA Module [dpub-aria-1.0] markup
@@ -422,47 +466,57 @@ details.respec-tests-details > li {
     It is intended for user agent developers
     responsible for accessibility in their user agent so that they can support the accessibility content produced for digital publishing."></head>
 	<body style="zoom: 1;" class="h-entry toc-inline"><div class="head">
-  <a href="https://www.w3.org/" class="logo">
-      <img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C">
-  </a>
-  <h1 id="title" class="title p-name">Digital Publishing Accessibility <abbr title="application programming interface">API</abbr> Mappings</h1>
-  
-  <h2 id="w3c-editor-s-draft-19-july-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-07-19">19 July 2018</time></h2>
-  <dl>
-    <dt>This version:</dt><dd><a class="u-url" href="https://w3c.github.io/dpub-aam/">https://w3c.github.io/dpub-aam/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/dpub-aam-1.0/">https://www.w3.org/TR/dpub-aam-1.0/</a></dd>
-    <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/dpub-aam/">https://w3c.github.io/dpub-aam/</a></dd>
-    
-    
-    
-    
-    
-    
-    <dt>Editors:</dt>
-    <dd class="p-author h-card vcard" data-editor-id="2460"><a class="ed_mailto u-email email p-name" href="mailto:richschwer@gmail.com">Richard Schwerdtfeger</a> (Knowbility)</dd><dd class="p-author h-card vcard" data-editor-id="68182"><a class="ed_mailto u-email email p-name" href="mailto:jdiggs@igalia.com">Joanmarie Diggs</a> (Igalia, S.L.)</dd>
-    
-    
-    
-  </dl>
-  
-  
-  
-  <p class="copyright">
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> ©
-        2015-2018
+      <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Digital Publishing Accessibility <abbr title="application programming interface">API</abbr> Mappings</h1>
+      
+      <h2>
+        <abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft
+        <time class="dt-published" datetime="2018-12-21">21 December 2018</time>
+      </h2>
+      <dl>
+        <dt>This version:</dt><dd>
+                  <a class="u-url" href="https://w3c.github.io/dpub-aam/">https://w3c.github.io/dpub-aam/</a>
+                </dd><dt>Latest published version:</dt><dd>
+                  <a href="https://www.w3.org/TR/dpub-aam-1.0/">https://www.w3.org/TR/dpub-aam-1.0/</a>
+                </dd>
+        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/dpub-aam/">https://w3c.github.io/dpub-aam/</a></dd>
         
-        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup>
-        (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-        <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
-        <a href="https://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>).
         
-        <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
-        <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
-        rules apply.
-      </p>
-  <hr title="Separator for header">
-</div>
-		<section id="abstract" class="introductory"><!--OddPage--><h2 id="abstract-0">Abstract</h2>
+        
+        
+        
+        
+        <dt>Editors:</dt>
+        <dd class="p-author h-card vcard" data-editor-id="2460"><a class="ed_mailto u-email email p-name" href="mailto:richschwer@gmail.com">Richard Schwerdtfeger</a>
+            (Knowbility)
+          </dd><dd class="p-author h-card vcard" data-editor-id="68182"><a class="ed_mailto u-email email p-name" href="mailto:jdiggs@igalia.com">Joanmarie Diggs</a>
+            (Igalia, S.L.)
+          </dd>
+        
+        
+        
+      </dl>
+      
+      
+      
+      <p class="copyright">
+                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+                        ©
+                        2015-2018
+                        
+                        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+                        <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+                        <a href="http://ev.buaa.edu.cn/">Beihang</a>).
+                        
+                        <abbr title="World Wide Web Consortium">W3C</abbr>
+                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>
+                        and
+                        <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
+                        rules apply.
+                      </p>
+      <hr title="Separator for header">
+    </div>
+		<section id="abstract" class="introductory"><!--OddPage--><h2>Abstract</h2>
   <p>
     The Digital Publishing Accessibility <abbr title="application programming interface">API</abbr> Mappings (DPub-AAM) defines how
     <a class="termref internalDFN" href="#dfn-user-agent" data-link-type="dfn">user agents</a> map
@@ -487,70 +541,79 @@ details.respec-tests-details > li {
   </p>
 
 		</section>
-		<section id="sotd" class="introductory"><!--OddPage--><h2 id="status-of-this-document">Status of This Document</h2><p>
-        <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em>
-      </p><p>
-          This document was published by the <a href="https://www.w3.org/WAI/ARIA/">Accessible Rich Internet Applications Working Group</a> as an Editor's Draft.
-          
-          
-            Comments regarding this document are welcome. Please send them to
-            <a href="mailto:public-dpub-aria-comments@w3.org">public-dpub-aria-comments@w3.org</a>
-            (<a href="mailto:public-dpub-aria-comments-request@w3.org?subject=subscribe">subscribe</a>,
-            <a href="https://lists.w3.org/Archives/Public/public-dpub-aria-comments/">archives</a>).
-          
-          
-          
-          
-        </p><p>
-            Publication as an Editor's Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr>
-            Membership. This is a draft document and may be updated, replaced or obsoleted by other
-            documents at any time. It is inappropriate to cite this document as other than work in
-            progress.
-          </p><p>
-          
-            This document was produced by
-            a group
-            operating under the
-            <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-          
-          
-          
-              <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/83726/status">public list of any patent
-              disclosures</a>
-            made in connection with the deliverables of
-            the group; that page also includes
-            instructions for disclosing a patent. An individual who has actual knowledge of a patent
-            which the individual believes contains
-            <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential
-            Claim(s)</a> must disclose the information in accordance with
-            <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section
-            6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-          
-          
-        </p><p>This document is governed by the <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-        </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a href="#abstract" class="tocxref">Abstract</a></li><li class="tocline"><a href="#sotd" class="tocxref">Status of This Document</a></li><li class="tocline"><a href="#intro" class="tocxref"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a href="#conformance" class="tocxref"><span class="secno">2. </span>Conformance</a></li><li class="tocline"><a href="#glossary" class="tocxref"><span class="secno">3. </span>Important Terms</a></li><li class="tocline"><a href="#keyboard-focus" class="tocxref"><span class="secno">4. </span>Supporting Keyboard Navigation</a></li><li class="tocline"><a href="#mapping" class="tocxref"><span class="secno">5. </span>Mapping <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> to Accessibility <abbr title="Application Programming Interfaces">APIs</abbr></a><ol class="toc"><li class="tocline"><a href="#mapping_general" class="tocxref"><span class="secno">5.1 </span>General rules for exposing <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> semantics</a></li></ol></li><li class="tocline"><a href="#mapping_conflicts" class="tocxref"><span class="secno">6. </span>Conflicts between native markup semantics and <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr></a></li><li class="tocline"><a href="#mapping_nodirect" class="tocxref"><span class="secno">7. </span>Exposing attributes that do not directly map to accessibility <abbr title="application programming interface">API</abbr> properties</a></li><li class="tocline"><a href="#mapping_role" class="tocxref"><span class="secno">8. </span>Role mapping</a><ol class="toc"><li class="tocline"><a href="#roleMappingGeneralRules" class="tocxref"><span class="secno">8.1 </span>General Rules</a></li><li class="tocline"><a href="#mapping_role_table" class="tocxref"><span class="secno">8.2 </span>Role Mapping Table</a></li></ol></li><li class="tocline"><a href="#mapping_state-property" class="tocxref"><span class="secno">9. </span>State and Property Mapping</a></li><li class="tocline"><a href="#mapping_additional" class="tocxref"><span class="secno">10. </span>Special Processing Requiring Additional Computation</a><ol class="toc"><li class="tocline"><a href="#mapping_additional_nd" class="tocxref"><span class="secno">10.1 </span>Name and Description</a></li><li class="tocline"><a href="#mapping_additional_widget-value" class="tocxref"><span class="secno">10.2 </span>Widget Values</a></li><li class="tocline"><a href="#mapping_additional_relations" class="tocxref"><span class="secno">10.3 </span>Relations</a></li><li class="tocline"><a href="#mapping_additional_position" class="tocxref"><span class="secno">10.4 </span>Group Position</a></li></ol></li><li class="tocline"><a href="#mapping_actions" class="tocxref"><span class="secno">11. </span>Actions</a></li><li class="tocline"><a href="#mapping_events" class="tocxref"><span class="secno">12. </span>Events</a></li><li class="tocline"><a href="#document-handling" class="tocxref"><span class="secno">13. </span>Special Document Handling Procedures</a></li><li class="tocline"><a href="#appendices" class="tocxref"><span class="secno">A. </span>Appendices</a><ol class="toc"><li class="tocline"><a href="#changelog" class="tocxref"><span class="secno">A.1 </span>Change Log</a><ol class="toc"><li class="tocline"><a href="#substantive-changes-since-the-last-public-working-draft" class="tocxref"><span class="secno">A.1.1 </span>Substantive changes since the <span class="formerLink">last public working draft</span></a></li></ol></li><li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">A.2 </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a href="#ack_dpub" class="tocxref"><span class="secno">A.2.1 </span>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a href="#ack_funders" class="tocxref"><span class="secno">A.2.2 </span>Enabling funders</a></li></ol></li></ol></li><li class="tocline"><a href="#references" class="tocxref"><span class="secno">B. </span>References</a><ol class="toc"><li class="tocline"><a href="#normative-references" class="tocxref"><span class="secno">B.1 </span>Normative references</a></li><li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">B.2 </span>Informative references</a></li></ol></li></ol></nav>
+		<section id="sotd" class="introductory"><!--OddPage--><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p> <p>
+                                              This document was published by
+                                              the <a href="https://www.w3.org/WAI/ARIA/">Accessible Rich Internet Applications Working Group</a> as an
+                                              Editor's Draft.
+                                              
+                                            </p><p>
+                                                      
+                                                      Comments regarding this document are welcome.
+                                                              Please send them
+                                                              to
+                                                              <a href="mailto:public-dpub-aria-comments@w3.org">public-dpub-aria-comments@w3.org</a>
+                                                              (<a href="https://lists.w3.org/Archives/Public/public-dpub-aria-comments/">archives</a>).
+                                                            
+                                                    </p><p>
+                                              Publication as an
+                                              Editor's Draft does not imply
+                                              endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
+                                              This is a draft document and may
+                                              be updated, replaced or obsoleted
+                                              by other documents at any time. It
+                                              is inappropriate to cite this
+                                              document as other than work in
+                                              progress.
+                                            </p><p>
+                                      
+                                              This document was produced by
+                                              a group
+                                              operating under the
+                                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                                            
+                                      
+                                      
+                                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                                                      <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/83726/status">public list of any
+                                                        patent disclosures</a>
+                                              made in connection with the
+                                              deliverables of
+                                              the group; that page also includes
+                                              instructions for disclosing a
+                                              patent. An individual who has
+                                              actual knowledge of a patent which
+                                              the individual believes contains
+                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+                                              must disclose the information in
+                                              accordance with
+                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent
+                                                Policy</a>.
+                                            
+                                      
+                                    </p><p>
+                                      This document is governed by the
+                                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#intro"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a class="tocxref" href="#conformance"><span class="secno">2. </span>Conformance</a></li><li class="tocline"><a class="tocxref" href="#glossary"><span class="secno">3. </span>Important Terms</a></li><li class="tocline"><a class="tocxref" href="#keyboard-focus"><span class="secno">4. </span>Supporting Keyboard Navigation</a></li><li class="tocline"><a class="tocxref" href="#mapping"><span class="secno">5. </span>Mapping <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> to Accessibility <abbr title="Application Programming Interfaces">APIs</abbr></a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mapping_general"><span class="secno">5.1 </span>General rules for exposing <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> semantics</a></li></ol></li><li class="tocline"><a class="tocxref" href="#mapping_conflicts"><span class="secno">6. </span>Conflicts between native markup semantics and <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr></a></li><li class="tocline"><a class="tocxref" href="#mapping_nodirect"><span class="secno">7. </span>Exposing attributes that do not directly map to accessibility <abbr title="application programming interface">API</abbr> properties</a></li><li class="tocline"><a class="tocxref" href="#mapping_role"><span class="secno">8. </span>Role mapping</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#roleMappingGeneralRules"><span class="secno">8.1 </span>General Rules</a></li><li class="tocline"><a class="tocxref" href="#mapping_role_table"><span class="secno">8.2 </span>Role Mapping Table</a></li></ol></li><li class="tocline"><a class="tocxref" href="#mapping_state-property"><span class="secno">9. </span>State and Property Mapping</a></li><li class="tocline"><a class="tocxref" href="#mapping_additional"><span class="secno">10. </span>Special Processing Requiring Additional Computation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mapping_additional_nd"><span class="secno">10.1 </span>Name and Description</a></li><li class="tocline"><a class="tocxref" href="#mapping_additional_widget-value"><span class="secno">10.2 </span>Widget Values</a></li><li class="tocline"><a class="tocxref" href="#mapping_additional_relations"><span class="secno">10.3 </span>Relations</a></li><li class="tocline"><a class="tocxref" href="#mapping_additional_position"><span class="secno">10.4 </span>Group Position</a></li></ol></li><li class="tocline"><a class="tocxref" href="#mapping_actions"><span class="secno">11. </span>Actions</a></li><li class="tocline"><a class="tocxref" href="#mapping_events"><span class="secno">12. </span>Events</a></li><li class="tocline"><a class="tocxref" href="#document-handling"><span class="secno">13. </span>Special Document Handling Procedures</a></li><li class="tocline"><a class="tocxref" href="#appendices"><span class="secno">A. </span>Appendices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changelog"><span class="secno">A.1 </span>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#substantive-changes-since-the-last-public-working-draft"><span class="secno">A.1.1 </span>Substantive changes since the <span class="formerLink">last public working draft</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">A.2 </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><span class="secno">A.2.1 </span>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><span class="secno">A.2.2 </span>Enabling funders</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><span class="secno">B. </span>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><span class="secno">B.1 </span>Normative references</a></li></ol></li></ol></nav>
 		<section id="intro" class="informative">
-			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction&nbsp;<span class="permalink"><a href="#intro" aria-label="Permalink for 1. Introduction" title="Permalink for 1. Introduction"><span>§</span></a></span></h2><p><em>This section is non-normative.</em></p>
+			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction<a class="self-link" aria-label="§" href="#intro"></a></h2><p><em>This section is non-normative.</em></p>
 		</section>
-		<section id="conformance" class="normative"><!--OddPage--><h2 id="x2-conformance"><span class="secno">2. </span>Conformance&nbsp;<span class="permalink"><a href="#conformance" aria-label="Permalink for 2. Conformance" title="Permalink for 2. Conformance"><span>§</span></a></span></h2><p>
-  As well as sections marked as non-normative, all authoring guidelines, diagrams, examples,
-  and notes in this specification are non-normative. Everything else in this specification is
-  normative.
-</p><p id="respecRFC2119">The key words  <em class="rfc2119">MAY</em>, <em class="rfc2119">MUST</em>, <em class="rfc2119">MUST NOT</em>, <em class="rfc2119">OPTIONAL</em>, <em class="rfc2119">RECOMMENDED</em>, <em class="rfc2119">REQUIRED</em>, <em class="rfc2119">SHALL</em>, <em class="rfc2119">SHALL NOT</em>, and <em class="rfc2119">SHOULD</em> are 
-  to be interpreted as described in [<cite><a class="bibref" href="#bib-rfc2119">RFC2119</a></cite>].
-</p>
+		<section id="conformance" class="normative"><!--OddPage--><h2 id="x2-conformance"><span class="secno">2. </span>Conformance<a class="self-link" aria-label="§" href="#conformance"></a></h2><p>
+      As well as sections marked as non-normative, all authoring guidelines,
+      diagrams, examples, and notes in this specification are non-normative.
+      Everything else in this specification is normative.
+    </p><p id="respecRFC2119">The key words  <em class="rfc2119">MAY</em>, <em class="rfc2119">MUST</em>, <em class="rfc2119">MUST NOT</em>, <em class="rfc2119">OPTIONAL</em>, <em class="rfc2119">RECOMMENDED</em>, <em class="rfc2119">REQUIRED</em>, <em class="rfc2119">SHALL</em>, <em class="rfc2119">SHALL NOT</em>, and <em class="rfc2119">SHOULD</em> are to be interpreted as described in [<cite><a class="bibref" href="#bib-rfc2119">RFC2119</a></cite>].</p>
 			<p>This specification indicates whether a section is <a class="termref internalDFN" href="#dfn-normative" data-link-type="dfn">normative</a> or <a class="termref internalDFN" href="#dfn-informative" data-link-type="dfn">informative</a> and the classification applies to the entire section. A statement "This section is normative" or "This section is informative" applies to all sub-sections of that section.</p>
 			<p>Normative sections provide requirements that <a class="termref internalDFN" href="#dfn-user-agent" data-link-type="dfn">user agents</a> must follow for an implementation to conform to this specification. The keywords <strong class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></strong>, <strong class="rfc2119"><em class="rfc2119" title="MUST NOT">MUST NOT</em></strong>, <strong class="rfc2119"><em class="rfc2119" title="REQUIRED">REQUIRED</em></strong>, <strong class="rfc2119"><em class="rfc2119" title="SHALL">SHALL</em></strong>, <strong class="rfc2119"><em class="rfc2119" title="SHALL NOT">SHALL NOT</em></strong>, <strong class="rfc2119"><em class="rfc2119" title="SHOULD">SHOULD</em></strong>, <strong class="rfc2119"><em class="rfc2119" title="RECOMMENDED">RECOMMENDED</em></strong>, <strong class="rfc2119"><em class="rfc2119" title="MAY">MAY</em></strong>, and <strong class="rfc2119"><em class="rfc2119" title="OPTIONAL">OPTIONAL</em></strong> in this document are to be interpreted as described in <cite><a href="http://www.rfc-editor.org/rfc/rfc2119.txt">Keywords for use in RFCs to indicate requirement levels</a></cite> [<cite><a class="bibref" href="#bib-rfc2119">RFC2119</a></cite>]. RFC-2119 keywords are formatted in uppercase and contained in a <code>strong</code> element with <code>class="rfc2119"</code>. When the keywords shown above are used, but do not share this format,
 				they do not convey formal information in the RFC 2119 sense, and are merely explanatory, i.e., informative. As much as possible, such usages are avoided in this specification.</p>
 			<p>Informative sections provide information useful to understanding the specification. Such sections may contain examples of recommended practice, but it is not required to follow such recommendations in order to conform to this specification.</p>
 		</section>
 		<section id="glossary">
-			<!--OddPage--><h2 id="x3-important-terms"><span class="secno">3. </span>Important Terms&nbsp;<span class="permalink"><a href="#glossary" aria-label="Permalink for 3. Important Terms" title="Permalink for 3. Important Terms"><span>§</span></a></span></h2>
+			<!--OddPage--><h2 id="x3-important-terms"><span class="secno">3. </span>Important Terms<a class="self-link" aria-label="§" href="#glossary"></a></h2>
 			<div data-oninclude="restrictReferences"><p>While some terms are defined in place, the following definitions are used throughout this document. </p>
 <dl class="termlist">
     <dt><dfn data-lt="accessibility api|accessibility apis" id="dfn-accessibility-api" data-dfn-type="dfn">Accessibility <abbr title="Application Programming Interface">API</abbr></dfn></dt>
     <dd>
-      <p>Operating systems and other platforms provide a set of interfaces that expose information about <a class="termref internalDFN" data-lt="object" href="#dfn-object" data-link-type="dfn">objects</a> and <a class="termref internalDFN" data-lt="event" href="#dfn-event" data-link-type="dfn">events</a> to <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a>. Assistive technologies use these interfaces to get information about and interact with those <a class="termref internalDFN respec-offending-element" data-lt="widget" href="#dfn-widget" data-link-type="dfn">widgets</a>. Examples of accessibility <abbr title="application programming interfaces">APIs</abbr> are <a href="https://msdn.microsoft.com/en-us/library/ms697270(VS.85).aspx">Microsoft Active Accessibility</a> [<cite><a class="bibref" href="#bib-msaa">MSAA</a></cite>], <a href="https://msdn.microsoft.com/en-us/library/ee684013%28VS.85%29.aspx">Microsoft User Interface Automation</a> [<cite><a class="bibref" href="#bib-ui-automation">UI-AUTOMATION</a></cite>], <abbr title="Microsoft Active Accessibility">MSAA</abbr> with <cite><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898(v=vs.85).aspx"><abbr title="User Interface Automation">UIA</abbr> Express</a></cite> [<cite><a class="bibref" href="#bib-uia-express">UIA-EXPRESS</a></cite>], the
+      <p>Operating systems and other platforms provide a set of interfaces that expose information about <a class="termref internalDFN" data-lt="object" href="#dfn-object" data-link-type="dfn">objects</a> and <a class="termref internalDFN" data-lt="event" href="#dfn-event" data-link-type="dfn">events</a> to <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a>. Assistive technologies use these interfaces to get information about and interact with those <a class="termref internalDFN respec-offending-element" data-lt="widget" href="#dfn-widget" data-link-type="dfn" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured">widgets</a>. Examples of accessibility <abbr title="application programming interfaces">APIs</abbr> are <a href="https://msdn.microsoft.com/en-us/library/ms697270(VS.85).aspx">Microsoft Active Accessibility</a> [<cite><a class="bibref" href="#bib-msaa">MSAA</a></cite>], <a href="https://msdn.microsoft.com/en-us/library/ee684013%28VS.85%29.aspx">Microsoft User Interface Automation</a> [<cite><a class="bibref" href="#bib-ui-automation">UI-AUTOMATION</a></cite>], <abbr title="Microsoft Active Accessibility">MSAA</abbr> with <cite><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898(v=vs.85).aspx"><abbr title="User Interface Automation">UIA</abbr> Express</a></cite> [<cite><a class="bibref" href="#bib-uia-express">UIA-EXPRESS</a></cite>], the
       	<a href="https://developer.apple.com/documentation/appkit/accessibility/nsaccessibility">Mac <abbr title="OS Ten">OS X</abbr> Accessibility Protocol</a> [<cite><a class="bibref" href="#bib-axapi">AXAPI</a></cite>], the <cite><a href="https://developer.gnome.org/atk/unstable/">Linux/Unix Accessibility Toolkit</a></cite> [<cite><a class="bibref" href="#bib-atk">ATK</a></cite>] and <cite><a href="https://developer.gnome.org/libatspi/stable/">Assistive Technology Service Provider Interface</a></cite> [<cite><a class="bibref" href="#bib-at-spi">AT-SPI</a></cite>], and <a href="https://wiki.linuxfoundation.org/accessibility/iaccessible2/start">IAccessible2</a> [<cite><a class="bibref" href="#bib-iaccessible2">IAccessible2</a></cite>].</p>
     </dd>
     
@@ -633,8 +696,8 @@ details.respec-tests-details > li {
     </dd>
     <dt><dfn data-lt="object|objects" id="dfn-object" data-dfn-type="dfn">Object</dfn></dt>
     <dd>
-      <p>In the context of user interfaces,  an item in the   perceptual user experience, represented in markup languages by one or   more <a class="termref internalDFN respec-offending-element" data-lt="element" href="#dfn-element" data-link-type="dfn">elements</a>, and rendered by <a class="termref internalDFN" data-lt="user agent" href="#dfn-user-agent" data-link-type="dfn">user agents</a>.</p>
-    In the context of programming, the instantiation of one or more <a class="termref internalDFN respec-offending-element" data-lt="class" href="#dfn-class" data-link-type="dfn">classes</a> and interfaces which define the general characteristics of similar objects. An object in an <a href="#dfn-accessibility-api" class="internalDFN" data-link-type="dfn">accessibility <abbr title="Application Programming Interfaces">API</abbr></a> may represent one or more <abbr title="Document Object Model">DOM</abbr> objects. <a class="termref internalDFN" data-lt="accessibility api" href="#dfn-accessibility-api" data-link-type="dfn">Accessibility <abbr title="application programming interfaces">APIs</abbr></a> have defined interfaces that are distinct from <abbr title="Document Object Model">DOM</abbr> interfaces.</dd>
+      <p>In the context of user interfaces,  an item in the   perceptual user experience, represented in markup languages by one or   more <a class="termref internalDFN respec-offending-element" data-lt="element" href="#dfn-element" data-link-type="dfn" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-0">elements</a>, and rendered by <a class="termref internalDFN" data-lt="user agent" href="#dfn-user-agent" data-link-type="dfn">user agents</a>.</p>
+    In the context of programming, the instantiation of one or more <a class="termref internalDFN respec-offending-element" data-lt="class" href="#dfn-class" data-link-type="dfn" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-1">classes</a> and interfaces which define the general characteristics of similar objects. An object in an <a href="#dfn-accessibility-api" class="internalDFN" data-link-type="dfn">accessibility <abbr title="Application Programming Interfaces">API</abbr></a> may represent one or more <abbr title="Document Object Model">DOM</abbr> objects. <a class="termref internalDFN" data-lt="accessibility api" href="#dfn-accessibility-api" data-link-type="dfn">Accessibility <abbr title="application programming interfaces">APIs</abbr></a> have defined interfaces that are distinct from <abbr title="Document Object Model">DOM</abbr> interfaces.</dd>
   
     
     
@@ -648,13 +711,13 @@ details.respec-tests-details > li {
     
     <dt><dfn data-lt="property|properties" id="dfn-property" data-dfn-type="dfn">Property</dfn></dt>
     <dd>
-      <p><a class="termref internalDFN respec-offending-element" data-lt="attribute" href="#dfn-attribute" data-link-type="dfn">Attributes</a> that are essential to the nature of a given <a href="#dfn-object" class="internalDFN" data-link-type="dfn">object</a>, or that represent a data value associated with the object. A change of a property may significantly impact the meaning or presentation of an object. Certain properties (for example, <a href="https://w3c.github.io/aria/#aria-multiline" class="property-reference"><code>aria-multiline</code></a>) are less likely to change than <a class="termref" href="#dfn-state">states</a>, but note that the frequency of change difference is not a rule. A few properties, such as <a href="https://w3c.github.io/aria/#aria-activedescendant" class="property-reference"><code>aria-activedescendant</code></a>, <a href="https://w3c.github.io/aria/#aria-valuenow" class="property-reference"><code>aria-valuenow</code></a>, and <a href="https://w3c.github.io/aria/#aria-valuetext" class="property-reference"><code>aria-valuetext</code></a> are expected to change often. See <a href="https://www.w3.org/TR/wai-aria-1.1/#statevsprop">clarification of states versus properties</a>.</p>
+      <p><a class="termref internalDFN respec-offending-element" data-lt="attribute" href="#dfn-attribute" data-link-type="dfn" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-2">Attributes</a> that are essential to the nature of a given <a href="#dfn-object" class="internalDFN" data-link-type="dfn">object</a>, or that represent a data value associated with the object. A change of a property may significantly impact the meaning or presentation of an object. Certain properties (for example, <a href="https://w3c.github.io/aria/#aria-multiline" class="property-reference"><code>aria-multiline</code></a>) are less likely to change than <a class="termref" href="#dfn-state">states</a>, but note that the frequency of change difference is not a rule. A few properties, such as <a href="https://w3c.github.io/aria/#aria-activedescendant" class="property-reference"><code>aria-activedescendant</code></a>, <a href="https://w3c.github.io/aria/#aria-valuenow" class="property-reference"><code>aria-valuenow</code></a>, and <a href="https://w3c.github.io/aria/#aria-valuetext" class="property-reference"><code>aria-valuetext</code></a> are expected to change often. See <a href="https://www.w3.org/TR/wai-aria-1.1/#statevsprop">clarification of states versus properties</a>.</p>
     </dd>
     
     
     <dt><dfn data-lt="role|roles" id="dfn-role" data-dfn-type="dfn">Role</dfn></dt>
     <dd>
-      <p>Main indicator of type. <!-- (removing, vague) The object's role is the class of <a class="termref" data-lt="object">objects</a> of which it is a member. --> This <a class="termref internalDFN respec-offending-element" data-lt="semantics" href="#dfn-semantics" data-link-type="dfn">semantic</a> association allows tools to present and support interaction with the object in a manner that is consistent with user expectations about other objects of that type.</p>
+      <p>Main indicator of type. <!-- (removing, vague) The object's role is the class of <a class="termref" data-lt="object">objects</a> of which it is a member. --> This <a class="termref internalDFN respec-offending-element" data-lt="semantics" href="#dfn-semantics" data-link-type="dfn" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-3">semantic</a> association allows tools to present and support interaction with the object in a manner that is consistent with user expectations about other objects of that type.</p>
     </dd>
     
     
@@ -688,38 +751,38 @@ details.respec-tests-details > li {
 </div>
 		</section>
 		<section class="section" id="keyboard-focus">
-			<!--OddPage--><h2 id="x4-supporting-keyboard-navigation"><span class="secno">4. </span>Supporting Keyboard Navigation&nbsp;<span class="permalink"><a href="#keyboard-focus" aria-label="Permalink for 4. Supporting Keyboard Navigation" title="Permalink for 4. Supporting Keyboard Navigation"><span>§</span></a></span></h2>
+			<!--OddPage--><h2 id="x4-supporting-keyboard-navigation"><span class="secno">4. </span>Supporting Keyboard Navigation<a class="self-link" aria-label="§" href="#keyboard-focus"></a></h2>
 			<p>Enabling keyboard navigation in web applications is a necessary step toward making accessible web applications possible. Conforming <a class="termref internalDFN" href="#dfn-user-agent" data-link-type="dfn">user agents</a> <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="https://w3c.github.io/core-aam/#keyboard-focus">Supporting Keyboard Navigation</a> requirements in [<cite><a class="bibref" href="#bib-core-aam-1.1">CORE-AAM-1.1</a></cite>].</p>
 		</section>
 		<section id="mapping">
-			<!--OddPage--><h2 id="x5-mapping-wai-aria-to-accessibility-apis"><span class="secno">5. </span>Mapping <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> to Accessibility <abbr title="Application Programming Interfaces">APIs</abbr>&nbsp;<span class="permalink"><a href="#mapping" aria-label="Permalink for 5. Mapping WAI-ARIA to Accessibility APIs" title="Permalink for 5. Mapping WAI-ARIA to Accessibility APIs"><span>§</span></a></span></h2>
+			<!--OddPage--><h2 id="x5-mapping-wai-aria-to-accessibility-apis"><span class="secno">5. </span>Mapping <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> to Accessibility <abbr title="Application Programming Interfaces">APIs</abbr><a class="self-link" aria-label="§" href="#mapping"></a></h2>
 			<section id="mapping_general">
-				<h3 id="x5-1-general-rules-for-exposing-wai-aria-semantics"><span class="secno">5.1 </span>General rules for exposing <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> semantics&nbsp;<span class="permalink"><a href="#mapping_general" aria-label="Permalink for 5.1 General rules for exposing WAI-ARIA semantics" title="Permalink for 5.1 General rules for exposing WAI-ARIA semantics"><span>§</span></a></span></h3>
+				<h3 id="x5-1-general-rules-for-exposing-wai-aria-semantics"><span class="secno">5.1 </span>General rules for exposing <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> semantics<a class="self-link" aria-label="§" href="#mapping_general"></a></h3>
 				<p>This section <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="https://w3c.github.io/core-aam/#mapping_general">General rules for exposing <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> semantics</a> in [<cite><a class="bibref" href="#bib-core-aam-1.1">CORE-AAM-1.1</a></cite>].</p>
 			</section>
 		</section>
 		<section id="mapping_conflicts">
-			<!--OddPage--><h2 id="x6-conflicts-between-native-markup-semantics-and-wai-aria"><span class="secno">6. </span>Conflicts between native markup semantics and <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr>&nbsp;<span class="permalink"><a href="#mapping_conflicts" aria-label="Permalink for 6. Conflicts between native markup semantics and WAI-ARIA" title="Permalink for 6. Conflicts between native markup semantics and WAI-ARIA"><span>§</span></a></span></h2>
+			<!--OddPage--><h2 id="x6-conflicts-between-native-markup-semantics-and-wai-aria"><span class="secno">6. </span>Conflicts between native markup semantics and <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr><a class="self-link" aria-label="§" href="#mapping_conflicts"></a></h2>
 			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="https://w3c.github.io/core-aam/#mapping_conflicts">Conflicts between native markup semantics and <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr></a> in [<cite><a class="bibref" href="#bib-core-aam-1.1">CORE-AAM-1.1</a></cite>]. </p>
 		</section>
 		<section id="mapping_nodirect">
-			<!--OddPage--><h2 id="x7-exposing-attributes-that-do-not-directly-map-to-accessibility-api-properties"><span class="secno">7. </span>Exposing attributes that do not directly map to accessibility <abbr title="application programming interface">API</abbr> properties&nbsp;<span class="permalink"><a href="#mapping_nodirect" aria-label="Permalink for 7. Exposing attributes that do not directly map to accessibility API properties" title="Permalink for 7. Exposing attributes that do not directly map to accessibility API properties"><span>§</span></a></span></h2>
+			<!--OddPage--><h2 id="x7-exposing-attributes-that-do-not-directly-map-to-accessibility-api-properties"><span class="secno">7. </span>Exposing attributes that do not directly map to accessibility <abbr title="application programming interface">API</abbr> properties<a class="self-link" aria-label="§" href="#mapping_nodirect"></a></h2>
 			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to <a class="core-mapping" href="https://w3c.github.io/core-aam/#mapping_nodirect">Exposing attributes that do not directly map to accessibility <abbr title="application programming interface">API</abbr> properties</a> in [<cite><a class="bibref" href="#bib-core-aam-1.1">CORE-AAM-1.1</a></cite>].</p>
 		</section>
 		<section id="mapping_role">
-			<!--OddPage--><h2 id="x8-role-mapping"><span class="secno">8. </span>Role mapping&nbsp;<span class="permalink"><a href="#mapping_role" aria-label="Permalink for 8. Role mapping" title="Permalink for 8. Role mapping"><span>§</span></a></span></h2>
+			<!--OddPage--><h2 id="x8-role-mapping"><span class="secno">8. </span>Role mapping<a class="self-link" aria-label="§" href="#mapping_role"></a></h2>
 			<p>Platform <a class="termref internalDFN" href="#dfn-accessibility-api" data-link-type="dfn">accessibility <abbr title="Application Programming Interfaces">APIs</abbr></a> traditionally have had a finite set of predefined <a class="termref internalDFN" href="#dfn-role" data-link-type="dfn">roles</a> that are expected by <a class="termref internalDFN" href="#dfn-assistive-technology" data-link-type="dfn">assistive technologies</a> on that platform and only one or two roles may be exposed. In contrast, <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> allows multiple roles to be specified as an ordered set of space-separated valid role tokens. The additional roles are fallback roles similar to the concept of specifying multiple fonts in case the first choice font type is not supported.</p>
 			<section id="roleMappingGeneralRules">
-				<h3 id="x8-1-general-rules"><span class="secno">8.1 </span>General Rules&nbsp;<span class="permalink"><a href="#roleMappingGeneralRules" aria-label="Permalink for 8.1 General Rules" title="Permalink for 8.1 General Rules"><span>§</span></a></span></h3>
+				<h3 id="x8-1-general-rules"><span class="secno">8.1 </span>General Rules<a class="self-link" aria-label="§" href="#roleMappingGeneralRules"></a></h3>
 				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the Role Mapping <a class="core-mapping" href="https://w3c.github.io/core-aam/#roleMappingGeneralRules">General Rules</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-core-aam-1.1">CORE-AAM-1.1</a></cite>].</p>
 			</section>
 			<section id="mapping_role_table">
-				<h3 id="x8-2-role-mapping-table"><span class="secno">8.2 </span>Role Mapping Table&nbsp;<span class="permalink"><a href="#mapping_role_table" aria-label="Permalink for 8.2 Role Mapping Table" title="Permalink for 8.2 Role Mapping Table"><span>§</span></a></span></h3>
+				<h3 id="x8-2-role-mapping-table"><span class="secno">8.2 </span>Role Mapping Table<a class="self-link" aria-label="§" href="#mapping_role_table"></a></h3>
                 <div class="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="4"><span>Note</span></div><p class="">Translators: For label text associated with the following table and its toggle buttons, see the <code>mappingTableLabels</code> object in the <code>&lt;head&gt;</code> section of this document.</p></div>
 				<p> This section defines how <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> digital publishing roles map to platform accessibility <abbr title="application programming interfaces">APIs</abbr>. Elements having roles with a prefix value of <code>doc-</code>, that are not listed in this role mapping table, have no normative mappings. 
 				</p>
                                <div class="note" id="issue-container-generatedID-0"><div role="heading" class="note-title marker" id="h-note-0" aria-level="4"><span>Note</span></div><p class="">There are a number of roles mappings that are localized. The group needs to look into localizing for non-English languages.</p></div>
-				<div class="table-container" style="display: none;">
+				<div class="table-container">
 					<table class="map-table elements" id="role-mapping-table">
 						<caption>Table describing mapping of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles to accessibility <abbr title="application programming interfaces">APIs</abbr>.</caption>
 						<thead>
@@ -732,7 +795,7 @@ details.respec-tests-details > li {
 							</tr>
 						</thead>
 						<tbody>
-                                                        <tr>
+                                                        <tr id="role-map-abstract">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-abstract"><code>doc-abstract</code></a></th>
                                                                 <td>
 									Expose IAccessible2: 
@@ -753,7 +816,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                       <tr>
+                                                       <tr id="role-map-acknowledgments">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-acknowledgments"><code>doc-acknowledgments</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -776,7 +839,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-							<tr>
+							<tr id="role-map-afterword">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-afterword"><code>doc-afterword</code></a></th>
 								<td>
                                                                         Expose IAccessible2:
@@ -800,7 +863,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-appendix">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-appendix"><code>doc-appendix</code></a></th>
 								<td>
                                                                         Expose IAccessible2:
@@ -824,7 +887,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-backlink">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-backlink"><code>doc-backlink</code></a></th>
                                                                 <td>
 								 	Expose
@@ -852,7 +915,7 @@ details.respec-tests-details > li {
 
                                                         </tr>
 
-                                                        <tr>
+                                                        <tr id="role-map-biblioentry">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-biblioentry"><code>doc-biblioentry</code></a></th>
                                                                 <td>
 									Expose
@@ -870,7 +933,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-bibliography">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-biblioentry"><code>doc-bibliography</code></a></th>
 								<td>
                                                                         Expose IAccessible2:
@@ -893,7 +956,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-biblioref">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-biblioref"><code>doc-biblioref</code></a></th>
 								<td>
                                                                         Expose
@@ -920,7 +983,7 @@ details.respec-tests-details > li {
                                                                 </td>
                                                         </tr>
 
-                                                        <tr>
+                                                        <tr id="role-map-chapter">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-chapter"><code>doc-chapter</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -943,7 +1006,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
 							</tr>
-                                                        <tr>
+                                                        <tr id="role-map-colophon">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-colophon"><code>doc-colophon</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2: Object attribute <code>xml-roles:doc-colophon</code>. </p></td>
                                                                 <td>
@@ -959,7 +1022,7 @@ details.respec-tests-details > li {
                                                                 </td>
 
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-conclusion">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-conclusion"><code>doc-conclusion</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -982,7 +1045,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-cover">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-cover</code></a></th>
                                                                 <td>Expose <p><code>ROLE_SYSTEM_GRAPHIC</code></p>  
 								<p>IAccessible2: Object attribute <code>xml-roles:doc-cover</code>. </p>
@@ -997,7 +1060,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'image'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-credit">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-credit</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-credit</code></td>
                                                                 <td>
@@ -1012,7 +1075,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'group'</code>
 								</td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-credits">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-credits"><code>doc-credits</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1035,7 +1098,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'region'</code>
 								</td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-dedication">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-dedication"><code>doc-dedication</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-dedication</code></td>
                                                                 <td>
@@ -1050,7 +1113,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-endnote">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-endnote"><code>doc-endnote</code></a></th>
                                                                 <td>
                                                                         Expose
@@ -1068,7 +1131,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-endnotes">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-endnote"><code>doc-endnotes</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1093,7 +1156,7 @@ details.respec-tests-details > li {
                                                                 </td>
                                                         </tr>
 
-                                                        <tr>
+                                                        <tr id="role-map-epigraph">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-epigraph"><code>doc-epigraph</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-epigraph</code></td>
                                                                 <td>
@@ -1108,7 +1171,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-epilogue">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-epilogue"><code>doc-epilogue</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1132,7 +1195,7 @@ details.respec-tests-details > li {
                                                                 </td>
 
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-errata">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-errata</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1155,7 +1218,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-example">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-example</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-example</code></td>
                                                                 <td>
@@ -1170,7 +1233,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-footnote">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-footnote"><code>doc-footnote</code></a></th>
                                                                 <td><p>Expose IAccessible2:</p>
 									<ul>
@@ -1190,7 +1253,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-foreword">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-foreword"><code>doc-foreword</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1213,7 +1276,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-glossary">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-glossary"><code>doc-glossary</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1236,7 +1299,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-glossref">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-glossref"><code>doc-glossref</code></a></th>
 								<td>
                                                                         Expose
@@ -1263,7 +1326,7 @@ details.respec-tests-details > li {
                                                                 </td>
 
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-index">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-index"><code>doc-index</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1286,7 +1349,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'navigation'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-introduction">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-introduction"><code>doc-introduction</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1310,7 +1373,7 @@ details.respec-tests-details > li {
                                                                 </td>
 
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-noteref">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-noteref"><code>doc-noteref</code></a></th>
                                                                 <td>
                                                                         Expose
@@ -1337,7 +1400,7 @@ details.respec-tests-details > li {
                                                                 </td>
 
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-notice">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-notice"><code>doc-notice</code></a></th>
                                                                 <td>Expose
 								    <p><code>IA2_ROLE_NOTE</code></p>
@@ -1354,7 +1417,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'note'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-pagebreak">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pagebreak"><code>doc-pagebreak</code></a></th>
                                                                 <td>Expose <p><code>ROLE_SYSTEM_SEPARATOR</code></p> 
 								<p>IAccessible2:</p>
@@ -1372,7 +1435,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'splitter'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-pagelist">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pagelist"><code>doc-pagelist</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1395,7 +1458,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'navigation'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-part">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-part"><code>doc-part</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1418,7 +1481,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id="role-map-preface">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-preface"><code>doc-preface</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1441,7 +1504,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                         <tr>
+                                                         <tr id="role-map-prologue">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-prologue"><code>doc-prologue</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1464,7 +1527,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                         <tr>
+                                                         <tr id="role-map-pullquote">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pullquote"><code>doc-pullquote</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1485,7 +1548,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                         <tr>
+                                                         <tr id="role-map-qna">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-preface"><code>doc-qna</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-qna</code></td>
                                                                 <td>
@@ -1500,7 +1563,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                         <tr>
+                                                         <tr id="role-map-subtitle">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-preface"><code>doc-subtitle</code></a></th>
                                                                 <td>Expose IAccessible2:
 									<ul>
@@ -1520,7 +1583,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'heading'</code>
                                                                 </td>
                                                         </tr>
-                                                         <tr>
+                                                         <tr id="role-map-tip">
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-tip"><code>doc-tip</code></a></th>
                                                                 <td>
 									Expose
@@ -1540,7 +1603,7 @@ details.respec-tests-details > li {
                                                                     AXRoleDescription: <code>'note'</code>
                                                                 </td>
                                                         </tr>
-							<tr>
+							<tr id="role-map-toc">
 								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-toc"><code>doc-toc</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1572,50 +1635,50 @@ details.respec-tests-details > li {
 			</section>
 		</section>
 		<section id="mapping_state-property">
-			<!--OddPage--><h2 id="x9-state-and-property-mapping"><span class="secno">9. </span>State and Property Mapping&nbsp;<span class="permalink"><a href="#mapping_state-property" aria-label="Permalink for 9. State and Property Mapping" title="Permalink for 9. State and Property Mapping"><span>§</span></a></span></h2>
+			<!--OddPage--><h2 id="x9-state-and-property-mapping"><span class="secno">9. </span>State and Property Mapping<a class="self-link" aria-label="§" href="#mapping_state-property"></a></h2>
 			<p>This section describes how to expose <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
 				<a class="termref internalDFN" href="#dfn-state" data-link-type="dfn">states</a> and <a class="termref internalDFN" href="#dfn-object" data-link-type="dfn">object</a>
 				<a class="termref internalDFN" href="#dfn-property" data-link-type="dfn">properties</a>. User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="https://w3c.github.io/core-aam/#mapping_state-property" class="core-mapping">State and Property Mapping</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-core-aam-1.1">CORE-AAM-1.1</a></cite>]. </p>
 		</section>
 		<section id="mapping_additional">
-			<!--OddPage--><h2 id="x10-special-processing-requiring-additional-computation"><span class="secno">10. </span>Special Processing Requiring Additional Computation&nbsp;<span class="permalink"><a href="#mapping_additional" aria-label="Permalink for 10. Special Processing Requiring Additional Computation" title="Permalink for 10. Special Processing Requiring Additional Computation"><span>§</span></a></span></h2>
+			<!--OddPage--><h2 id="x10-special-processing-requiring-additional-computation"><span class="secno">10. </span>Special Processing Requiring Additional Computation<a class="self-link" aria-label="§" href="#mapping_additional"></a></h2>
 			<section id="mapping_additional_nd">
-				<h3 id="x10-1-name-and-description"><span class="secno">10.1 </span>Name and Description&nbsp;<span class="permalink"><a href="#mapping_additional_nd" aria-label="Permalink for 10.1 Name and Description" title="Permalink for 10.1 Name and Description"><span>§</span></a></span></h3>
+				<h3 id="x10-1-name-and-description"><span class="secno">10.1 </span>Name and Description<a class="self-link" aria-label="§" href="#mapping_additional_nd"></a></h3>
 				<p>When computing an <a class="termref internalDFN" href="#dfn-accessible-name" data-link-type="dfn">accessible name</a> or <a class="termref internalDFN" href="#dfn-accessible-description" data-link-type="dfn">accessible description</a>, <a class="termref internalDFN" href="#dfn-user-agent" data-link-type="dfn">user agents</a> <em class="rfc2119" title="MUST">MUST</em> conform to the section titled <a class="accname" href="https://w3c.github.io/accname/#mapping_additional_nd_te">Text Alternative Computation</a> of the [<cite><a class="bibref" href="#bib-accname-aam-1.1">ACCNAME-AAM-1.1</a></cite>] specification. 
 				</p>
 			</section>
 			<section id="mapping_additional_widget-value">
-				<h3 id="x10-2-widget-values"><span class="secno">10.2 </span>Widget Values&nbsp;<span class="permalink"><a href="#mapping_additional_widget-value" aria-label="Permalink for 10.2 Widget Values" title="Permalink for 10.2 Widget Values"><span>§</span></a></span></h3>
+				<h3 id="x10-2-widget-values"><span class="secno">10.2 </span>Widget Values<a class="self-link" aria-label="§" href="#mapping_additional_widget-value"></a></h3>
 				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="https://w3c.github.io/core-aam/#mapping_additional_widget-value" class="core-mapping">Widget Values</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-core-aam-1.1">CORE-AAM-1.1</a></cite>].</p>
 			</section>
 			<section id="mapping_additional_relations">
-				<h3 id="x10-3-relations"><span class="secno">10.3 </span>Relations&nbsp;<span class="permalink"><a href="#mapping_additional_relations" aria-label="Permalink for 10.3 Relations" title="Permalink for 10.3 Relations"><span>§</span></a></span></h3>
+				<h3 id="x10-3-relations"><span class="secno">10.3 </span>Relations<a class="self-link" aria-label="§" href="#mapping_additional_relations"></a></h3>
 				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="https://w3c.github.io/core-aam/#mapping_additional_relations" class="core-mapping">Relation</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-core-aam-1.1">CORE-AAM-1.1</a></cite>].</p>
 			</section>
 			<section id="mapping_additional_position">
-				<h3 id="x10-4-group-position"><span class="secno">10.4 </span>Group Position&nbsp;<span class="permalink"><a href="#mapping_additional_position" aria-label="Permalink for 10.4 Group Position" title="Permalink for 10.4 Group Position"><span>§</span></a></span></h3>
+				<h3 id="x10-4-group-position"><span class="secno">10.4 </span>Group Position<a class="self-link" aria-label="§" href="#mapping_additional_position"></a></h3>
 				<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="https://w3c.github.io/core-aam/#mapping_additional_position" class="core-mapping">Group Position</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-core-aam-1.1">CORE-AAM-1.1</a></cite>].</p>
 			</section>
 		</section>
 		<section id="mapping_actions">
-			<!--OddPage--><h2 id="x11-actions"><span class="secno">11. </span>Actions&nbsp;<span class="permalink"><a href="#mapping_actions" aria-label="Permalink for 11. Actions" title="Permalink for 11. Actions"><span>§</span></a></span></h2>
+			<!--OddPage--><h2 id="x11-actions"><span class="secno">11. </span>Actions<a class="self-link" aria-label="§" href="#mapping_actions"></a></h2>
 			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="https://w3c.github.io/core-aam/#mapping_actions" class="core-mapping">Actions</a> accessibility <abbr title="application programming interface">API</abbr> computational requirements in [<cite><a class="bibref" href="#bib-core-aam-1.1">CORE-AAM-1.1</a></cite>].</p>
 		</section>
 		<section id="mapping_events">
-			<!--OddPage--><h2 id="x12-events"><span class="secno">12. </span>Events&nbsp;<span class="permalink"><a href="#mapping_events" aria-label="Permalink for 12. Events" title="Permalink for 12. Events"><span>§</span></a></span></h2>
+			<!--OddPage--><h2 id="x12-events"><span class="secno">12. </span>Events<a class="self-link" aria-label="§" href="#mapping_events"></a></h2>
 			<p><a class="termref internalDFN" href="#dfn-user-agent" data-link-type="dfn">User agents</a> fire <a class="termref internalDFN" href="#dfn-event" data-link-type="dfn">events</a> for user actions, <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr>
 				<a class="termref internalDFN" href="#dfn-state" data-link-type="dfn">state</a> changes, changes to document content or node visibility, changes in selection, and operation of menus. Conforming <a class="termref internalDFN" href="#dfn-user-agent" data-link-type="dfn">user agents</a> <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> support the [<cite><a class="bibref" href="#bib-core-aam-1.1">CORE-AAM-1.1</a></cite>] <a class="core=mappings" href="#mapping_events">Events</a> mappings.</p>
 		</section>
 		<section id="document-handling">
-			<!--OddPage--><h2 id="x13-special-document-handling-procedures"><span class="secno">13. </span>Special Document Handling Procedures&nbsp;<span class="permalink"><a href="#document-handling" aria-label="Permalink for 13. Special Document Handling Procedures" title="Permalink for 13. Special Document Handling Procedures"><span>§</span></a></span></h2>
+			<!--OddPage--><h2 id="x13-special-document-handling-procedures"><span class="secno">13. </span>Special Document Handling Procedures<a class="self-link" aria-label="§" href="#document-handling"></a></h2>
 			<p>User agents <span class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></span> conform to the <a href="https://w3c.github.io/core-aam/#document-handling" class="core-mapping">Special Document Handling Procedures</a> in [<cite><a class="bibref" href="#bib-core-aam-1.1">CORE-AAM-1.1</a></cite>].</p>
 		</section>
 		<section id="appendices" class="appendix">
-			<!--OddPage--><h2 id="a-appendices"><span class="secno">A. </span>Appendices&nbsp;<span class="permalink"><a href="#appendices" aria-label="Permalink for A. Appendices" title="Permalink for A. Appendices"><span>§</span></a></span></h2>
+			<!--OddPage--><h2 id="a-appendices"><span class="secno">A. </span>Appendices<a class="self-link" aria-label="§" href="#appendices"></a></h2>
         		<section class="appendix" id="changelog">
-                		<h3 id="a-1-change-log"><span class="secno">A.1 </span>Change Log&nbsp;<span class="permalink"><a href="#changelog" aria-label="Permalink for A.1 Change Log" title="Permalink for A.1 Change Log"><span>§</span></a></span></h3>
+                		<h3 id="a-1-change-log"><span class="secno">A.1 </span>Change Log<a class="self-link" aria-label="§" href="#changelog"></a></h3>
                 		<section id="substantive-changes-since-the-last-public-working-draft">
-                        		<h4 id="a-1-1-substantive-changes-since-the-last-public-working-draft"><span class="secno">A.1.1 </span>Substantive changes since the <a href="https://www.w3.org/TR/2015/WD-dpub-aam-1.0-20151203/">last public working draft</a>&nbsp;<span class="permalink"><a href="#substantive-changes-since-the-last-public-working-draft" aria-label="Permalink for A.1.1 Substantive changes since the last public working draft" title="Permalink for A.1.1 Substantive changes since the last public working draft"><span>§</span></a></span></h4>
+                        		<h4 id="a-1-1-substantive-changes-since-the-last-public-working-draft"><span class="secno">A.1.1 </span>Substantive changes since the <a href="https://www.w3.org/TR/2015/WD-dpub-aam-1.0-20151203/">last public working draft</a><a class="self-link" aria-label="§" href="#substantive-changes-since-the-last-public-working-draft"></a></h4>
                         		<ul>
                                 		<li>20-Apr-2017: Update mappings. For <abbr title="Mac OS X Accessibility Protocol">AXAPI</abbr>, the AXSubrole is now AXApplicationGroup for the following roles: doc-abstract, doc-colophon, doc-dedication, doc-epigraph, doc-example, doc-footnote, doc-pullquote, and doc-qna; the AXRoleDescription of doc-abstract is now 'group'; doc-pagebreak is now mapped to AXRole: AXSplitter, AXRoleDescription: 'splitter'; doc-notice and doc-tip are now mapped to AXSubrole: AXDocumentNote, AXRoleDescription: 'note'. For <abbr title="Accessibility Toolkit">ATK</abbr>/ATSPI2, doc-tip is now mapped to ROLE_COMMENT.</li>
                                 		<li>20-Apr-2017: Map doc-pullquote for <abbr title="Accessibility Toolkit">ATK</abbr>/ATSPI2, IA2, and <abbr title="User Interface Automation">UIA</abbr>.</li>
@@ -1647,10 +1710,10 @@ details.respec-tests-details > li {
 				</section>
                 	</section>
 			<section class="appendix informative section" id="acknowledgements">
-				<h3 id="a-2-acknowledgments"><span class="secno">A.2 </span>Acknowledgments&nbsp;<span class="permalink"><a href="#acknowledgements" aria-label="Permalink for A.2 Acknowledgments" title="Permalink for A.2 Acknowledgments"><span>§</span></a></span></h3><p><em>This section is non-normative.</em></p>
+				<h3 id="a-2-acknowledgments"><span class="secno">A.2 </span>Acknowledgments<a class="self-link" aria-label="§" href="#acknowledgements"></a></h3><p><em>This section is non-normative.</em></p>
 				<p>The following people contributed to the development of this document.</p>
 				<section class="section" id="ack_dpub">
-					<h4 id="a-2-1-participants-active-in-the-dpub-aria-task-force-at-the-time-of-publication"><span class="secno">A.2.1 </span>Participants active in the DPUB-ARIA task force at the time of publication&nbsp;<span class="permalink"><a href="#ack_dpub" aria-label="Permalink for A.2.1 Participants active in the DPUB-ARIA task force at the time of publication" title="Permalink for A.2.1 Participants active in the DPUB-ARIA task force at the time of publication"><span>§</span></a></span></h4>
+					<h4 id="a-2-1-participants-active-in-the-dpub-aria-task-force-at-the-time-of-publication"><span class="secno">A.2.1 </span>Participants active in the DPUB-ARIA task force at the time of publication<a class="self-link" aria-label="§" href="#ack_dpub"></a></h4>
 					<ul>
 						<li>Michael Cooper (<abbr title="World Wide Web Consortium">W3C</abbr> Staff)</li>
 						<li>Heather Flanagan (Invited expert)</li>
@@ -1712,7 +1775,7 @@ details.respec-tests-details > li {
 		</section>
 		-->
 				<section class="section" id="ack_funders">
-					<h4 id="a-2-2-enabling-funders"><span class="secno">A.2.2 </span>Enabling funders&nbsp;<span class="permalink"><a href="#ack_funders" aria-label="Permalink for A.2.2 Enabling funders" title="Permalink for A.2.2 Enabling funders"><span>§</span></a></span></h4>
+					<h4 id="a-2-2-enabling-funders"><span class="secno">A.2.2 </span>Enabling funders<a class="self-link" aria-label="§" href="#ack_funders"></a></h4>
 					<p>This publication has been funded in part with Federal funds from the U.S. Department of Education, National Institute on Disability, Independent Living, and Rehabilitation Research (NIDILRR) under contract number ED-OSE-10-C-0067. The content of this publication does not necessarily reflect the views or policies of the U.S. Department of Education, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
 				</section>
 			</section>
@@ -1720,14 +1783,10 @@ details.respec-tests-details > li {
 	
 
 <section id="references" class="appendix">
-      <!--OddPage--><h2 id="b-references"><span class="secno">B. </span>References&nbsp;<span class="permalink"><a href="#references" aria-label="Permalink for B. References" title="Permalink for B. References"><span>§</span></a></span></h2>
+      <!--OddPage--><h2 id="b-references"><span class="secno">B. </span>References<a class="self-link" aria-label="§" href="#references"></a></h2>
       
     <section id="normative-references">
-        <h3 id="b-1-normative-references"><span class="secno">B.1 </span>Normative references&nbsp;<span class="permalink"><a href="#normative-references" aria-label="Permalink for B.1 Normative references" title="Permalink for B.1 Normative references"><span>§</span></a></span></h3>
+        <h3 id="b-1-normative-references"><span class="secno">B.1 </span>Normative references<a class="self-link" aria-label="§" href="#normative-references"></a></h3>
       <dl class="bibliography">
-        <dt id="bib-accname-aam-1.1">[ACCNAME-AAM-1.1]</dt><dd><a href="https://www.w3.org/TR/accname-1.1/"><cite>Accessible Name and Description Computation 1.1</cite></a>. Joanmarie Diggs; Bryan Garaventa; Michael Cooper. W3C. 19 June 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/accname-1.1/">https://www.w3.org/TR/accname-1.1/</a></dd><dt id="bib-core-aam-1.1">[CORE-AAM-1.1]</dt><dd><a href="https://www.w3.org/TR/core-aam-1.1/"><cite>Core Accessibility API Mappings 1.1</cite></a>. Joanmarie Diggs; Joseph Scheuhammer; Richard Schwerdtfeger; Michael Cooper; Andi Snow-Weaver; Aaron Leventhal. W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/core-aam-1.1/">https://www.w3.org/TR/core-aam-1.1/</a></dd><dt id="bib-dpub-aria-1.0">[dpub-aria-1.0]</dt><dd><a href="https://www.w3.org/TR/dpub-aria-1.0/"><cite>Digital Publishing WAI-ARIA Module 1.0</cite></a>. Matt Garrish; Tzviya Siegman; Markus Gylling; Shane McCarron. W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/dpub-aria-1.0/">https://www.w3.org/TR/dpub-aria-1.0/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner. IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a></dd>
-      </dl></section><section id="informative-references">
-        <h3 id="b-2-informative-references"><span class="secno">B.2 </span>Informative references&nbsp;<span class="permalink"><a href="#informative-references" aria-label="Permalink for B.2 Informative references" title="Permalink for B.2 Informative references"><span>§</span></a></span></h3>
-      <dl class="bibliography">
-        <dt id="bib-at-spi">[AT-SPI]</dt><dd><a href="https://developer.gnome.org/libatspi/stable/"><cite>Assistive Technology Service Provider Interface</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/libatspi/stable/">https://developer.gnome.org/libatspi/stable/</a></dd><dt id="bib-atk">[ATK]</dt><dd><a href="https://developer.gnome.org/atk/stable/"><cite>ATK - Accessibility Toolkit</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/atk/stable/">https://developer.gnome.org/atk/stable/</a></dd><dt id="bib-axapi">[AXAPI]</dt><dd><a href="https://developer.apple.com/documentation/appkit/nsaccessibility"><cite>The NSAccessibility Protocol for macOS</cite></a>.  Apple, Inc. URL: <a href="https://developer.apple.com/documentation/appkit/nsaccessibility">https://developer.apple.com/documentation/appkit/nsaccessibility</a></dd><dt id="bib-iaccessible2">[IAccessible2]</dt><dd><a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2"><cite>IAccessible2</cite></a>.  Linux Foundation. URL: <a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2">https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2</a></dd><dt id="bib-msaa">[MSAA]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/ms697707.aspx"><cite>Microsoft Active Accessibility (MSAA) 2.0</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/ms697707.aspx">https://msdn.microsoft.com/en-us/library/ms697707.aspx</a></dd><dt id="bib-ui-automation">[UI-AUTOMATION]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx"><cite>UI Automation</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx">https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx</a></dd><dt id="bib-uia-express">[UIA-EXPRESS]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx"><cite>The IAccessibleEx Interface</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx</a></dd><dt id="bib-wcag21">[WCAG21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O Connor; Alastair Campbell; Michael Cooper. W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd>
+        <dt id="bib-accname-aam-1.1">[ACCNAME-AAM-1.1]</dt><dd><a href="https://www.w3.org/TR/accname-1.1/"><cite>Accessible Name and Description Computation 1.1</cite></a>. Joanmarie Diggs; Bryan Garaventa; Michael Cooper. W3C. 18 December 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/accname-1.1/">https://www.w3.org/TR/accname-1.1/</a></dd><dt id="bib-at-spi">[AT-SPI]</dt><dd><a href="https://developer.gnome.org/libatspi/stable/"><cite>Assistive Technology Service Provider Interface</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/libatspi/stable/">https://developer.gnome.org/libatspi/stable/</a></dd><dt id="bib-atk">[ATK]</dt><dd><a href="https://developer.gnome.org/atk/stable/"><cite>ATK - Accessibility Toolkit</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/atk/stable/">https://developer.gnome.org/atk/stable/</a></dd><dt id="bib-axapi">[AXAPI]</dt><dd><a href="https://developer.apple.com/documentation/appkit/nsaccessibility"><cite>The NSAccessibility Protocol for macOS</cite></a>.  Apple, Inc. URL: <a href="https://developer.apple.com/documentation/appkit/nsaccessibility">https://developer.apple.com/documentation/appkit/nsaccessibility</a></dd><dt id="bib-core-aam-1.1">[CORE-AAM-1.1]</dt><dd><a href="https://www.w3.org/TR/core-aam-1.1/"><cite>Core Accessibility API Mappings 1.1</cite></a>. Joanmarie Diggs; Joseph Scheuhammer; Richard Schwerdtfeger; Michael Cooper; Andi Snow-Weaver; Aaron Leventhal. W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/core-aam-1.1/">https://www.w3.org/TR/core-aam-1.1/</a></dd><dt id="bib-dpub-aria-1.0">[dpub-aria-1.0]</dt><dd><a href="https://www.w3.org/TR/dpub-aria-1.0/"><cite>Digital Publishing WAI-ARIA Module 1.0</cite></a>. Matt Garrish; Tzviya Siegman; Markus Gylling; Shane McCarron. W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/dpub-aria-1.0/">https://www.w3.org/TR/dpub-aria-1.0/</a></dd><dt id="bib-iaccessible2">[IAccessible2]</dt><dd><a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2"><cite>IAccessible2</cite></a>.  Linux Foundation. URL: <a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2">https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2</a></dd><dt id="bib-msaa">[MSAA]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/ms697707.aspx"><cite>Microsoft Active Accessibility (MSAA) 2.0</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/ms697707.aspx">https://msdn.microsoft.com/en-us/library/ms697707.aspx</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner. IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a></dd><dt id="bib-ui-automation">[UI-AUTOMATION]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx"><cite>UI Automation</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx">https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx</a></dd><dt id="bib-uia-express">[UIA-EXPRESS]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx"><cite>The IAccessibleEx Interface</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx</a></dd><dt id="bib-wcag21">[WCAG21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O Connor; Alastair Campbell; Michael Cooper. W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd>
       </dl></section></section><p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
