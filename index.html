@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><meta name="generator" content="ReSpec 23.8.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><meta name="generator" content="ReSpec 24.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -92,37 +92,7 @@ input.task-list-item-checkbox {
 		<title>Digital Publishing Accessibility API Mappings</title>
 		
 		<script src="common/script/jquery-1.9.0.min.js"></script>
-		
-		
-		
-		
-		<link href="common/css/mapping-tables.css" rel="stylesheet" type="text/css">
-		<link href="common/css/common.css" rel="stylesheet" type="text/css">
-		<!--<link href="css/dpub-aam.css" rel="stylesheet" type="text/css"/>-->
-		
-		<script src="common/script/jquery.details.min.js"></script>
-		<script src="common/script/mapping-tables.js"></script>
-		<script type="text/javascript">
-
-var mappingTableLabels = {
-  viewByTable: "View as a single table",
-  expand: "Expand all",
-  collapse: "Collapse all",
-  showHideCols: "Show/Hide Columns:",
-  showActionText: "Show",
-  hideActionText: "Hide",
-  showToolTipText: "Show column",
-  hideToolTipText: "Hide column",
-
-  // map where keys are @id of associated mapping table:
-  viewByLabels: {
-    "role-mapping-table": "View by roles",
-    "state-property-mapping-table": "View by state/property",
-    "event-mapping-table": "View by state/property"
-  }
-}
-</script>
-	<style id="respec-mainstyle">/*****************************************************************
+		<style id="respec-mainstyle">/*****************************************************************
  * ReSpec 3 CSS
  * Robin Berjon - http://berjon.com/
  *****************************************************************/
@@ -362,7 +332,37 @@ h6>a.self-link::before {
     display: none;
   }
 }
-</style><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"><link rel="canonical" href="https://www.w3.org/TR/dpub-aam-1.0/"><script id="initialUserConfig" type="application/json">{
+</style>
+		
+		
+		
+		<link href="common/css/mapping-tables.css" rel="stylesheet" type="text/css">
+		<link href="common/css/common.css" rel="stylesheet" type="text/css">
+		<!--<link href="css/dpub-aam.css" rel="stylesheet" type="text/css"/>-->
+		
+		<script src="common/script/jquery.details.min.js"></script>
+		<script src="common/script/mapping-tables.js"></script>
+		<script type="text/javascript">
+
+var mappingTableLabels = {
+  viewByTable: "View as a single table",
+  expand: "Expand all",
+  collapse: "Collapse all",
+  showHideCols: "Show/Hide Columns:",
+  showActionText: "Show",
+  hideActionText: "Hide",
+  showToolTipText: "Show column",
+  hideToolTipText: "Hide column",
+
+  // map where keys are @id of associated mapping table:
+  viewByLabels: {
+    "role-mapping-table": "View by roles",
+    "state-property-mapping-table": "View by state/property",
+    "event-mapping-table": "View by state/property"
+  }
+}
+</script>
+	<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"><link rel="canonical" href="https://www.w3.org/TR/dpub-aam-1.0/"><script id="initialUserConfig" type="application/json">{
   "includePermalinks": true,
   "specStatus": "ED",
   "diffTool": "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
@@ -456,21 +456,21 @@ h6>a.self-link::before {
   "preProcess": [
     null
   ],
-  "publishDate": "2018-12-21",
-  "publishISODate": "2018-12-21T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 21 December 2018"
+  "publishDate": "2019-01-15",
+  "publishISODate": "2019-01-15T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 15 January 2019"
 }</script><meta name="description" content="The Digital Publishing Accessibility API Mappings (DPub-AAM) defines how
     user agents map
     the Digital Publishing WAI-ARIA Module [dpub-aria-1.0] markup
     to platform accessibility APIs.
     It is intended for user agent developers
     responsible for accessibility in their user agent so that they can support the accessibility content produced for digital publishing."></head>
-	<body style="zoom: 1;" class="h-entry toc-inline"><div class="head">
+	<body class="h-entry" style="zoom: 1;"><div class="head">
       <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Digital Publishing Accessibility <abbr title="application programming interface">API</abbr> Mappings</h1>
       
       <h2>
         <abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft
-        <time class="dt-published" datetime="2018-12-21">21 December 2018</time>
+        <time class="dt-published" datetime="2019-01-15">15 January 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -501,7 +501,7 @@ h6>a.self-link::before {
       <p class="copyright">
                         <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
                         ©
-                        2015-2018
+                        2015-2019
                         
                         <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
                         <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
@@ -516,7 +516,7 @@ h6>a.self-link::before {
                       </p>
       <hr title="Separator for header">
     </div>
-		<section id="abstract" class="introductory"><!--OddPage--><h2>Abstract</h2>
+		<section id="abstract" class="introductory"><h2>Abstract</h2>
   <p>
     The Digital Publishing Accessibility <abbr title="application programming interface">API</abbr> Mappings (DPub-AAM) defines how
     <a class="termref internalDFN" href="#dfn-user-agent" data-link-type="dfn">user agents</a> map
@@ -541,7 +541,7 @@ h6>a.self-link::before {
   </p>
 
 		</section>
-		<section id="sotd" class="introductory"><!--OddPage--><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p> <p>
+		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p> <p>
                                               This document was published by
                                               the <a href="https://www.w3.org/WAI/ARIA/">Accessible Rich Internet Applications Working Group</a> as an
                                               Editor's Draft.
@@ -782,7 +782,7 @@ h6>a.self-link::before {
 				<p> This section defines how <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> digital publishing roles map to platform accessibility <abbr title="application programming interfaces">APIs</abbr>. Elements having roles with a prefix value of <code>doc-</code>, that are not listed in this role mapping table, have no normative mappings. 
 				</p>
                                <div class="note" id="issue-container-generatedID-0"><div role="heading" class="note-title marker" id="h-note-0" aria-level="4"><span>Note</span></div><p class="">There are a number of roles mappings that are localized. The group needs to look into localizing for non-English languages.</p></div>
-				<div class="table-container">
+				<div class="table-container" style="display: none;">
 					<table class="map-table elements" id="role-mapping-table">
 						<caption>Table describing mapping of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles to accessibility <abbr title="application programming interfaces">APIs</abbr>.</caption>
 						<thead>
@@ -795,7 +795,7 @@ h6>a.self-link::before {
 							</tr>
 						</thead>
 						<tbody>
-                                                        <tr id="role-map-abstract">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-abstract"><code>doc-abstract</code></a></th>
                                                                 <td>
 									Expose IAccessible2: 
@@ -816,7 +816,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                       <tr id="role-map-acknowledgments">
+                                                       <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-acknowledgments"><code>doc-acknowledgments</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -839,7 +839,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-							<tr id="role-map-afterword">
+							<tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-afterword"><code>doc-afterword</code></a></th>
 								<td>
                                                                         Expose IAccessible2:
@@ -863,7 +863,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-appendix">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-appendix"><code>doc-appendix</code></a></th>
 								<td>
                                                                         Expose IAccessible2:
@@ -887,7 +887,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-backlink">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-backlink"><code>doc-backlink</code></a></th>
                                                                 <td>
 								 	Expose
@@ -915,7 +915,7 @@ h6>a.self-link::before {
 
                                                         </tr>
 
-                                                        <tr id="role-map-biblioentry">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-biblioentry"><code>doc-biblioentry</code></a></th>
                                                                 <td>
 									Expose
@@ -933,7 +933,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-bibliography">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-biblioentry"><code>doc-bibliography</code></a></th>
 								<td>
                                                                         Expose IAccessible2:
@@ -956,7 +956,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-biblioref">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-biblioref"><code>doc-biblioref</code></a></th>
 								<td>
                                                                         Expose
@@ -983,7 +983,7 @@ h6>a.self-link::before {
                                                                 </td>
                                                         </tr>
 
-                                                        <tr id="role-map-chapter">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-chapter"><code>doc-chapter</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1006,7 +1006,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
 							</tr>
-                                                        <tr id="role-map-colophon">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-colophon"><code>doc-colophon</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2: Object attribute <code>xml-roles:doc-colophon</code>. </p></td>
                                                                 <td>
@@ -1022,7 +1022,7 @@ h6>a.self-link::before {
                                                                 </td>
 
                                                         </tr>
-                                                        <tr id="role-map-conclusion">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-conclusion"><code>doc-conclusion</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1045,7 +1045,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-cover">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-cover</code></a></th>
                                                                 <td>Expose <p><code>ROLE_SYSTEM_GRAPHIC</code></p>  
 								<p>IAccessible2: Object attribute <code>xml-roles:doc-cover</code>. </p>
@@ -1060,7 +1060,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'image'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-credit">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-credit</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-credit</code></td>
                                                                 <td>
@@ -1075,7 +1075,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'group'</code>
 								</td>
                                                         </tr>
-                                                        <tr id="role-map-credits">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-credits"><code>doc-credits</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1098,7 +1098,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'region'</code>
 								</td>
                                                         </tr>
-                                                        <tr id="role-map-dedication">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-dedication"><code>doc-dedication</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-dedication</code></td>
                                                                 <td>
@@ -1113,7 +1113,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-endnote">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-endnote"><code>doc-endnote</code></a></th>
                                                                 <td>
                                                                         Expose
@@ -1131,7 +1131,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-endnotes">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-endnote"><code>doc-endnotes</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1156,7 +1156,7 @@ h6>a.self-link::before {
                                                                 </td>
                                                         </tr>
 
-                                                        <tr id="role-map-epigraph">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-epigraph"><code>doc-epigraph</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-epigraph</code></td>
                                                                 <td>
@@ -1171,7 +1171,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-epilogue">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-epilogue"><code>doc-epilogue</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1195,7 +1195,7 @@ h6>a.self-link::before {
                                                                 </td>
 
                                                         </tr>
-                                                        <tr id="role-map-errata">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-errata</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1218,7 +1218,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-example">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-example</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-example</code></td>
                                                                 <td>
@@ -1233,7 +1233,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-footnote">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-footnote"><code>doc-footnote</code></a></th>
                                                                 <td><p>Expose IAccessible2:</p>
 									<ul>
@@ -1253,7 +1253,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-foreword">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-foreword"><code>doc-foreword</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1276,7 +1276,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-glossary">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-glossary"><code>doc-glossary</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1299,7 +1299,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-glossref">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-glossref"><code>doc-glossref</code></a></th>
 								<td>
                                                                         Expose
@@ -1326,7 +1326,7 @@ h6>a.self-link::before {
                                                                 </td>
 
                                                         </tr>
-                                                        <tr id="role-map-index">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-index"><code>doc-index</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1349,7 +1349,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'navigation'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-introduction">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-introduction"><code>doc-introduction</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1373,7 +1373,7 @@ h6>a.self-link::before {
                                                                 </td>
 
                                                         </tr>
-                                                        <tr id="role-map-noteref">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-noteref"><code>doc-noteref</code></a></th>
                                                                 <td>
                                                                         Expose
@@ -1400,7 +1400,7 @@ h6>a.self-link::before {
                                                                 </td>
 
                                                         </tr>
-                                                        <tr id="role-map-notice">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-notice"><code>doc-notice</code></a></th>
                                                                 <td>Expose
 								    <p><code>IA2_ROLE_NOTE</code></p>
@@ -1417,7 +1417,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'note'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-pagebreak">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pagebreak"><code>doc-pagebreak</code></a></th>
                                                                 <td>Expose <p><code>ROLE_SYSTEM_SEPARATOR</code></p> 
 								<p>IAccessible2:</p>
@@ -1435,7 +1435,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'splitter'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-pagelist">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pagelist"><code>doc-pagelist</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1458,7 +1458,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'navigation'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-part">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-part"><code>doc-part</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1481,7 +1481,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr id="role-map-preface">
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-preface"><code>doc-preface</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1504,7 +1504,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                         <tr id="role-map-prologue">
+                                                         <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-prologue"><code>doc-prologue</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1527,7 +1527,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                         <tr id="role-map-pullquote">
+                                                         <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pullquote"><code>doc-pullquote</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1548,7 +1548,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                         <tr id="role-map-qna">
+                                                         <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-preface"><code>doc-qna</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-qna</code></td>
                                                                 <td>
@@ -1563,7 +1563,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'group'</code>
                                                                 </td>
                                                         </tr>
-                                                         <tr id="role-map-subtitle">
+                                                         <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-preface"><code>doc-subtitle</code></a></th>
                                                                 <td>Expose IAccessible2:
 									<ul>
@@ -1583,7 +1583,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'heading'</code>
                                                                 </td>
                                                         </tr>
-                                                         <tr id="role-map-tip">
+                                                         <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-tip"><code>doc-tip</code></a></th>
                                                                 <td>
 									Expose
@@ -1603,7 +1603,7 @@ h6>a.self-link::before {
                                                                     AXRoleDescription: <code>'note'</code>
                                                                 </td>
                                                         </tr>
-							<tr id="role-map-toc">
+							<tr>
 								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-toc"><code>doc-toc</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
