@@ -1,30 +1,13 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><meta name="generator" content="ReSpec 24.3.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
-div.issue-title, div.note-title , div.ednote-title, div.warning-title {
-    padding-right:  1em;
-    min-width: 7.5em;
-    color: #b9ab2d;
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><meta name="generator" content="ReSpec 24.5.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+.issue-label {
+    text-transform: initial;
 }
-div.issue-title { color: #e05252; }
-div.note-title, div.ednote-title { color: #2b2; }
-div.warning-title { color: #f22; }
-div.issue-title span, div.note-title span, div.ednote-title span, div.warning-title span {
-    text-transform: uppercase;
-}
-div.note, div.issue, div.ednote, div.warning {
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
+
 .warning > p:first-child { margin-top: 0 }
 .warning {
     padding: .5em;
     border-left-width: .5em;
     border-left-style: solid;
-}
-div.issue, div.note , div.ednote,  div.warning {
-    padding: 1em 1.2em 0.5em;
-    margin: 1em 0;
-    position: relative;
-    clear: both;
 }
 span.warning { padding: .1em .5em .15em; }
 
@@ -68,6 +51,7 @@ input.task-list-item-checkbox {
   border-radius: 4px;
   position: relative;
   bottom: 2px;
+  border: none;
 }
 
 .issue a.respec-label-dark {
@@ -353,7 +337,7 @@ var mappingTableLabels = {
   }
 }
 </script>
-	<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"><link rel="canonical" href="https://www.w3.org/TR/dpub-aam-1.0/"><script id="initialUserConfig" type="application/json">{
+	<link rel="canonical" href="https://www.w3.org/TR/dpub-aam-1.0/"><script id="initialUserConfig" type="application/json">{
   "includePermalinks": true,
   "specStatus": "ED",
   "diffTool": "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
@@ -447,21 +431,21 @@ var mappingTableLabels = {
   "preProcess": [
     null
   ],
-  "publishDate": "2019-02-12",
-  "publishISODate": "2019-02-12T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 12 February 2019"
+  "publishDate": "2019-03-20",
+  "publishISODate": "2019-03-20T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 20 March 2019"
 }</script><meta name="description" content="The Digital Publishing Accessibility API Mappings (DPub-AAM) defines how
     user agents map
     the Digital Publishing WAI-ARIA Module [dpub-aria-1.0] markup
     to platform accessibility APIs.
     It is intended for user agent developers
-    responsible for accessibility in their user agent so that they can support the accessibility content produced for digital publishing."></head>
+    responsible for accessibility in their user agent so that they can support the accessibility content produced for digital publishing."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry" style="zoom: 1;"><div class="head">
       <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Digital Publishing Accessibility <abbr title="application programming interface">API</abbr> Mappings</h1>
       
       <h2>
         <abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft
-        <time class="dt-published" datetime="2019-02-12">12 February 2019</time>
+        <time class="dt-published" datetime="2019-03-20">20 March 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -496,7 +480,7 @@ var mappingTableLabels = {
       
       <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
       <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-      <a href="http://ev.buaa.edu.cn/">Beihang</a>). 
+      <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
       <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
       <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
       apply.
@@ -507,7 +491,7 @@ var mappingTableLabels = {
   <p>
     The Digital Publishing Accessibility <abbr title="application programming interface">API</abbr> Mappings (DPub-AAM) defines how
     <a class="termref internalDFN" href="#dfn-user-agent" data-link-type="dfn">user agents</a> map
-    the Digital Publishing <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> Module [<cite><a class="bibref" href="#bib-dpub-aria-1.0">dpub-aria-1.0</a></cite>] markup
+    the Digital Publishing <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> Module [<cite class="respec-offending-element" title="Normative references in informative sections are not allowed. Remove '!' from the start of the reference `[[!!dpub-aria-1.0]]`" id="respec-offender-normative-references-in-informative-sections-are-not-allowed-remove-from-the-start-of-the-reference-dpub-aria-1-0"><a class="bibref" href="#bib-dpub-aria-1.0">dpub-aria-1.0</a></cite>] markup
     to platform <a class="termref internalDFN" href="#dfn-accessibility-api" data-link-type="dfn">accessibility <abbr title="Application Programming Interfaces">APIs</abbr></a>.
     It is intended for user agent developers
     responsible for accessibility in their user agent so that they can support the accessibility content produced for digital publishing.
@@ -516,8 +500,8 @@ var mappingTableLabels = {
     The implementation of this specification in user agents enables authors to produce more accessible e-books,
     by conveying structural book constructs used by the digital publishing industry to assistive technologies.
     It does this by extending the
-    <cite><a href="http://www.w3.org/TR/core-aam-1.1/">Core Accessibility <abbr title="application programming interface">API</abbr> Mappings 1.1</a></cite> [<cite><a class="bibref" href="#bib-core-aam-1.1">CORE-AAM-1.1</a></cite>]
-    and the <cite><a href="http://www.w3.org/TR/accname-aam-1.1/">Accessible Name and Description: Computation and <abbr title="application programming interface">API</abbr> Mappings 1.1</a></cite> [<cite><a class="bibref" href="#bib-accname-aam-1.1">ACCNAME-AAM-1.1</a></cite>] specifications
+    <cite><a href="http://www.w3.org/TR/core-aam-1.1/">Core Accessibility <abbr title="application programming interface">API</abbr> Mappings 1.1</a></cite> [<cite class="respec-offending-element" title="Normative references in informative sections are not allowed. Remove '!' from the start of the reference `[[!!CORE-AAM-1.1]]`" id="respec-offender-normative-references-in-informative-sections-are-not-allowed-remove-from-the-start-of-the-reference-core-aam-1-1"><a class="bibref" href="#bib-core-aam-1.1">CORE-AAM-1.1</a></cite>]
+    and the <cite><a href="http://www.w3.org/TR/accname-aam-1.1/">Accessible Name and Description: Computation and <abbr title="application programming interface">API</abbr> Mappings 1.1</a></cite> [<cite class="respec-offending-element" title="Normative references in informative sections are not allowed. Remove '!' from the start of the reference `[[!!ACCNAME-AAM-1.1]]`" id="respec-offender-normative-references-in-informative-sections-are-not-allowed-remove-from-the-start-of-the-reference-accname-aam-1-1"><a class="bibref" href="#bib-accname-aam-1.1">ACCNAME-AAM-1.1</a></cite>] specifications
     for user agents.
     It provides Accessibility <abbr title="application programming interface">API</abbr> Mapping guidance for the roles defined in the Digital Publish <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> Module.
   </p>
@@ -568,7 +552,7 @@ var mappingTableLabels = {
                   
                 </p><p>
                   This document is governed by the
-                  <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                  <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#intro"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a class="tocxref" href="#conformance"><span class="secno">2. </span>Conformance</a></li><li class="tocline"><a class="tocxref" href="#glossary"><span class="secno">3. </span>Important Terms</a></li><li class="tocline"><a class="tocxref" href="#keyboard-focus"><span class="secno">4. </span>Supporting Keyboard Navigation</a></li><li class="tocline"><a class="tocxref" href="#mapping"><span class="secno">5. </span>Mapping <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> to Accessibility <abbr title="Application Programming Interfaces">APIs</abbr></a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mapping_general"><span class="secno">5.1 </span>General rules for exposing <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> semantics</a></li></ol></li><li class="tocline"><a class="tocxref" href="#mapping_conflicts"><span class="secno">6. </span>Conflicts between native markup semantics and <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr></a></li><li class="tocline"><a class="tocxref" href="#mapping_nodirect"><span class="secno">7. </span>Exposing attributes that do not directly map to accessibility <abbr title="application programming interface">API</abbr> properties</a></li><li class="tocline"><a class="tocxref" href="#mapping_role"><span class="secno">8. </span>Role mapping</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#roleMappingGeneralRules"><span class="secno">8.1 </span>General Rules</a></li><li class="tocline"><a class="tocxref" href="#mapping_role_table"><span class="secno">8.2 </span>Role Mapping Table</a></li></ol></li><li class="tocline"><a class="tocxref" href="#mapping_state-property"><span class="secno">9. </span>State and Property Mapping</a></li><li class="tocline"><a class="tocxref" href="#mapping_additional"><span class="secno">10. </span>Special Processing Requiring Additional Computation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mapping_additional_nd"><span class="secno">10.1 </span>Name and Description</a></li><li class="tocline"><a class="tocxref" href="#mapping_additional_widget-value"><span class="secno">10.2 </span>Widget Values</a></li><li class="tocline"><a class="tocxref" href="#mapping_additional_relations"><span class="secno">10.3 </span>Relations</a></li><li class="tocline"><a class="tocxref" href="#mapping_additional_position"><span class="secno">10.4 </span>Group Position</a></li></ol></li><li class="tocline"><a class="tocxref" href="#mapping_actions"><span class="secno">11. </span>Actions</a></li><li class="tocline"><a class="tocxref" href="#mapping_events"><span class="secno">12. </span>Events</a></li><li class="tocline"><a class="tocxref" href="#document-handling"><span class="secno">13. </span>Special Document Handling Procedures</a></li><li class="tocline"><a class="tocxref" href="#appendices"><span class="secno">A. </span>Appendices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changelog"><span class="secno">A.1 </span>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#substantive-changes-since-the-last-public-working-draft"><span class="secno">A.1.1 </span>Substantive changes since the <span class="formerLink">last public working draft</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">A.2 </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><span class="secno">A.2.1 </span>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><span class="secno">A.2.2 </span>Enabling funders</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><span class="secno">B. </span>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><span class="secno">B.1 </span>Normative references</a></li></ol></li></ol></nav>
 		<section id="intro" class="informative">
 			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction<a class="self-link" aria-label="§" href="#intro"></a></h2><p><em>This section is non-normative.</em></p>
@@ -577,7 +561,11 @@ var mappingTableLabels = {
       As well as sections marked as non-normative, all authoring guidelines,
       diagrams, examples, and notes in this specification are non-normative.
       Everything else in this specification is normative.
-    </p><p id="respecRFC2119">The key words  <em class="rfc2119">MAY</em>, <em class="rfc2119">MUST</em>, <em class="rfc2119">MUST NOT</em>, <em class="rfc2119">OPTIONAL</em>, <em class="rfc2119">RECOMMENDED</em>, <em class="rfc2119">REQUIRED</em>, <em class="rfc2119">SHALL</em>, <em class="rfc2119">SHALL NOT</em>, and <em class="rfc2119">SHOULD</em> are to be interpreted as described in [<cite><a class="bibref" href="#bib-rfc2119">RFC2119</a></cite>].</p>
+    </p><p>
+            The key words <em class="rfc2119">MAY</em>, <em class="rfc2119">MUST</em>, <em class="rfc2119">MUST NOT</em>, <em class="rfc2119">OPTIONAL</em>, <em class="rfc2119">RECOMMENDED</em>, <em class="rfc2119">REQUIRED</em>, <em class="rfc2119">SHALL</em>, <em class="rfc2119">SHALL NOT</em>, and <em class="rfc2119">SHOULD</em>
+            are to be interpreted as described in
+            [<cite><a class="bibref" href="#bib-rfc2119">RFC2119</a></cite>].
+          </p>
 			<p>This specification indicates whether a section is <a class="termref internalDFN" href="#dfn-normative" data-link-type="dfn">normative</a> or <a class="termref internalDFN" href="#dfn-informative" data-link-type="dfn">informative</a> and the classification applies to the entire section. A statement "This section is normative" or "This section is informative" applies to all sub-sections of that section.</p>
 			<p>Normative sections provide requirements that <a class="termref internalDFN" href="#dfn-user-agent" data-link-type="dfn">user agents</a> must follow for an implementation to conform to this specification. The keywords <strong class="rfc2119"><em class="rfc2119" title="MUST">MUST</em></strong>, <strong class="rfc2119"><em class="rfc2119" title="MUST NOT">MUST NOT</em></strong>, <strong class="rfc2119"><em class="rfc2119" title="REQUIRED">REQUIRED</em></strong>, <strong class="rfc2119"><em class="rfc2119" title="SHALL">SHALL</em></strong>, <strong class="rfc2119"><em class="rfc2119" title="SHALL NOT">SHALL NOT</em></strong>, <strong class="rfc2119"><em class="rfc2119" title="SHOULD">SHOULD</em></strong>, <strong class="rfc2119"><em class="rfc2119" title="RECOMMENDED">RECOMMENDED</em></strong>, <strong class="rfc2119"><em class="rfc2119" title="MAY">MAY</em></strong>, and <strong class="rfc2119"><em class="rfc2119" title="OPTIONAL">OPTIONAL</em></strong> in this document are to be interpreted as described in <cite><a href="http://www.rfc-editor.org/rfc/rfc2119.txt">Keywords for use in RFCs to indicate requirement levels</a></cite> [<cite><a class="bibref" href="#bib-rfc2119">RFC2119</a></cite>]. RFC-2119 keywords are formatted in uppercase and contained in a <code>strong</code> element with <code>class="rfc2119"</code>. When the keywords shown above are used, but do not share this format,
 				they do not convey formal information in the RFC 2119 sense, and are merely explanatory, i.e., informative. As much as possible, such usages are avoided in this specification.</p>
