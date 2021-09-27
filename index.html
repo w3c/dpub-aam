@@ -35,7 +35,7 @@ dfn{cursor:pointer}
 .dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
 </style>
 		
-<title>Digital Publishing Accessibility API Mappings</title>
+<title>Digital Publishing Accessibility API Mappings 1.1</title>
 		
 		
 <script src="common/script/jquery-1.9.0.min.js"></script>
@@ -139,7 +139,7 @@ var mappingTableLabels = {
     to platform accessibility APIs.
     It is intended for user agent developers
     responsible for accessibility in their user agent so that they can support the accessibility content produced for digital publishing.">
-<link rel="canonical" href="https://www.w3.org/TR/dpub-aam-1.0/">
+<link rel="canonical" href="https://www.w3.org/TR/dpub-aam-1.1/">
 <style>
 var{position:relative;cursor:pointer}
 var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
@@ -151,7 +151,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "github": "w3c/dpub-aam",
   "doJsonLd": true,
   "specStatus": "ED",
-  "shortName": "dpub-aam-1.0",
+  "shortName": "dpub-aam-1.1",
   "copyrightStart": "2015",
   "license": "document",
   "edDraftURI": "https://w3c.github.io/dpub-aam/",
@@ -217,24 +217,24 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "accname",
     "wai-aria"
   ],
-  "publishDate": "2021-09-21",
-  "publishISODate": "2021-09-21T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 21 September 2021"
+  "publishDate": "2021-09-27",
+  "publishISODate": "2021-09-27T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 27 September 2021"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry" style="zoom: 1;" data-cite="core-aam accname wai-aria"><div class="head">
     <a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72">
-  </a> <h1 id="title" class="title">Digital Publishing Accessibility API Mappings</h1>
+  </a> <h1 id="title" class="title">Digital Publishing Accessibility API Mappings 1.1</h1>
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2021-09-21">21 September 2021</time>
+      <time class="dt-published" datetime="2021-09-27">27 September 2021</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
               <a class="u-url" href="https://w3c.github.io/dpub-aam/">https://w3c.github.io/dpub-aam/</a>
             </dd><dt>Latest published version:</dt><dd>
-              <a href="https://www.w3.org/TR/dpub-aam-1.0/">https://www.w3.org/TR/dpub-aam-1.0/</a>
+              <a href="https://www.w3.org/TR/dpub-aam-1.1/">https://www.w3.org/TR/dpub-aam-1.1/</a>
             </dd>
       <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/dpub-aam/">https://w3c.github.io/dpub-aam/</a></dd>
       
@@ -348,7 +348,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2020/Process-20200915/">15 September 2020 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#keyboard-focus"><bdi class="secno">3. </bdi>Supporting Keyboard Navigation</a></li><li class="tocline"><a class="tocxref" href="#mapping"><bdi class="secno">4. </bdi>Mapping <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> to Accessibility <abbr title="Application Programming Interfaces">APIs</abbr></a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mapping_general"><bdi class="secno">4.1 </bdi>General rules for exposing <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> semantics</a></li></ol></li><li class="tocline"><a class="tocxref" href="#mapping_conflicts"><bdi class="secno">5. </bdi>Conflicts between native markup semantics and <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr></a></li><li class="tocline"><a class="tocxref" href="#mapping_nodirect"><bdi class="secno">6. </bdi>Exposing attributes that do not directly map to accessibility <abbr title="application programming interface">API</abbr> properties</a></li><li class="tocline"><a class="tocxref" href="#mapping_role"><bdi class="secno">7. </bdi>Role mapping</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#roleMappingGeneralRules"><bdi class="secno">7.1 </bdi>General Rules</a></li><li class="tocline"><a class="tocxref" href="#mapping_role_table"><bdi class="secno">7.2 </bdi>Role Mapping Table</a></li></ol></li><li class="tocline"><a class="tocxref" href="#mapping_state-property"><bdi class="secno">8. </bdi>State and Property Mapping</a></li><li class="tocline"><a class="tocxref" href="#mapping_additional"><bdi class="secno">9. </bdi>Special Processing Requiring Additional Computation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mapping_additional_nd"><bdi class="secno">9.1 </bdi>Name and Description</a></li><li class="tocline"><a class="tocxref" href="#mapping_additional_widget-value"><bdi class="secno">9.2 </bdi>Widget Values</a></li><li class="tocline"><a class="tocxref" href="#mapping_additional_relations"><bdi class="secno">9.3 </bdi>Relations</a></li><li class="tocline"><a class="tocxref" href="#mapping_additional_position"><bdi class="secno">9.4 </bdi>Group Position</a></li></ol></li><li class="tocline"><a class="tocxref" href="#mapping_actions"><bdi class="secno">10. </bdi>Actions</a></li><li class="tocline"><a class="tocxref" href="#mapping_events"><bdi class="secno">11. </bdi>Events</a></li><li class="tocline"><a class="tocxref" href="#document-handling"><bdi class="secno">12. </bdi>Special Document Handling Procedures</a></li><li class="tocline"><a class="tocxref" href="#appendices"><bdi class="secno">A. </bdi>Appendices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">A.1 </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#substantive-changes-since-the-last-public-working-draft"><bdi class="secno">A.1.1 </bdi>Substantive changes since the <span class="formerLink">last public working draft</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">A.2 </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><bdi class="secno">A.2.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">A.2.2 </bdi>Enabling funders</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">B.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">B.2 </bdi>Informative references</a></li></ol></li></ol></nav>
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#keyboard-focus"><bdi class="secno">3. </bdi>Supporting Keyboard Navigation</a></li><li class="tocline"><a class="tocxref" href="#mapping"><bdi class="secno">4. </bdi>Mapping <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> to Accessibility <abbr title="Application Programming Interfaces">APIs</abbr></a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mapping_general"><bdi class="secno">4.1 </bdi>General rules for exposing <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> semantics</a></li></ol></li><li class="tocline"><a class="tocxref" href="#mapping_conflicts"><bdi class="secno">5. </bdi>Conflicts between native markup semantics and <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr></a></li><li class="tocline"><a class="tocxref" href="#mapping_nodirect"><bdi class="secno">6. </bdi>Exposing attributes that do not directly map to accessibility <abbr title="application programming interface">API</abbr> properties</a></li><li class="tocline"><a class="tocxref" href="#mapping_role"><bdi class="secno">7. </bdi>Role mapping</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#roleMappingGeneralRules"><bdi class="secno">7.1 </bdi>General Rules</a></li><li class="tocline"><a class="tocxref" href="#mapping_role_table"><bdi class="secno">7.2 </bdi>Role Mapping Table</a></li></ol></li><li class="tocline"><a class="tocxref" href="#mapping_state-property"><bdi class="secno">8. </bdi>State and Property Mapping</a></li><li class="tocline"><a class="tocxref" href="#mapping_additional"><bdi class="secno">9. </bdi>Special Processing Requiring Additional Computation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mapping_additional_nd"><bdi class="secno">9.1 </bdi>Name and Description</a></li><li class="tocline"><a class="tocxref" href="#mapping_additional_widget-value"><bdi class="secno">9.2 </bdi>Widget Values</a></li><li class="tocline"><a class="tocxref" href="#mapping_additional_relations"><bdi class="secno">9.3 </bdi>Relations</a></li><li class="tocline"><a class="tocxref" href="#mapping_additional_position"><bdi class="secno">9.4 </bdi>Group Position</a></li></ol></li><li class="tocline"><a class="tocxref" href="#mapping_actions"><bdi class="secno">10. </bdi>Actions</a></li><li class="tocline"><a class="tocxref" href="#mapping_events"><bdi class="secno">11. </bdi>Events</a></li><li class="tocline"><a class="tocxref" href="#document-handling"><bdi class="secno">12. </bdi>Special Document Handling Procedures</a></li><li class="tocline"><a class="tocxref" href="#appendices"><bdi class="secno">A. </bdi>Appendices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">A.1 </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recent-changes"><bdi class="secno">A.1.1 </bdi>Substantive changes since <span class="formerLink">Digital Publishing Accessibility <abbr title="application programming interface">API</abbr> Mappings 1.0</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">A.2 </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><bdi class="secno">A.2.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">A.2.2 </bdi>Enabling funders</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">B.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">B.2 </bdi>Informative references</a></li></ol></li></ol></nav>
 		<section id="intro" class="informative">
 			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#intro"></a></h2><p><em>This section is non-normative.</em></p>
 		</section>
@@ -1050,6 +1050,48 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                                                                 </td>
                                                         </tr>
                                                         <tr>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pagefooter"><code>doc-pagefooter</code></a></th>
+                                                                <td>
+                                                                        Expose IAccessible2:
+                                                                        <ul>
+                                                                                <li><code>IA2_ROLE_FOOTER</code></li>
+                                                                                <li>Object attribute <code>xml-roles:doc-pagefooter</code> </li>
+                                                                        </ul>
+                                                                </td>
+                                                                <td>
+                                                                  <ul>
+                                                                    <li>Control Type is <code>Text</code></li>
+                                                                    <li>Control Pattern: <code>Annotation</code></li>
+                                                                    <li><code>Annotation.AnnotationTypeId</code>: <code>Footer</code></li>
+                                                                  </ul>
+                                                                </td>
+                                                                <td>Expose <p><code>ROLE_FOOTER</code> and object attribute <code>xml-roles:doc-pagefooter</code>. </p></td>
+                                                                <td>AXRole: <code>AXGroup</code><br>
+                                                                        AXSubrole: <code>&lt;nil&gt;</code>
+                                                                </td>
+                                                        </tr>
+                                                        <tr>
+                                                                <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pageheader"><code>doc-pageheader</code></a></th>
+                                                                <td>
+                                                                        Expose IAccessible2:
+                                                                        <ul>
+                                                                                <li><code>IA2_ROLE_HEADER</code></li>
+                                                                                <li>Object attribute <code>xml-roles:doc-pageheader</code> </li>
+                                                                        </ul>
+                                                                </td>
+                                                                <td>
+                                                                  <ul>
+                                                                    <li>Control Type is <code>Text</code></li>
+                                                                    <li>Control Pattern: <code>Annotation</code></li>
+                                                                    <li><code>Annotation.AnnotationTypeId</code>: <code>Header</code></li>
+                                                                  </ul>
+                                                                </td>
+                                                                <td>Expose <p><code>ROLE_HEADER</code> and object attribute <code>xml-roles:doc-pageheader</code>. </p></td>
+                                                                <td>AXRole: <code>AXGroup</code><br>
+                                                                        AXSubrole: <code>&lt;nil&gt;</code>
+                                                                </td>
+                                                        </tr>
+                                                        <tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pagelist"><code>doc-pagelist</code></a></th>
                                                                 <td>
                                                                         Expose IAccessible2:
@@ -1289,40 +1331,18 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 		</section>
 		<section id="appendices" class="appendix">
 			<h2 id="a-appendices"><bdi class="secno">A. </bdi>Appendices<a class="self-link" aria-label="§" href="#appendices"></a></h2>
-        		<section class="appendix" id="changelog">
-                		<h3 id="a-1-change-log"><bdi class="secno">A.1 </bdi>Change Log<a class="self-link" aria-label="§" href="#changelog"></a></h3>
-                		<section id="substantive-changes-since-the-last-public-working-draft">
-                        		<h4 id="a-1-1-substantive-changes-since-the-last-public-working-draft"><bdi class="secno">A.1.1 </bdi>Substantive changes since the <a href="https://www.w3.org/TR/2015/WD-dpub-aam-1.0-20151203/">last public working draft</a><a class="self-link" aria-label="§" href="#substantive-changes-since-the-last-public-working-draft"></a></h4>
-                        		<ul>
-                                		<li>20-Apr-2017: Update mappings. For <abbr title="Mac OS X Accessibility Protocol">AXAPI</abbr>, the AXSubrole is now AXApplicationGroup for the following roles: doc-abstract, doc-colophon, doc-dedication, doc-epigraph, doc-example, doc-footnote, doc-pullquote, and doc-qna; the AXRoleDescription of doc-abstract is now 'group'; doc-pagebreak is now mapped to AXRole: AXSplitter, AXRoleDescription: 'splitter'; doc-notice and doc-tip are now mapped to AXSubrole: AXDocumentNote, AXRoleDescription: 'note'. For <abbr title="Accessibility Toolkit">ATK</abbr>/ATSPI2, doc-tip is now mapped to ROLE_COMMENT.</li>
-                                		<li>20-Apr-2017: Map doc-pullquote for <abbr title="Accessibility Toolkit">ATK</abbr>/ATSPI2, IA2, and <abbr title="User Interface Automation">UIA</abbr>.</li>
-                                		<li>10-Mar-2016: Replace all ROLE_PANEL to ROLE_SECTION for <abbr title="Accessibility Toolkit">ATK</abbr>/ATSPI mappings</li>
-                                		<li>10-Mar-2016: Replace doc-locator with doc-backlink</li>
-						<li>10-Mar-2016: Remove doc-title</li>
-                                		<li>10-Mar-2016: Remove doc-footnotes and add doc-endnote and doc-endnotes</li>
-                                		<li>10-Mar-2016: Changed doc-pullquote to reflect no mappings</li>
-                                		<li>10-Mar-2016: Change doc-cover to map to an image</li>
-						<li>10-Mar-2016: Removed rendundant references section in the appendix</li>
-						<li>10-Mar-2016: Fixed links for githumb.io in configuration</li>
-						<li>10-Mar-2016: Added a change log </li>
-                                                <li>10-Mar-2016: Remove editors note regarding @rel </li>
-						<li>10-Mar-2016: change xml-roles mapping for doc-pagelist to reflect the actual role </li>
-                                              	<li>10-Mar-2016: Fix doc-prologue in table to not say doc-preface </li>
-                                              	<li>10-Mar-2016: Fix doc-conclusion to map to ROLE_LANDMARK for <abbr title="Accessibility Toolkit">ATK</abbr>/ATSPI </li>
-						<li>10-Mar-2016: changed doc-pagebreak to map to separator roles on IA2 and <abbr title="Accessibility Toolkit">ATK</abbr>/ATSPI </li>
-						<li>10-Mar-2016: modify doc-toc mapping to be consistent with doc-pagelist </li>
-						<li>10-Mar-2016: modify doc-subtitle to be a form of heading</li>
-						<li>10-Mar-2016: modify doc-pagebreak to be more like a separator</li>
-						<li>10-Mar-2016: Map doc-biblioentry and doc-endnote to ROLE_LIST_ITEM for <abbr title="Accessibility Toolkit">ATK</abbr>/ATSPI2; map doc-notice to ROLE_COMMENT for <abbr title="Accessibility Toolkit">ATK</abbr>/ATSPI2</li>
-						<li>14-Jul-2016: Remove special processing copied over from SVG-AAM for name and description computation.</li>
-						<li>26-Sep-2016: For macOS, modify doc-abstract, doc-acknowledgments, doc-afterword, doc-appendix, doc-bibliography, doc-chapter, doc-conclusion, doc-credits, doc-endnotes, doc-epilogue, doc-errata, doc-foreward, doc-glossary, doc-index, doc-introduction, doc-pagelist, doc-part, doc-pagebreak, doc-prologue, and doc-toc to be navigation or region landmarks.</li>
-						<li>28-Sep-2016: doc-abstract, doc-colophon, doc-credit, doc-dedication, doc-epigraph, doc-example and doc-qna are all to IA2_ROLE_SECTION; doc-notice, doc-tip mapped to IA2_ROLE_NOTE; convert a number of MSAA and IA2 roles to have &lt;code&gt; styling</li>
-
-
-                            			
-                        		</ul>
-				</section>
-                	</section>
+    		<section class="appendix" id="changelog">
+    			<h3 id="a-1-change-log"><bdi class="secno">A.1 </bdi>Change Log<a class="self-link" aria-label="§" href="#changelog"></a></h3>
+        			
+    			<section id="recent-changes">
+    				<h4 id="a-1-1-substantive-changes-since-digital-publishing-accessibility-api-mappings-1-0"><bdi class="secno">A.1.1 </bdi>Substantive changes since <a href="https://www.w3.org/TR/2017/REC-dpub-aam-1.0-20171214//">Digital Publishing Accessibility <abbr title="application programming interface">API</abbr> Mappings 1.0</a><a class="self-link" aria-label="§" href="#recent-changes"></a></h4>
+    				
+    				<ul>
+    					<li>20-Sep-2021: Added mappings for doc-pageheader and doc-pagefooter roles.</li>
+    				</ul>
+    			</section>
+    			
+			</section>
 			<section class="appendix informative section" id="acknowledgements">
 				<h3 id="a-2-acknowledgments"><bdi class="secno">A.2 </bdi>Acknowledgments<a class="self-link" aria-label="§" href="#acknowledgements"></a></h3><p><em>This section is non-normative.</em></p>
 				<p>The following people contributed to the development of this document.</p>
@@ -1330,20 +1350,11 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<h4 id="a-2-1-participants-active-in-the-dpub-aria-task-force-at-the-time-of-publication"><bdi class="secno">A.2.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication<a class="self-link" aria-label="§" href="#ack_dpub"></a></h4>
 					<ul>
 						<li>Michael Cooper (<abbr title="World Wide Web Consortium">W3C</abbr> Staff)</li>
-						<li>Heather Flanagan (Invited expert)</li>
+						<li>Joanmarie Diggs (Igalia, S.L.)</li>
 						<li>Matt Garrish (DAISY Consortium)</li>
-						<li>Markus Gylling (DAISY Consortium)</li>
-						<li>Ivan Herman (<abbr title="World Wide Web Consortium">W3C</abbr> Staff)</li>
-						<li>Deborah Kaplan (Invited expert)</li>
-						<li>George Kerscher (DAISY Consortium)</li>
-						<li>Peter Krautzberger (<abbr title="World Wide Web Consortium">W3C</abbr> Invited Experts)</li>
-						<li>Charles LaPierre (Benetech)</li>
-						<li>Shane McCarron (<abbr title="World Wide Web Consortium">W3C</abbr> Invited Experts)</li>
-						<li>Janina Sajka (Invited Expert, The Linux Foundation)</li>
-						<li>Richard Schwerdtfeger (Knowbility)</li>
+						<li>James Nurthen (Adobe)</li>
 						<li>Tzviya Siegman (Wiley)</li>
 					</ul>
-					<p>The group would like to thank all members of the DAISY and EPUB 3 working groups who developed the structural semantics vocabulary from which this module was drawn, with special thanks to Sanders Kleinfeld for his assistance analyzing the initial set of semantics for inclusion.</p>
 				</section>
 				<section class="section" id="ack_funders">
 	<h4 id="a-2-2-enabling-funders"><bdi class="secno">A.2.2 </bdi>Enabling funders<a class="self-link" aria-label="§" href="#ack_funders"></a></h4>
