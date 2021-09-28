@@ -217,9 +217,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "accname",
     "wai-aria"
   ],
-  "publishDate": "2021-09-27",
-  "publishISODate": "2021-09-27T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 27 September 2021"
+  "publishDate": "2021-09-28",
+  "publishISODate": "2021-09-28T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 28 September 2021"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry" style="zoom: 1;" data-cite="core-aam accname wai-aria"><div class="head">
@@ -228,7 +228,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2021-09-27">27 September 2021</time>
+      <time class="dt-published" datetime="2021-09-28">28 September 2021</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -570,7 +570,25 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-                                                        <tr>
+														<tr>
+															<th><code>listitem</code> descendants of <a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-bibliography"><code>doc-bibliography</code></a> (not descendant of another <code>listitem</code>)</th>
+								<td>
+									Expose
+									<p><code>ROLE_SYSTEM_LISTITEM</code> + <code>STATE_SYSTEM_READONLY</code></p>
+									<p>IAccessible2:</p><p>Object attribute <code>xml-roles:doc-biblioentry</code>.</p></td>
+								<td>
+									<ul>
+										<li>Control Type is <code>Text</code></li>
+										<li>Localized Control Type is '<code>biblioentry</code>'</li>
+									</ul>
+								</td>
+								<td><p>Expose <code>ROLE_LIST_ITEM</code> and object attribute <code>xml-roles:doc-bilioentry</code>.</p></td>
+								<td>AXRole: <code>AXGroup</code><br>
+									AXSubrole: <code>&lt;nil&gt;</code><br>
+									AXRoleDescription: <code>'group'</code>
+								</td>
+							</tr>
+														<tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-biblioref"><code>doc-biblioref</code></a></th>
 								<td>
                                                                         Expose
@@ -769,8 +787,25 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                                                                     AXRoleDescription: <code>'region'</code>
                                                                 </td>
                                                         </tr>
-
-                                                        <tr>
+														<tr>
+															<th><code>listitem</code> descendants of <a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-endnotes"><code>doc-endnotes</code></a> (not descendant of another <code>listitem</code>)</th>
+								<td>
+									Expose
+									<p><code>ROLE_SYSTEM_LISTITEM</code> + <code>STATE_SYSTEM_READONLY</code></p>
+									<p>IAccessible2:</p><p>Object attribute <code>xml-roles:doc-endnote</code>.</p></td>
+								<td>
+									<ul>
+										<li>Control Type is <code>Text</code></li>
+										<li>Localized Control Type is '<code>endnote</code>'</li>
+									</ul>
+								</td>
+								<td><p>Expose <code>ROLE_LIST_ITEM</code> and object attribute <code>xml-roles:doc-endnote</code>. </p></td>
+								<td>AXRole: <code>AXGroup</code><br>
+									AXSubrole: <code>&lt;nil&gt;</code><br>
+									AXRoleDescription: <code>'group'</code>
+								</td>
+							</tr>
+														<tr>
                                                                 <th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-epigraph"><code>doc-epigraph</code></a></th>
                                                                 <td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute <code>xml-roles:doc-epigraph</code></td>
                                                                 <td>
