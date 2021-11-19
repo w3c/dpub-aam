@@ -121,7 +121,10 @@
     },
     preProcess: [ linkCrossReferences, mappingTables ],
     postProcess: [ ],
-    xref: ["core-aam", "accname", "wai-aria"]
+    xref: ["core-aam", "accname", "wai-aria"],
+    lint: {
+    	"privsec-section": false
+    }
   }
 </script>
 		<script src="common/script/jquery.details.min.js"></script>
