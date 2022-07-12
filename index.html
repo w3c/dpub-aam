@@ -3,7 +3,6 @@
 	<head>
 		<title>Digital Publishing Accessibility API Mappings 1.1</title>
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-		<script src="common/script/jquery-1.9.0.min.js"></script>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
 		<script src="common/script/resolveReferences.js" class="remove"></script>
 		<script src="common/biblio.js" class="remove"></script>
@@ -88,6 +87,7 @@
     
     // Working group info
     group: "aria",
+    wgPublicList: "public-aria",
     
     tocIntroductory: true,
     //maxTocLevel: 4,
@@ -119,10 +119,12 @@
     },
     preProcess: [ linkCrossReferences, mappingTables ],
     postProcess: [ ],
-    xref: ["core-aam", "accname", "wai-aria"]
+    xref: ["core-aam", "accname", "wai-aria"],
+    lint: {
+    	"privsec-section": false
+    }
   }
 </script>
-		<script src="common/script/jquery.details.min.js"></script>
 		<script type="text/javascript">
 
 var mappingTableLabels = {
@@ -161,9 +163,11 @@ var mappingTableLabels = {
 			<p> The DPub-AAM is part of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> suite
 				described in the <a href="http://www.w3.org/WAI/intro/aria.php"><abbr
 						title="Accessible Rich Internet Application">WAI-ARIA</abbr> Overview</a>. </p>
-
 		</section>
-		<section id="sotd"> </section>
+		<section id="sotd">
+			<p>For a complete list of changes addressed in this revision, please refer to the <a href="#changelog"
+					>change log</a>.</p>
+		</section>
 		<section id="intro" class="informative">
 			<h2>Introduction</h2>
 		</section>
