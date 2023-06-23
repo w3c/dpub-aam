@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<meta name="generator" content="ReSpec 34.1.3">
+<meta name="generator" content="ReSpec 34.1.4">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 .issue-label{text-transform:initial}
@@ -132,250 +132,6 @@ dd{margin-left:0}
 				Publishing WAI-ARIA Module [dpub-aria-1.1] markup to platform accessibility APIs. It is intended for user agent
 				developers responsible for accessibility in their user agent so that they can support the accessibility
 				content produced for digital publishing.">
-<link rel="canonical" href="https://www.w3.org/TR/dpub-aam-1.1/">
-<script type="application/ld+json">{
-  "@context": [
-    "http://schema.org",
-    {
-      "@vocab": "http://schema.org/",
-      "@language": "en-US",
-      "w3p": "http://www.w3.org/2001/02pd/rec54#",
-      "foaf": "http://xmlns.com/foaf/0.1/",
-      "datePublished": {
-        "@type": "http://www.w3.org/2001/XMLSchema#date"
-      },
-      "inLanguage": {
-        "@language": null
-      },
-      "isBasedOn": {
-        "@type": "@id"
-      },
-      "license": {
-        "@type": "@id"
-      }
-    }
-  ],
-  "id": "https://www.w3.org/TR/dpub-aam-1.1/",
-  "type": [
-    "TechArticle",
-    "w3p:CR"
-  ],
-  "name": "Digital Publishing Accessibility API Mappings 1.1",
-  "inLanguage": "en-US",
-  "license": "https://www.w3.org/Consortium/Legal/2023/software-license",
-  "datePublished": "2023-06-29",
-  "copyrightHolder": {
-    "name": "World Wide Web Consortium",
-    "url": "https://www.w3.org/"
-  },
-  "discussionUrl": "https://github.com/w3c/dpub-aam/issues/",
-  "alternativeHeadline": "",
-  "isBasedOn": "",
-  "description": "The Digital Publishing Accessibility API Mappings (DPub-AAM) defines how user agents map the Digital\n\t\t\t\tPublishing WAI-ARIA Module [dpub-aria-1.1] markup to platform accessibility APIs. It is intended for user agent\n\t\t\t\tdevelopers responsible for accessibility in their user agent so that they can support the accessibility\n\t\t\t\tcontent produced for digital publishing.",
-  "editor": [
-    {
-      "type": "Person",
-      "name": "Matt Garrish",
-      "worksFor": {
-        "name": "DAISY Consortium",
-        "url": "https://daisy.org"
-      }
-    },
-    {
-      "type": "Person",
-      "name": "Tzviya Siegman",
-      "url": "http://www.wiley.com",
-      "worksFor": {
-        "name": "Wiley"
-      }
-    }
-  ],
-  "contributor": [],
-  "citation": [
-    {
-      "id": "https://www.w3.org/TR/dpub-aria-1.1/",
-      "type": "TechArticle",
-      "name": "Digital Publishing WAI-ARIA Module 1.1",
-      "url": "https://www.w3.org/TR/dpub-aria-1.1/",
-      "creator": [
-        {
-          "name": "Matt Garrish"
-        },
-        {
-          "name": "Tzviya Siegman"
-        }
-      ],
-      "publisher": {
-        "name": "W3C"
-      }
-    },
-    {
-      "id": "https://www.w3.org/TR/core-aam-1.1/",
-      "type": "TechArticle",
-      "name": "Core Accessibility API Mappings 1.1",
-      "url": "https://www.w3.org/TR/core-aam-1.1/",
-      "creator": [
-        {
-          "name": "Joanmarie Diggs"
-        },
-        {
-          "name": "Joseph Scheuhammer"
-        },
-        {
-          "name": "Richard Schwerdtfeger"
-        },
-        {
-          "name": "Michael Cooper"
-        },
-        {
-          "name": "Andi Snow-Weaver"
-        },
-        {
-          "name": "Aaron Leventhal"
-        }
-      ],
-      "publisher": {
-        "name": "W3C"
-      }
-    },
-    {
-      "id": "https://html.spec.whatwg.org/multipage/",
-      "type": "TechArticle",
-      "name": "HTML Standard",
-      "url": "https://html.spec.whatwg.org/multipage/",
-      "creator": [
-        {
-          "name": "Anne van Kesteren"
-        },
-        {
-          "name": "Domenic Denicola"
-        },
-        {
-          "name": "Ian Hickson"
-        },
-        {
-          "name": "Philip Jägenstedt"
-        },
-        {
-          "name": "Simon Pieters"
-        }
-      ],
-      "publisher": {
-        "name": "WHATWG"
-      }
-    },
-    {
-      "id": "https://www.w3.org/TR/accname-1.2/",
-      "type": "TechArticle",
-      "name": "Accessible Name and Description Computation 1.2",
-      "url": "https://www.w3.org/TR/accname-1.2/",
-      "creator": [
-        {
-          "name": "Bryan Garaventa"
-        },
-        {
-          "name": "Joanmarie Diggs"
-        },
-        {
-          "name": "Michael Cooper"
-        }
-      ],
-      "publisher": {
-        "name": "W3C"
-      }
-    },
-    {
-      "id": "https://www.rfc-editor.org/rfc/rfc2119",
-      "type": "TechArticle",
-      "name": "Key words for use in RFCs to Indicate Requirement Levels",
-      "url": "https://www.rfc-editor.org/rfc/rfc2119",
-      "creator": [
-        {
-          "name": "S. Bradner"
-        }
-      ],
-      "publisher": {
-        "name": "IETF"
-      }
-    },
-    {
-      "id": "https://www.rfc-editor.org/rfc/rfc8174",
-      "type": "TechArticle",
-      "name": "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words",
-      "url": "https://www.rfc-editor.org/rfc/rfc8174",
-      "creator": [
-        {
-          "name": "B. Leiba"
-        }
-      ],
-      "publisher": {
-        "name": "IETF"
-      }
-    },
-    {
-      "id": "https://infra.spec.whatwg.org/",
-      "type": "TechArticle",
-      "name": "Infra Standard",
-      "url": "https://infra.spec.whatwg.org/",
-      "creator": [
-        {
-          "name": "Anne van Kesteren"
-        },
-        {
-          "name": "Domenic Denicola"
-        }
-      ],
-      "publisher": {
-        "name": "WHATWG"
-      }
-    },
-    {
-      "id": "https://www.w3.org/TR/wai-aria/",
-      "type": "TechArticle",
-      "name": "Accessible Rich Internet Applications (WAI-ARIA) 1.0",
-      "url": "https://www.w3.org/TR/wai-aria/",
-      "creator": [
-        {
-          "name": "James Craig"
-        },
-        {
-          "name": "Michael Cooper"
-        }
-      ],
-      "publisher": {
-        "name": "W3C"
-      }
-    },
-    {
-      "id": "https://www.w3.org/TR/fingerprinting-guidance/",
-      "type": "TechArticle",
-      "name": "Mitigating Browser Fingerprinting in Web Specifications",
-      "url": "https://www.w3.org/TR/fingerprinting-guidance/",
-      "creator": [
-        {
-          "name": "Nick Doty"
-        }
-      ],
-      "publisher": {
-        "name": "W3C"
-      }
-    },
-    {
-      "id": "https://dom.spec.whatwg.org/",
-      "type": "TechArticle",
-      "name": "DOM Standard",
-      "url": "https://dom.spec.whatwg.org/",
-      "creator": [
-        {
-          "name": "Anne van Kesteren"
-        }
-      ],
-      "publisher": {
-        "name": "WHATWG"
-      }
-    }
-  ]
-}</script>
 <style>
 var{position:relative;cursor:pointer}
 var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
@@ -386,11 +142,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <script id="initialUserConfig" type="application/json">{
   "github": "w3c/dpub-aam",
   "doJsonLd": true,
-  "specStatus": "CR",
-  "crEnd": "2023-07-29",
-  "publishDate": "2023-06-29",
+  "specStatus": "ED",
   "shortName": "dpub-aam-1.1",
-  "implementationReportURI": "https://w3c.github.io/test-results/dpub-aam/",
   "copyrightStart": "2015",
   "license": "w3c-software-doc",
   "edDraftURI": "https://w3c.github.io/dpub-aam/",
@@ -434,57 +187,49 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "ED": "https://w3c.github.io/aria/",
     "FPWD": "https://www.w3.org/TR/wai-aria-1.2/",
     "WD": "https://www.w3.org/TR/wai-aria-1.2/",
-    "CR": "https://www.w3.org/TR/wai-aria-1.2/",
     "REC": "https://www.w3.org/TR/wai-aria-1.2/"
+  },
+  "accNameURLs": {
+    "ED": "https://w3c.github.io/accname/",
+    "WD": "https://www.w3.org/TR/accname-1.2/",
+    "FPWD": "https://www.w3.org/TR/accname-1.2/",
+    "REC": "https://www.w3.org/TR/accname-1.2/"
   },
   "coreMappingURLs": {
     "ED": "https://w3c.github.io/core-aam/",
     "WD": "https://www.w3.org/TR/core-aam-1.2/",
     "FPWD": "https://www.w3.org/TR/core-aam-1.2/",
-    "CR": "https://www.w3.org/TR/core-aam-1.2/",
     "REC": "https://www.w3.org/TR/core-aam-1.2/"
   },
   "dpubModURLs": {
     "ED": "https://w3c.github.io/dpub-aria/",
     "FPWD": "https://www.w3.org/TR/dpub-aria-1.1/",
     "WD": "https://www.w3.org/TR/dpub-aria-1.1/",
-    "CR": "https://www.w3.org/TR/dpub-aria-1.1/",
     "REC": "https://www.w3.org/TR/dpub-aria-1.1/"
   },
   "htmlMappingURLs": {
     "ED": "https://w3c.github.io/html-aam/",
     "FPWD": "https://www.w3.org/TR/html-aam-1.0/",
     "WD": "https://www.w3.org/TR/html-aam/",
-    "CR": "https://www.w3.org/TR/html-aam/",
     "REC": "https://www.w3.org/TR/html-aam/"
   },
   "graphicsMappingModURLs": {
     "ED": "https://w3c.github.io/graphics-aam/",
     "FPWD": "https://www.w3.org/TR/graphics-aam/",
     "WD": "https://www.w3.org/TR/graphics-aam/",
-    "CR": "https://www.w3.org/TR/graphics-aam/",
     "REC": "https://www.w3.org/TR/graphics-aam/"
   },
   "graphicsModURLs": {
     "ED": "https://w3c.github.io/graphics-aria/",
-    "FPWD": "https://www.w3.org/TR/graphics-aria/",
+    "FWPD": "https://www.w3.org/TR/graphics-aria/",
     "WD": "https://www.w3.org/TR/graphics-aria/",
-    "CR": "https://www.w3.org/TR/graphics-aria/",
     "REC": "https://www.w3.org/TR/graphics-aria/"
   },
   "practicesURLs": {
     "ED": "https://www.w3.org/WAI/ARIA/apg/",
     "FPWD": "https://www.w3.org/WAI/ARIA/apg/",
     "WD": "https://www.w3.org/WAI/ARIA/apg/",
-    "CR": "https://www.w3.org/WAI/ARIA/apg/",
     "REC": "https://www.w3.org/WAI/ARIA/apg/"
-  },
-  "accNameURLs": {
-    "ED": "https://w3c.github.io/accname/",
-    "WD": "https://www.w3.org/TR/accname-1.2/",
-    "FPWD": "https://www.w3.org/TR/accname-1.2/",
-    "CR": "https://www.w3.org/TR/accname-1.2/",
-    "REC": "https://www.w3.org/TR/accname-1.2/"
   },
   "preProcess": [
     null,
@@ -546,34 +291,32 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishISODate": "2023-06-29T00:00:00.000Z",
-  "generatedSubtitle": "W3C Candidate Recommendation Snapshot 29 June 2023"
+  "publishISODate": "2023-06-23T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 23 June 2023"
 }</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-CR"></head>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 	<body class="h-entry" data-cite="core-aam wai-aria dom infra accname"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Digital Publishing Accessibility API Mappings 1.1</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#CR">W3C Candidate Recommendation Snapshot</a> <time class="dt-published" datetime="2023-06-29">29 June 2023</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-06-23">23 June 2023</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
         <dt>This version:</dt><dd>
-                <a class="u-url" href="https://www.w3.org/TR/2023/CR-dpub-aam-1.1-20230629/">https://www.w3.org/TR/2023/CR-dpub-aam-1.1-20230629/</a>
+                <a class="u-url" href="https://w3c.github.io/dpub-aam/">https://w3c.github.io/dpub-aam/</a>
               </dd>
         <dt>Latest published version:</dt><dd>
                 <a href="https://www.w3.org/TR/dpub-aam-1.1/">https://www.w3.org/TR/dpub-aam-1.1/</a>
               </dd>
         <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/dpub-aam/">https://w3c.github.io/dpub-aam/</a></dd>
         <dt>History:</dt><dd>
-                    <a href="https://www.w3.org/standards/history/dpub-aam-1.1">https://www.w3.org/standards/history/dpub-aam-1.1</a>
+                    <a href="https://www.w3.org/standards/history/dpub-aam-1.1/">https://www.w3.org/standards/history/dpub-aam-1.1/</a>
                   </dd><dd>
                     <a href="https://github.com/w3c/dpub-aam/commits/">Commit history</a>
                   </dd>
         
-        <dt>Implementation report:</dt><dd>
-                <a href="https://w3c.github.io/test-results/dpub-aam/">https://w3c.github.io/test-results/dpub-aam/</a>
-              </dd>
+        
         
         
         
@@ -635,19 +378,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				log</a>.</p>
 		<p>
     This document was published by the <a href="https://www.w3.org/groups/wg/aria">Accessible Rich Internet Applications Working Group</a> as
-    a Candidate Recommendation Snapshot using the
-        <a href="https://www.w3.org/2021/Process-20211102/#recs-and-notes">Recommendation track</a>. 
-  </p><p>Publication as a Candidate Recommendation does not
-  imply endorsement by <abbr title="World Wide Web Consortium">W3C</abbr> and its Members. A Candidate Recommendation Snapshot has received
-        <a href="https://www.w3.org/2021/Process-20211102/#dfn-wide-review">wide review</a>, is intended to
-        gather
-        <a href="https://w3c.github.io/test-results/dpub-aam/">implementation experience</a>,
-        and has commitments from Working Group members to
-        <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Requirements">royalty-free licensing</a>
-        for implementations.</p><p>
-          This Candidate Recommendation is not expected to advance to Proposed
-          Recommendation any earlier than 29 July 2023.
-        </p><p>
+    an Editor's Draft. 
+  </p><p>Publication as an Editor's Draft does not
+  imply endorsement by <abbr title="World Wide Web Consortium">W3C</abbr> and its Members. </p><p>
+    This is a draft document and may be updated, replaced or obsoleted by other
+    documents at any time. It is inappropriate to cite this document as other
+    than work in progress.
+    
+  </p><p>
     
         This document was produced by a group
         operating under the
@@ -798,7 +536,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</thead>
 						<tbody>
 							<tr data-id="role-map-abstract">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-abstract"><code>doc-abstract</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-abstract"><code>doc-abstract</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_SECTION</code></li>
 										<li>Object attribute <code>xml-roles:doc-abstract</code>. </li>
@@ -822,7 +560,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-acknowledgments">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-acknowledgments"><code>doc-acknowledgments</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-acknowledgments"><code>doc-acknowledgments</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-acknowledgments</code>. </li>
@@ -849,7 +587,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-afterword">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-afterword"><code>doc-afterword</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-afterword"><code>doc-afterword</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-afterword</code>. </li>
@@ -876,7 +614,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-appendix">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-appendix"><code>doc-appendix</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-appendix"><code>doc-appendix</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-appendix</code>. </li>
@@ -903,7 +641,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-backlink">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-backlink"><code>doc-backlink</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-backlink"><code>doc-backlink</code></a></th>
 								<td> Expose <ul>
 										<li><code>ROLE_SYSTEM_LINK</code> + <code>STATE_LINKED</code></li>
 										<li><code>STATE_LINKED</code> on all descendants</li>
@@ -934,7 +672,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 							</tr>
 
 							<tr data-id="role-map-biblioentry">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-biblioentry"><code>doc-biblioentry</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-biblioentry"><code>doc-biblioentry</code></a></th>
 								<td> Expose <p><code>ROLE_SYSTEM_LISTITEM</code> +
 										<code>STATE_SYSTEM_READONLY</code></p>
 									<p>IAccessible2:</p><p>Object attribute
@@ -958,7 +696,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-bibliography">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-biblioentry"><code>doc-bibliography</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-biblioentry"><code>doc-bibliography</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-bibliography</code>. </li>
@@ -984,7 +722,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-biblioentry-implied">
-								<th><code>listitem</code> descendants of <a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-bibliography"><code>doc-bibliography</code></a> (not descendant of
+								<th><code>listitem</code> descendants of <a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-bibliography"><code>doc-bibliography</code></a> (not descendant of
 									another <code>listitem</code>)</th>
 								<td> Expose <p><code>ROLE_SYSTEM_LISTITEM</code> +
 										<code>STATE_SYSTEM_READONLY</code></p>
@@ -1009,7 +747,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-biblioref">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-biblioref"><code>doc-biblioref</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-biblioref"><code>doc-biblioref</code></a></th>
 								<td> Expose <ul>
 										<li><code>ROLE_SYSTEM_LINK</code> + <code>STATE_LINKED</code></li>
 										<li><code>STATE_LINKED</code> on all descendants</li>
@@ -1039,7 +777,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 							</tr>
 
 							<tr data-id="role-map-chapter">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-chapter"><code>doc-chapter</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-chapter"><code>doc-chapter</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-chapter</code>. </li>
@@ -1066,7 +804,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-colophon">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-colophon"><code>doc-colophon</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-colophon"><code>doc-colophon</code></a></th>
 								<td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2: Object attribute
 											<code>xml-roles:doc-colophon</code>.</p></td>
 								<td>
@@ -1088,7 +826,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 							</tr>
 							<tr data-id="role-map-conclusion">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-conclusion"><code>doc-conclusion</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-conclusion"><code>doc-conclusion</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-conclusion</code>. </li>
@@ -1114,7 +852,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-cover">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-cover"><code>doc-cover</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-cover</code></a></th>
 								<td>Expose <p><code>ROLE_SYSTEM_GRAPHIC</code></p>
 									<p>IAccessible2: Object attribute <code>xml-roles:doc-cover</code>.</p>
 								</td>
@@ -1135,7 +873,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-credit">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-cover"><code>doc-credit</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-credit</code></a></th>
 								<td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute
 										<code>xml-roles:doc-credit</code></td>
 								<td>
@@ -1157,7 +895,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-credits">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-credits"><code>doc-credits</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-credits"><code>doc-credits</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-credits</code>. </li>
@@ -1183,7 +921,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-dedication">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-dedication"><code>doc-dedication</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-dedication"><code>doc-dedication</code></a></th>
 								<td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute
 										<code>xml-roles:doc-dedication</code></td>
 								<td>
@@ -1204,7 +942,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-endnote">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-endnote"><code>doc-endnote</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-endnote"><code>doc-endnote</code></a></th>
 								<td> Expose <p><code>ROLE_SYSTEM_LISTITEM</code> +
 										<code>STATE_SYSTEM_READONLY</code></p>
 									<p>IAccessible2:</p><p>Object attribute <code>xml-roles:doc-endnote</code>.</p></td>
@@ -1227,7 +965,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-endnotes">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-endnote"><code>doc-endnotes</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-endnote"><code>doc-endnotes</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-endnotes</code>. </li>
@@ -1254,7 +992,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-endnote-implied">
-								<th><code>listitem</code> descendants of <a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-endnotes"><code>doc-endnotes</code></a> (not descendant of another
+								<th><code>listitem</code> descendants of <a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-endnotes"><code>doc-endnotes</code></a> (not descendant of another
 										<code>listitem</code>)</th>
 								<td> Expose <p><code>ROLE_SYSTEM_LISTITEM</code> +
 										<code>STATE_SYSTEM_READONLY</code></p>
@@ -1278,7 +1016,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-epigraph">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-epigraph"><code>doc-epigraph</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-epigraph"><code>doc-epigraph</code></a></th>
 								<td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute
 										<code>xml-roles:doc-epigraph</code></td>
 								<td>
@@ -1299,7 +1037,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-epilogue">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-epilogue"><code>doc-epilogue</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-epilogue"><code>doc-epilogue</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-epilogue</code>. </li>
@@ -1326,7 +1064,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 							</tr>
 							<tr data-id="role-map-errata">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-cover"><code>doc-errata</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-errata</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-errata</code></li>
@@ -1352,7 +1090,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-example">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-cover"><code>doc-example</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-example</code></a></th>
 								<td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute
 										<code>xml-roles:doc-example</code></td>
 								<td>
@@ -1373,7 +1111,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-footnote">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-footnote"><code>doc-footnote</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-footnote"><code>doc-footnote</code></a></th>
 								<td><p>Expose IAccessible2:</p>
 									<ul>
 										<li><code>IA2_ROLE_FOOTNOTE</code></li>
@@ -1398,7 +1136,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-foreword">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-foreword"><code>doc-foreword</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-foreword"><code>doc-foreword</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-foreword</code></li>
@@ -1424,7 +1162,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-glossary">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-glossary"><code>doc-glossary</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-glossary"><code>doc-glossary</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-glossary</code>
@@ -1451,7 +1189,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-glossref">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-glossref"><code>doc-glossref</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-glossref"><code>doc-glossref</code></a></th>
 								<td> Expose <ul>
 										<li><code>ROLE_SYSTEM_LINK</code> + <code>STATE_LINKED</code></li>
 										<li><code>STATE_LINKED</code> on all descendants</li>
@@ -1481,7 +1219,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 							</tr>
 							<tr data-id="role-map-index">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-index"><code>doc-index</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-index"><code>doc-index</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-index</code>
@@ -1508,7 +1246,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-introduction">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-introduction"><code>doc-introduction</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-introduction"><code>doc-introduction</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-introduction</code>
@@ -1536,7 +1274,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 							</tr>
 							<tr data-id="role-map-noteref">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-noteref"><code>doc-noteref</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-noteref"><code>doc-noteref</code></a></th>
 								<td> Expose <ul>
 										<li><code>ROLE_SYSTEM_LINK</code> + <code>STATE_LINKED</code></li>
 										<li><code>STATE_LINKED</code> on all descendants</li>
@@ -1566,7 +1304,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 							</tr>
 							<tr data-id="role-map-notice">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-notice"><code>doc-notice</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-notice"><code>doc-notice</code></a></th>
 								<td>Expose <p><code>IA2_ROLE_NOTE</code></p>
 									<p>IAccessible2:</p> Object attribute <code>xml-roles:doc-notice</code>.</td>
 								<td>
@@ -1588,7 +1326,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-pagebreak">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-pagebreak"><code>doc-pagebreak</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pagebreak"><code>doc-pagebreak</code></a></th>
 								<td>Expose <p><code>ROLE_SYSTEM_SEPARATOR</code></p>
 									<p>IAccessible2:</p> Object attribute <code>xml-roles:doc-pagebreak</code>. </td>
 								<td>
@@ -1609,7 +1347,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-pagefooter">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-pagefooter"><code>doc-pagefooter</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pagefooter"><code>doc-pagefooter</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_FOOTER</code></li>
 										<li>Object attribute <code>xml-roles:doc-pagefooter</code>
@@ -1635,7 +1373,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-pageheader">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-pageheader"><code>doc-pageheader</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pageheader"><code>doc-pageheader</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_HEADER</code></li>
 										<li>Object attribute <code>xml-roles:doc-pageheader</code>
@@ -1661,7 +1399,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-pagelist">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-pagelist"><code>doc-pagelist</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pagelist"><code>doc-pagelist</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-pagelist</code>
@@ -1688,7 +1426,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-part">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-part"><code>doc-part</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-part"><code>doc-part</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-part</code>
@@ -1715,7 +1453,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-preface">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-preface"><code>doc-preface</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-preface"><code>doc-preface</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARKi</code></li>
 										<li>Object attribute <code>xml-roles:doc-preface</code>
@@ -1742,7 +1480,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-prologue">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-prologue"><code>doc-prologue</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-prologue"><code>doc-prologue</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-prologue</code>
@@ -1769,7 +1507,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-pullquote">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-pullquote"><code>doc-pullquote</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pullquote"><code>doc-pullquote</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_SECTION</code></li>
 										<li>Object attribute <code>xml-roles:doc-pullquote</code>
@@ -1794,7 +1532,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-qna">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-preface"><code>doc-qna</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-preface"><code>doc-qna</code></a></th>
 								<td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute
 										<code>xml-roles:doc-qna</code></td>
 								<td>
@@ -1815,7 +1553,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-subtitle">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-preface"><code>doc-subtitle</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-preface"><code>doc-subtitle</code></a></th>
 								<td>Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_HEADING</code></li>
 										<li>Object attribute <code>xml-roles:doc-subtitle</code></li>
@@ -1840,7 +1578,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-tip">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-tip"><code>doc-tip</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-tip"><code>doc-tip</code></a></th>
 								<td> Expose <p><code>IA2_ROLE_NOTE</code></p>
 									<p>IAccessible2:</p> Object attribute <code>xml-roles:doc-tip</code>
 								</td>
@@ -1862,7 +1600,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								</td>
 							</tr>
 							<tr data-id="role-map-toc">
-								<th><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-toc"><code>doc-toc</code></a></th>
+								<th><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-toc"><code>doc-toc</code></a></th>
 								<td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-toc</code>
@@ -1891,7 +1629,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 							</tr>
 						</tbody>
 					</table>
-				</div><div class="details"><button class="expand">Expand all</button><button disabled="" class="collapse">Collapse all</button><details class="map"><summary id="role-map-abstract"><code>doc-abstract</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-abstract"><code>doc-abstract</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+				</div><div class="details"><button class="expand">Expand all</button><button disabled="" class="collapse">Collapse all</button><details class="map"><summary id="role-map-abstract"><code>doc-abstract</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-abstract"><code>doc-abstract</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_SECTION</code></li>
 										<li>Object attribute <code>xml-roles:doc-abstract</code>. </li>
 									</ul>
@@ -1910,7 +1648,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'group'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "abstract" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-acknowledgments"><code>doc-acknowledgments</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-acknowledgments"><code>doc-acknowledgments</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-acknowledgments"><code>doc-acknowledgments</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-acknowledgments"><code>doc-acknowledgments</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-acknowledgments</code>. </li>
 									</ul>
@@ -1932,7 +1670,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXCustomContent: <code>{ label: "type", value: "acknowledgements"
 											}</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-afterword"><code>doc-afterword</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-afterword"><code>doc-afterword</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-afterword"><code>doc-afterword</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-afterword"><code>doc-afterword</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-afterword</code>. </li>
 									</ul>
@@ -1953,7 +1691,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'region'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "afterword" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-appendix"><code>doc-appendix</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-appendix"><code>doc-appendix</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-appendix"><code>doc-appendix</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-appendix"><code>doc-appendix</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-appendix</code>. </li>
 									</ul>
@@ -1974,7 +1712,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'region'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "appendix" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-backlink"><code>doc-backlink</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-backlink"><code>doc-backlink</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-backlink"><code>doc-backlink</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-backlink"><code>doc-backlink</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose <ul>
 										<li><code>ROLE_SYSTEM_LINK</code> + <code>STATE_LINKED</code></li>
 										<li><code>STATE_LINKED</code> on all descendants</li>
 									</ul>
@@ -1998,7 +1736,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'link'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "back" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-biblioentry"><code>doc-biblioentry</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-biblioentry"><code>doc-biblioentry</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose <p><code>ROLE_SYSTEM_LISTITEM</code> +
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-biblioentry"><code>doc-biblioentry</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-biblioentry"><code>doc-biblioentry</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose <p><code>ROLE_SYSTEM_LISTITEM</code> +
 										<code>STATE_SYSTEM_READONLY</code></p>
 									<p>IAccessible2:</p><p>Object attribute
 									<code>xml-roles:doc-biblioentry</code>.</p></td></tr><tr><th><abbr title="User Interface Automation">UIA</abbr> Control Type + Other
@@ -2017,7 +1755,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXCustomContent: <code>{}</code></li>
 										
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-bibliography"><code>doc-bibliography</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-biblioentry"><code>doc-bibliography</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-bibliography"><code>doc-bibliography</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-biblioentry"><code>doc-bibliography</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-bibliography</code>. </li>
 									</ul>
@@ -2039,7 +1777,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXCustomContent: <code>{ label: "type", value: "bibliography" }</code></li>
 									</ul>
 								</td></tr></tbody></table></details><details class="map"><summary id="role-map-biblioentry-implied"><code>listitem</code> descendants of <code>doc-bibliography</code> (not descendant of
-									another <code>listitem</code>)</summary><table><caption><code>listitem</code> descendants of <a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-bibliography"><code>doc-bibliography</code></a> (not descendant of
+									another <code>listitem</code>)</summary><table><caption><code>listitem</code> descendants of <a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-bibliography"><code>doc-bibliography</code></a> (not descendant of
 									another <code>listitem</code>)</caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose <p><code>ROLE_SYSTEM_LISTITEM</code> +
 										<code>STATE_SYSTEM_READONLY</code></p>
 									<p>IAccessible2:</p><p>Object attribute
@@ -2059,7 +1797,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXCustomContent: <code>{}</code></li>
 										
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-biblioref"><code>doc-biblioref</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-biblioref"><code>doc-biblioref</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-biblioref"><code>doc-biblioref</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-biblioref"><code>doc-biblioref</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose <ul>
 										<li><code>ROLE_SYSTEM_LINK</code> + <code>STATE_LINKED</code></li>
 										<li><code>STATE_LINKED</code> on all descendants</li>
 									</ul>
@@ -2083,7 +1821,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'link'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "bibliography" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-chapter"><code>doc-chapter</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-chapter"><code>doc-chapter</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-chapter"><code>doc-chapter</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-chapter"><code>doc-chapter</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-chapter</code>. </li>
 									</ul>
@@ -2105,7 +1843,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXCustomContent: <code>{}</code></li>
 										
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-colophon"><code>doc-colophon</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-colophon"><code>doc-colophon</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2: Object attribute
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-colophon"><code>doc-colophon</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-colophon"><code>doc-colophon</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2: Object attribute
 											<code>xml-roles:doc-colophon</code>.</p></td></tr><tr><th><abbr title="User Interface Automation">UIA</abbr> Control Type + Other
 									Features</th><td>
 									<ul>
@@ -2121,7 +1859,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'group'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "colophon" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-conclusion"><code>doc-conclusion</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-conclusion"><code>doc-conclusion</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-conclusion"><code>doc-conclusion</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-conclusion"><code>doc-conclusion</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-conclusion</code>. </li>
 									</ul>
@@ -2142,7 +1880,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'region'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "conclusion" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-cover"><code>doc-cover</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-cover"><code>doc-cover</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose <p><code>ROLE_SYSTEM_GRAPHIC</code></p>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-cover"><code>doc-cover</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-cover</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose <p><code>ROLE_SYSTEM_GRAPHIC</code></p>
 									<p>IAccessible2: Object attribute <code>xml-roles:doc-cover</code>.</p>
 								</td></tr><tr><th><abbr title="User Interface Automation">UIA</abbr> Control Type + Other
 									Features</th><td>Control Type is <code>Image</code>
@@ -2158,7 +1896,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXCustomContent: <code>{}</code></li>
 										
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-credit"><code>doc-credit</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-cover"><code>doc-credit</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-credit"><code>doc-credit</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-credit</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute
 										<code>xml-roles:doc-credit</code></td></tr><tr><th><abbr title="User Interface Automation">UIA</abbr> Control Type + Other
 									Features</th><td>
 									<ul>
@@ -2175,7 +1913,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXCustomContent: <code>{}</code></li>
 										
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-credits"><code>doc-credits</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-credits"><code>doc-credits</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-credits"><code>doc-credits</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-credits"><code>doc-credits</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-credits</code>. </li>
 									</ul>
@@ -2196,7 +1934,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'region'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "credits" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-dedication"><code>doc-dedication</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-dedication"><code>doc-dedication</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-dedication"><code>doc-dedication</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-dedication"><code>doc-dedication</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute
 										<code>xml-roles:doc-dedication</code></td></tr><tr><th><abbr title="User Interface Automation">UIA</abbr> Control Type + Other
 									Features</th><td>
 									<ul>
@@ -2212,7 +1950,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'group'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "dedication" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-endnote"><code>doc-endnote</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-endnote"><code>doc-endnote</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose <p><code>ROLE_SYSTEM_LISTITEM</code> +
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-endnote"><code>doc-endnote</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-endnote"><code>doc-endnote</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose <p><code>ROLE_SYSTEM_LISTITEM</code> +
 										<code>STATE_SYSTEM_READONLY</code></p>
 									<p>IAccessible2:</p><p>Object attribute <code>xml-roles:doc-endnote</code>.</p></td></tr><tr><th><abbr title="User Interface Automation">UIA</abbr> Control Type + Other
 									Features</th><td>
@@ -2230,7 +1968,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXCustomContent: <code>{}</code></li>
 										
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-endnotes"><code>doc-endnotes</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-endnote"><code>doc-endnotes</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-endnotes"><code>doc-endnotes</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-endnote"><code>doc-endnotes</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-endnotes</code>. </li>
 									</ul>
@@ -2252,7 +1990,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXCustomContent: <code>{ label: "type", value: "end notes" }</code></li>
 									</ul>
 								</td></tr></tbody></table></details><details class="map"><summary id="role-map-endnote-implied"><code>listitem</code> descendants of <code>doc-endnotes</code> (not descendant of another
-										<code>listitem</code>)</summary><table><caption><code>listitem</code> descendants of <a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-endnotes"><code>doc-endnotes</code></a> (not descendant of another
+										<code>listitem</code>)</summary><table><caption><code>listitem</code> descendants of <a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-endnotes"><code>doc-endnotes</code></a> (not descendant of another
 										<code>listitem</code>)</caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose <p><code>ROLE_SYSTEM_LISTITEM</code> +
 										<code>STATE_SYSTEM_READONLY</code></p>
 									<p>IAccessible2:</p><p>Object attribute <code>xml-roles:doc-endnote</code>.</p></td></tr><tr><th><abbr title="User Interface Automation">UIA</abbr> Control Type + Other
@@ -2271,7 +2009,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXCustomContent: <code>{}</code></li>
 										
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-epigraph"><code>doc-epigraph</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-epigraph"><code>doc-epigraph</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-epigraph"><code>doc-epigraph</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-epigraph"><code>doc-epigraph</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute
 										<code>xml-roles:doc-epigraph</code></td></tr><tr><th><abbr title="User Interface Automation">UIA</abbr> Control Type + Other
 									Features</th><td>
 									<ul>
@@ -2287,7 +2025,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'group'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "epigraph" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-epilogue"><code>doc-epilogue</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-epilogue"><code>doc-epilogue</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-epilogue"><code>doc-epilogue</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-epilogue"><code>doc-epilogue</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-epilogue</code>. </li>
 									</ul>
@@ -2308,7 +2046,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'region'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "epilog" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-errata"><code>doc-errata</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-cover"><code>doc-errata</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-errata"><code>doc-errata</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-errata</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-errata</code></li>
 									</ul>
@@ -2329,7 +2067,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'region'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "errata" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-example"><code>doc-example</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-cover"><code>doc-example</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-example"><code>doc-example</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-cover"><code>doc-example</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute
 										<code>xml-roles:doc-example</code></td></tr><tr><th><abbr title="User Interface Automation">UIA</abbr> Control Type + Other
 									Features</th><td>
 									<ul>
@@ -2345,7 +2083,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'group'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "example" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-footnote"><code>doc-footnote</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-footnote"><code>doc-footnote</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td><p>Expose IAccessible2:</p>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-footnote"><code>doc-footnote</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-footnote"><code>doc-footnote</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td><p>Expose IAccessible2:</p>
 									<ul>
 										<li><code>IA2_ROLE_FOOTNOTE</code></li>
 										<li>Object attribute: <code>xml-roles:doc-footnote</code></li>
@@ -2365,7 +2103,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'group'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "footnote" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-foreword"><code>doc-foreword</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-foreword"><code>doc-foreword</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-foreword"><code>doc-foreword</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-foreword"><code>doc-foreword</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-foreword</code></li>
 									</ul>
@@ -2386,7 +2124,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'region'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "foreword" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-glossary"><code>doc-glossary</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-glossary"><code>doc-glossary</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-glossary"><code>doc-glossary</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-glossary"><code>doc-glossary</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-glossary</code>
 										</li>
@@ -2408,7 +2146,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'region'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "glossary" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-glossref"><code>doc-glossref</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-glossref"><code>doc-glossref</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-glossref"><code>doc-glossref</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-glossref"><code>doc-glossref</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose <ul>
 										<li><code>ROLE_SYSTEM_LINK</code> + <code>STATE_LINKED</code></li>
 										<li><code>STATE_LINKED</code> on all descendants</li>
 									</ul>
@@ -2432,7 +2170,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'link'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "glossary" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-index"><code>doc-index</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-index"><code>doc-index</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-index"><code>doc-index</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-index"><code>doc-index</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-index</code>
 										</li>
@@ -2454,7 +2192,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'navigation'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "index" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-introduction"><code>doc-introduction</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-introduction"><code>doc-introduction</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-introduction"><code>doc-introduction</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-introduction"><code>doc-introduction</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-introduction</code>
 										</li>
@@ -2476,7 +2214,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'region'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "introduction" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-noteref"><code>doc-noteref</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-noteref"><code>doc-noteref</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-noteref"><code>doc-noteref</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-noteref"><code>doc-noteref</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose <ul>
 										<li><code>ROLE_SYSTEM_LINK</code> + <code>STATE_LINKED</code></li>
 										<li><code>STATE_LINKED</code> on all descendants</li>
 									</ul>
@@ -2500,7 +2238,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'link'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "note" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-notice"><code>doc-notice</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-notice"><code>doc-notice</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose <p><code>IA2_ROLE_NOTE</code></p>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-notice"><code>doc-notice</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-notice"><code>doc-notice</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose <p><code>IA2_ROLE_NOTE</code></p>
 									<p>IAccessible2:</p> Object attribute <code>xml-roles:doc-notice</code>.</td></tr><tr><th><abbr title="User Interface Automation">UIA</abbr> Control Type + Other
 									Features</th><td>
 									<ul>
@@ -2517,7 +2255,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXCustomContent: <code>{}</code></li>
 										
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-pagebreak"><code>doc-pagebreak</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-pagebreak"><code>doc-pagebreak</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose <p><code>ROLE_SYSTEM_SEPARATOR</code></p>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-pagebreak"><code>doc-pagebreak</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pagebreak"><code>doc-pagebreak</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose <p><code>ROLE_SYSTEM_SEPARATOR</code></p>
 									<p>IAccessible2:</p> Object attribute <code>xml-roles:doc-pagebreak</code>. </td></tr><tr><th><abbr title="User Interface Automation">UIA</abbr> Control Type + Other
 									Features</th><td>
 									<ul>
@@ -2533,7 +2271,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'splitter'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "page break" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-pagefooter"><code>doc-pagefooter</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-pagefooter"><code>doc-pagefooter</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-pagefooter"><code>doc-pagefooter</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pagefooter"><code>doc-pagefooter</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_FOOTER</code></li>
 										<li>Object attribute <code>xml-roles:doc-pagefooter</code>
 										</li>
@@ -2554,7 +2292,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'group'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "footer" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-pageheader"><code>doc-pageheader</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-pageheader"><code>doc-pageheader</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-pageheader"><code>doc-pageheader</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pageheader"><code>doc-pageheader</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_HEADER</code></li>
 										<li>Object attribute <code>xml-roles:doc-pageheader</code>
 										</li>
@@ -2575,7 +2313,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'group'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "header" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-pagelist"><code>doc-pagelist</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-pagelist"><code>doc-pagelist</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-pagelist"><code>doc-pagelist</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pagelist"><code>doc-pagelist</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-pagelist</code>
 										</li>
@@ -2597,7 +2335,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'navigation'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "page list" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-part"><code>doc-part</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-part"><code>doc-part</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-part"><code>doc-part</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-part"><code>doc-part</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-part</code>
 										</li>
@@ -2619,7 +2357,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'region'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "part" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-preface"><code>doc-preface</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-preface"><code>doc-preface</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-preface"><code>doc-preface</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-preface"><code>doc-preface</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARKi</code></li>
 										<li>Object attribute <code>xml-roles:doc-preface</code>
 										</li>
@@ -2641,7 +2379,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'region'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "preface" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-prologue"><code>doc-prologue</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-prologue"><code>doc-prologue</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-prologue"><code>doc-prologue</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-prologue"><code>doc-prologue</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-prologue</code>
 										</li>
@@ -2663,7 +2401,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'region'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "prolog" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-pullquote"><code>doc-pullquote</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-pullquote"><code>doc-pullquote</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-pullquote"><code>doc-pullquote</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-pullquote"><code>doc-pullquote</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_SECTION</code></li>
 										<li>Object attribute <code>xml-roles:doc-pullquote</code>
 										</li>
@@ -2683,7 +2421,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'group'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "pull quote" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-qna"><code>doc-qna</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-preface"><code>doc-qna</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-qna"><code>doc-qna</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-preface"><code>doc-qna</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose<p><code>IA2_ROLE_SECTION</code></p><p>IAccessible2:</p> Object attribute
 										<code>xml-roles:doc-qna</code></td></tr><tr><th><abbr title="User Interface Automation">UIA</abbr> Control Type + Other
 									Features</th><td>
 									<ul>
@@ -2699,7 +2437,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'group'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "Q&amp;A" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-subtitle"><code>doc-subtitle</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-preface"><code>doc-subtitle</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-subtitle"><code>doc-subtitle</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-preface"><code>doc-subtitle</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td>Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_HEADING</code></li>
 										<li>Object attribute <code>xml-roles:doc-subtitle</code></li>
 									</ul>
@@ -2719,7 +2457,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXCustomContent: <code>{}</code></li>
 										
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-tip"><code>doc-tip</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-tip"><code>doc-tip</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose <p><code>IA2_ROLE_NOTE</code></p>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-tip"><code>doc-tip</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-tip"><code>doc-tip</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose <p><code>IA2_ROLE_NOTE</code></p>
 									<p>IAccessible2:</p> Object attribute <code>xml-roles:doc-tip</code>
 								</td></tr><tr><th><abbr title="User Interface Automation">UIA</abbr> Control Type + Other
 									Features</th><td>
@@ -2736,7 +2474,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 										<li>AXRoleDescription: <code>'note'</code></li>
 										<li>AXCustomContent: <code>{ label: "type", value: "tip" }</code></li>
 									</ul>
-								</td></tr></tbody></table></details><details class="map"><summary id="role-map-toc"><code>doc-toc</code></summary><table><caption><a class="dpub-role-reference" href="https://www.w3.org/TR/dpub-aria-1.1/#doc-toc"><code>doc-toc</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
+								</td></tr></tbody></table></details><details class="map"><summary id="role-map-toc"><code>doc-toc</code></summary><table><caption><a class="dpub-role-reference" href="https://w3c.github.io/dpub-aria/#doc-toc"><code>doc-toc</code></a></caption><tbody><tr><th>MSAA + IAccessible2 Role + Other IAccessible2 Features</th><td> Expose IAccessible2: <ul>
 										<li><code>IA2_ROLE_LANDMARK</code></li>
 										<li>Object attribute <code>xml-roles:doc-toc</code>
 										</li>
@@ -2833,7 +2571,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 			<p>In accordance with <a href="https://w3ctag.github.io/design-principles/#do-not-expose-use-of-assistive-tech">Web Platform
 					Design Principles</a>, this specification provides no programatic interface to determine if
-				information is being used by assistive technologies. However, this specification does allow an author to
+				information is being used by assistive technologies. However, this specificaton does allow an author to
 				present different information to users of assistive technologies from the information available to users
 				who do not use assistive technologies. This is possible using many features of the DPUB-ARIA
 				specification, just as this is possible using many other parts of the web technology stack. This content
@@ -2897,7 +2635,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </dd><dt id="bib-core-aam-1.1">[CORE-AAM-1.1]</dt><dd>
       <a href="https://www.w3.org/TR/core-aam-1.1/"><cite>Core Accessibility API Mappings 1.1</cite></a>. Joanmarie Diggs; Joseph Scheuhammer; Richard Schwerdtfeger; Michael Cooper; Andi Snow-Weaver; Aaron Leventhal.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/core-aam-1.1/">https://www.w3.org/TR/core-aam-1.1/</a>
     </dd><dt id="bib-dpub-aria-1.1">[dpub-aria-1.1]</dt><dd>
-      <a href="https://www.w3.org/TR/dpub-aria-1.1/"><cite>Digital Publishing WAI-ARIA Module 1.1</cite></a>. Matt Garrish; Tzviya Siegman.  W3C. 19 June 2023. W3C Working Draft. URL: <a href="https://www.w3.org/TR/dpub-aria-1.1/">https://www.w3.org/TR/dpub-aria-1.1/</a>
+      <a href="https://www.w3.org/TR/dpub-aria-1.1/"><cite>Digital Publishing WAI-ARIA Module 1.1</cite></a>. Matt Garrish; Tzviya Siegman.  W3C. 20 June 2023. W3C Working Draft. URL: <a href="https://www.w3.org/TR/dpub-aria-1.1/">https://www.w3.org/TR/dpub-aria-1.1/</a>
     </dd><dt id="bib-html">[html]</dt><dd>
       <a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
     </dd><dt id="bib-infra">[infra]</dt><dd>
